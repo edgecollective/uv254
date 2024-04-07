@@ -1058,8 +1058,8 @@
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
-			(property "Reference" "Q"
-				(at 5.08 1.905 0)
+			(property "Reference" "Q1"
+				(at 6.35 1.27 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -1068,7 +1068,7 @@
 				)
 			)
 			(property "Value" "2N7000"
-				(at 5.08 0 0)
+				(at 6.35 -1.27 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -1076,7 +1076,7 @@
 					(justify left)
 				)
 			)
-			(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
+			(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
 				(at 5.08 -1.905 0)
 				(effects
 					(font
@@ -1097,7 +1097,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "0.2A Id, 200V Vds, N-Channel MOSFET, 2.6V Logic Level, TO-92"
+			(property "Description" ""
 				(at 0 0 0)
 				(effects
 					(font
@@ -1292,10 +1292,10 @@
 				)
 			)
 			(symbol "2N7000_1_1"
-				(pin passive line
-					(at 2.54 -5.08 90)
+				(pin input line
+					(at -5.08 0 0)
 					(length 2.54)
-					(name "S"
+					(name "G"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1310,10 +1310,10 @@
 						)
 					)
 				)
-				(pin input line
-					(at -5.08 0 0)
+				(pin passive line
+					(at 2.54 -5.08 90)
 					(length 2.54)
-					(name "G"
+					(name "S"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1469,7 +1469,7 @@
 	)
 	(wire
 		(pts
-			(xy 36.83 130.81) (xy 36.83 138.43)
+			(xy 102.87 106.68) (xy 102.87 114.3)
 		)
 		(stroke
 			(width 0)
@@ -1589,7 +1589,7 @@
 	)
 	(wire
 		(pts
-			(xy 36.83 110.49) (xy 36.83 115.57)
+			(xy 102.87 86.36) (xy 102.87 91.44)
 		)
 		(stroke
 			(width 0)
@@ -1628,7 +1628,7 @@
 		(uuid "f2a3914d-6ab1-4c25-a5eb-82b50856b816")
 	)
 	(image
-		(at 147.066 117.602)
+		(at 246.888 51.816)
 		(uuid "af9fe5dd-68e7-473b-8a8e-ccaae0bbffd6")
 		(data "iVBORw0KGgoAAAANSUhEUgAAAYMAAAEsCAIAAACuTEh+AAAAA3NCSVQICAjb4U/gAAAgAElEQVR4"
 			"nO2dd1gUxxvH3z2OO1AQkI4FRFC6Hew1Ro3G3lsssSbGVHussUejJhpN1Fh/FjBGY0zsGiuoiKiA"
@@ -1944,7 +1944,7 @@
 	)
 	(text "UV LED requires \n5Vf or more"
 		(exclude_from_sim no)
-		(at 130.556 103.632 0)
+		(at 230.378 37.846 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1955,7 +1955,7 @@
 	)
 	(text "external connector (through-hole)"
 		(exclude_from_sim no)
-		(at 18.288 17.018 0)
+		(at 38.608 24.638 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1986,20 +1986,9 @@
 		)
 		(uuid "9680160e-7370-4aac-9062-4df13664c74e")
 	)
-	(text "external connector (smd)"
-		(exclude_from_sim no)
-		(at 18.288 43.688 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "9cd7f5b5-e98f-46ab-8888-c778c4ff0315")
-	)
 	(text "unused op-amps on board\ntie them to ground or etct?"
 		(exclude_from_sim no)
-		(at 59.182 108.458 0)
+		(at 125.222 84.328 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2010,7 +1999,7 @@
 	)
 	(text "op-amp power"
 		(exclude_from_sim no)
-		(at 29.21 107.696 0)
+		(at 95.25 83.566 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2019,31 +2008,9 @@
 		)
 		(uuid "d799f34f-c106-4972-b783-f9d293c058dc")
 	)
-	(global_label "V_LED_CONTROL"
-		(shape input)
-		(at 22.86 49.53 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "03d75659-bb7e-4a0e-8f12-55340843226e")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 4.8767 49.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "+5V"
 		(shape input)
-		(at 22.86 27.94 180)
+		(at 43.18 35.56 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2053,51 +2020,7 @@
 		)
 		(uuid "59f57795-f9cc-4afb-b1dc-2b9cd07a75e0")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 16.0043 27.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "+5V"
-		(shape input)
-		(at 22.86 54.61 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "79db57c4-b04a-4e41-bf9c-06809ad6c9a7")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 16.0043 54.61 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "+7VS"
-		(shape input)
-		(at 22.86 52.07 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "b7fcd047-6f51-4b7c-bcaf-28e8abfc1a57")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 14.7948 52.07 0)
+			(at 36.3243 35.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2131,7 +2054,7 @@
 	)
 	(global_label "+5V"
 		(shape input)
-		(at 36.83 110.49 0)
+		(at 102.87 86.36 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2141,7 +2064,7 @@
 		)
 		(uuid "d4e01951-316e-4206-846f-4fe31b6a6f65")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 43.6857 110.49 0)
+			(at 109.7257 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2153,7 +2076,7 @@
 	)
 	(global_label "+7VS"
 		(shape input)
-		(at 22.86 25.4 180)
+		(at 43.18 33.02 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2163,7 +2086,7 @@
 		)
 		(uuid "d866e80c-5caf-4983-9647-dcb6cd7128cd")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 14.7948 25.4 0)
+			(at 35.1148 33.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2175,7 +2098,7 @@
 	)
 	(global_label "V_LED_CONTROL"
 		(shape input)
-		(at 22.86 22.86 180)
+		(at 43.18 30.48 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2185,7 +2108,7 @@
 		)
 		(uuid "e0fa103c-bbb9-419d-832d-9f6e94fe95ff")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 4.8767 22.86 0)
+			(at 25.1967 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2245,7 +2168,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_2.7mm_M2.5"
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
 			(at 54.61 86.36 0)
 			(effects
 				(font
@@ -2387,7 +2310,7 @@
 	)
 	(symbol
 		(lib_id "Amplifier_Operational:OPA4340UA")
-		(at 68.58 143.51 0)
+		(at 134.62 119.38 0)
 		(unit 2)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2396,7 +2319,7 @@
 		(fields_autoplaced yes)
 		(uuid "1229da40-b9d2-412f-b9df-2b756e4f7a6b")
 		(property "Reference" "U1"
-			(at 68.58 133.35 0)
+			(at 134.62 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2404,7 +2327,7 @@
 			)
 		)
 		(property "Value" "OPA4340UA"
-			(at 68.58 135.89 0)
+			(at 134.62 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2412,7 +2335,7 @@
 			)
 		)
 		(property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
-			(at 67.31 140.97 0)
+			(at 133.35 116.84 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2421,7 +2344,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/opa340.pdf"
-			(at 69.85 138.43 0)
+			(at 135.89 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2430,7 +2353,7 @@
 			)
 		)
 		(property "Description" "Quad Single-Supply, Rail-to-Rail Operational Amplifier, MicroAmplifier Series, SOIC-14"
-			(at 68.58 143.51 0)
+			(at 134.62 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2491,7 +2414,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 22.86 30.48 0)
+		(at 43.18 38.1 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2500,7 +2423,7 @@
 		(fields_autoplaced yes)
 		(uuid "17fcda19-a845-49c0-a351-6ff468e908bc")
 		(property "Reference" "#PWR04"
-			(at 22.86 36.83 0)
+			(at 43.18 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2509,7 +2432,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 22.86 35.56 0)
+			(at 43.18 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2517,7 +2440,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 22.86 30.48 0)
+			(at 43.18 38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2526,7 +2449,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 22.86 30.48 0)
+			(at 43.18 38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2535,7 +2458,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 22.86 30.48 0)
+			(at 43.18 38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2695,7 +2618,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 36.83 138.43 0)
+		(at 102.87 114.3 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2704,7 +2627,7 @@
 		(fields_autoplaced yes)
 		(uuid "1e633495-44ab-4b54-adca-d1c3a4620d53")
 		(property "Reference" "#PWR03"
-			(at 36.83 144.78 0)
+			(at 102.87 120.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2713,7 +2636,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 36.83 143.51 0)
+			(at 102.87 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2721,7 +2644,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 36.83 138.43 0)
+			(at 102.87 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2730,7 +2653,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 36.83 138.43 0)
+			(at 102.87 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2739,7 +2662,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 36.83 138.43 0)
+			(at 102.87 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2761,7 +2684,7 @@
 	)
 	(symbol
 		(lib_id "Amplifier_Operational:OPA4340UA")
-		(at 68.58 124.46 0)
+		(at 134.62 100.33 0)
 		(unit 3)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2770,7 +2693,7 @@
 		(fields_autoplaced yes)
 		(uuid "4c2b165b-5913-40fe-a158-d8fdfd74a88e")
 		(property "Reference" "U1"
-			(at 68.58 114.3 0)
+			(at 134.62 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2778,7 +2701,7 @@
 			)
 		)
 		(property "Value" "OPA4340UA"
-			(at 68.58 116.84 0)
+			(at 134.62 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2786,7 +2709,7 @@
 			)
 		)
 		(property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
-			(at 67.31 121.92 0)
+			(at 133.35 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2795,7 +2718,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/opa340.pdf"
-			(at 69.85 119.38 0)
+			(at 135.89 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2804,7 +2727,7 @@
 			)
 		)
 		(property "Description" "Quad Single-Supply, Rail-to-Rail Operational Amplifier, MicroAmplifier Series, SOIC-14"
-			(at 68.58 124.46 0)
+			(at 134.62 100.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3001,7 +2924,7 @@
 	)
 	(symbol
 		(lib_id "Amplifier_Operational:OPA4340UA")
-		(at 39.37 123.19 0)
+		(at 105.41 99.06 0)
 		(unit 5)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3010,7 +2933,7 @@
 		(fields_autoplaced yes)
 		(uuid "801ccbf6-cf41-43da-9d1c-9984b791913e")
 		(property "Reference" "U1"
-			(at 38.1 121.9199 0)
+			(at 104.14 97.7899 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3019,7 +2942,7 @@
 			)
 		)
 		(property "Value" "OPA4340UA"
-			(at 38.1 124.4599 0)
+			(at 104.14 100.3299 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3028,7 +2951,7 @@
 			)
 		)
 		(property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
-			(at 38.1 120.65 0)
+			(at 104.14 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3037,7 +2960,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/opa340.pdf"
-			(at 40.64 118.11 0)
+			(at 106.68 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3046,7 +2969,7 @@
 			)
 		)
 		(property "Description" "Quad Single-Supply, Rail-to-Rail Operational Amplifier, MicroAmplifier Series, SOIC-14"
-			(at 39.37 123.19 0)
+			(at 105.41 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3107,7 +3030,7 @@
 	)
 	(symbol
 		(lib_id "Connector:Conn_01x04_Female")
-		(at 27.94 25.4 0)
+		(at 48.26 33.02 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3116,7 +3039,7 @@
 		(fields_autoplaced yes)
 		(uuid "80778b92-3e46-42dd-89b6-153dd43f934b")
 		(property "Reference" "J1"
-			(at 29.21 25.3999 0)
+			(at 49.53 33.0199 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3125,7 +3048,7 @@
 			)
 		)
 		(property "Value" "Conn_01x04_Female"
-			(at 29.21 27.9399 0)
+			(at 49.53 35.5599 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3134,7 +3057,7 @@
 			)
 		)
 		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical"
-			(at 27.94 25.4 0)
+			(at 48.26 33.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3143,7 +3066,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 27.94 25.4 0)
+			(at 48.26 33.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3152,7 +3075,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 27.94 25.4 0)
+			(at 48.26 33.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3209,7 +3132,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_2.7mm_M2.5"
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
 			(at 29.21 86.36 0)
 			(effects
 				(font
@@ -3240,72 +3163,6 @@
 			(project "UV-LED-source"
 				(path "/74d1271a-646f-4f00-a90e-b62b18e88539"
 					(reference "H2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 22.86 57.15 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "b9238968-955e-422e-8f23-d0e342d8a55c")
-		(property "Reference" "#PWR05"
-			(at 22.86 63.5 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 22.86 62.23 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 22.86 57.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 22.86 57.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 22.86 57.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "4e0399f3-f7a4-4d5a-9421-1e92b18916c7")
-		)
-		(instances
-			(project "UV-LED-source"
-				(path "/74d1271a-646f-4f00-a90e-b62b18e88539"
-					(reference "#PWR05")
 					(unit 1)
 				)
 			)
@@ -3379,7 +3236,7 @@
 	)
 	(symbol
 		(lib_id "Amplifier_Operational:OPA4340UA")
-		(at 68.58 160.02 0)
+		(at 134.62 135.89 0)
 		(unit 4)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3388,7 +3245,7 @@
 		(fields_autoplaced yes)
 		(uuid "c0909feb-45c9-4ee4-b4dc-8b2dea422ab8")
 		(property "Reference" "U1"
-			(at 68.58 149.86 0)
+			(at 134.62 125.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3396,7 +3253,7 @@
 			)
 		)
 		(property "Value" "OPA4340UA"
-			(at 68.58 152.4 0)
+			(at 134.62 128.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3404,7 +3261,7 @@
 			)
 		)
 		(property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
-			(at 67.31 157.48 0)
+			(at 133.35 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3413,7 +3270,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/opa340.pdf"
-			(at 69.85 154.94 0)
+			(at 135.89 130.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3422,7 +3279,7 @@
 			)
 		)
 		(property "Description" "Quad Single-Supply, Rail-to-Rail Operational Amplifier, MicroAmplifier Series, SOIC-14"
-			(at 68.58 160.02 0)
+			(at 134.62 135.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3477,82 +3334,6 @@
 				(path "/74d1271a-646f-4f00-a90e-b62b18e88539"
 					(reference "U1")
 					(unit 4)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:Conn_01x04_Female")
-		(at 27.94 52.07 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "caa4ea62-6e3b-49da-afec-a50e5f8a3489")
-		(property "Reference" "J2"
-			(at 29.21 52.0699 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "Conn_01x04_Female"
-			(at 29.21 54.6099 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Connector_JST:JST_PH_S4B-PH-K_1x04_P2.00mm_Horizontal"
-			(at 27.94 52.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 27.94 52.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 27.94 52.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "c3372adc-d0ec-4ae0-974a-c17c241521a8")
-		)
-		(pin "1"
-			(uuid "12cdd9da-41f8-40f4-8064-b283e8221553")
-		)
-		(pin "4"
-			(uuid "6f2f89fb-9c85-4689-9937-99862295d278")
-		)
-		(pin "3"
-			(uuid "32177e9e-1f45-4881-b766-e7dd59176803")
-		)
-		(instances
-			(project "UV-LED-source"
-				(path "/74d1271a-646f-4f00-a90e-b62b18e88539"
-					(reference "J2")
-					(unit 1)
 				)
 			)
 		)
@@ -3655,7 +3436,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_2.7mm_M2.5"
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
 			(at 29.21 77.47 0)
 			(effects
 				(font
@@ -3787,7 +3568,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_2.7mm_M2.5"
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
 			(at 54.61 77.47 0)
 			(effects
 				(font
