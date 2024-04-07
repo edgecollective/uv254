@@ -394,7 +394,7 @@
 				)
 			)
 		)
-		(symbol "Connector:Conn_01x05_Female"
+		(symbol "Connector:Conn_01x06_Male"
 			(pin_names
 				(offset 1.016) hide)
 			(exclude_from_sim no)
@@ -408,8 +408,8 @@
 					)
 				)
 			)
-			(property "Value" "Conn_01x05_Female"
-				(at 0 -7.62 0)
+			(property "Value" "Conn_01x06_Male"
+				(at 0 -10.16 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -434,7 +434,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Generic connector, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(property "Description" "Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)"
 				(at 0 0 0)
 				(effects
 					(font
@@ -461,34 +461,10 @@
 					(hide yes)
 				)
 			)
-			(symbol "Conn_01x05_Female_1_1"
-				(arc
-					(start 0 -4.572)
-					(mid -0.5058 -5.08)
-					(end 0 -5.588)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 0 -2.032)
-					(mid -0.5058 -2.54)
-					(end 0 -3.048)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
+			(symbol "Conn_01x06_Male_1_1"
 				(polyline
 					(pts
-						(xy -1.27 -5.08) (xy -0.508 -5.08)
+						(xy 1.27 -7.62) (xy 0.8636 -7.62)
 					)
 					(stroke
 						(width 0.1524)
@@ -500,7 +476,7 @@
 				)
 				(polyline
 					(pts
-						(xy -1.27 -2.54) (xy -0.508 -2.54)
+						(xy 1.27 -5.08) (xy 0.8636 -5.08)
 					)
 					(stroke
 						(width 0.1524)
@@ -512,7 +488,7 @@
 				)
 				(polyline
 					(pts
-						(xy -1.27 0) (xy -0.508 0)
+						(xy 1.27 -2.54) (xy 0.8636 -2.54)
 					)
 					(stroke
 						(width 0.1524)
@@ -524,7 +500,7 @@
 				)
 				(polyline
 					(pts
-						(xy -1.27 2.54) (xy -0.508 2.54)
+						(xy 1.27 0) (xy 0.8636 0)
 					)
 					(stroke
 						(width 0.1524)
@@ -536,7 +512,7 @@
 				)
 				(polyline
 					(pts
-						(xy -1.27 5.08) (xy -0.508 5.08)
+						(xy 1.27 2.54) (xy 0.8636 2.54)
 					)
 					(stroke
 						(width 0.1524)
@@ -546,10 +522,10 @@
 						(type none)
 					)
 				)
-				(arc
-					(start 0 0.508)
-					(mid -0.5058 0)
-					(end 0 -0.508)
+				(polyline
+					(pts
+						(xy 1.27 5.08) (xy 0.8636 5.08)
+					)
 					(stroke
 						(width 0.1524)
 						(type default)
@@ -558,32 +534,74 @@
 						(type none)
 					)
 				)
-				(arc
-					(start 0 3.048)
-					(mid -0.5058 2.54)
-					(end 0 2.032)
+				(rectangle
+					(start 0.8636 -7.493)
+					(end 0 -7.747)
 					(stroke
 						(width 0.1524)
 						(type default)
 					)
 					(fill
-						(type none)
+						(type outline)
 					)
 				)
-				(arc
-					(start 0 5.588)
-					(mid -0.5058 5.08)
-					(end 0 4.572)
+				(rectangle
+					(start 0.8636 -4.953)
+					(end 0 -5.207)
 					(stroke
 						(width 0.1524)
 						(type default)
 					)
 					(fill
-						(type none)
+						(type outline)
+					)
+				)
+				(rectangle
+					(start 0.8636 -2.413)
+					(end 0 -2.667)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start 0.8636 0.127)
+					(end 0 -0.127)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start 0.8636 2.667)
+					(end 0 2.413)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start 0.8636 5.207)
+					(end 0 4.953)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
 					)
 				)
 				(pin passive line
-					(at -5.08 5.08 0)
+					(at 5.08 5.08 180)
 					(length 3.81)
 					(name "Pin_1"
 						(effects
@@ -601,7 +619,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 2.54 0)
+					(at 5.08 2.54 180)
 					(length 3.81)
 					(name "Pin_2"
 						(effects
@@ -619,7 +637,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 0 0)
+					(at 5.08 0 180)
 					(length 3.81)
 					(name "Pin_3"
 						(effects
@@ -637,7 +655,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 -2.54 0)
+					(at 5.08 -2.54 180)
 					(length 3.81)
 					(name "Pin_4"
 						(effects
@@ -655,7 +673,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 -5.08 0)
+					(at 5.08 -5.08 180)
 					(length 3.81)
 					(name "Pin_5"
 						(effects
@@ -665,6 +683,24 @@
 						)
 					)
 					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 -7.62 180)
+					(length 3.81)
+					(name "Pin_6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1383,6 +1419,152 @@
 				)
 			)
 		)
+		(symbol "Reference_Voltage:LM4040DBZ-2.5"
+			(pin_names
+				(offset 0.0254) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U"
+				(at 0 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "LM4040DBZ-2.5"
+				(at 0 -3.175 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+				(at 0 -5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "http://www.ti.com/lit/ds/symlink/lm4040-n.pdf"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "2.500V Precision Micropower Shunt Voltage Reference, SOT-23"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "diode device voltage reference shunt"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "SOT?23*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "LM4040DBZ-2.5_0_1"
+				(polyline
+					(pts
+						(xy -1.27 0) (xy 0 0) (xy 1.27 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 -1.27) (xy 0.635 0) (xy -1.27 1.27) (xy -1.27 -1.27)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -1.27) (xy 0.635 -1.27) (xy 0.635 1.27) (xy 1.27 1.27)
+					)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "LM4040DBZ-2.5_1_1"
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "power:+2V5"
 			(power)
 			(pin_names
@@ -1945,110 +2127,168 @@
 		)
 	)
 	(junction
-		(at 107.95 83.82)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "05ccbad4-30a6-485c-b2cb-b16619290ecc")
-	)
-	(junction
-		(at 154.94 83.82)
+		(at 105.41 82.55)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "140e3bec-458d-4dd4-8a80-5309189a5c7e")
 	)
 	(junction
-		(at 86.36 58.42)
+		(at 55.88 53.34)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "1a410f79-3cc3-43d6-ab79-3ee4d0fcb019")
+		(uuid "1c48ad77-8d2c-4430-b5af-e812ed3671be")
 	)
 	(junction
-		(at 60.96 68.58)
+		(at 90.17 158.75)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "1b5b6fc4-50f6-4e16-83ab-1b7b94c34308")
+		(uuid "1dacaf62-c6fd-496e-9260-fef6be75673a")
 	)
 	(junction
-		(at 49.53 104.14)
+		(at 128.27 154.94)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "1bdaf28f-1306-4c91-9bcb-c6954cc155f1")
+		(uuid "2052d1a1-1964-4f9c-b5ef-e5375c8c6a66")
 	)
 	(junction
-		(at 175.26 109.22)
+		(at 125.73 107.95)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "2110ff94-e413-4e48-bebf-b7d005a2cfb8")
 	)
 	(junction
-		(at 237.49 85.09)
+		(at 39.37 53.34)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4029aea9-b946-45ba-ac25-1cfb1b0e44d6")
+	)
+	(junction
+		(at 187.96 83.82)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "4a1d50bf-235e-43b3-80f7-8e01aa69830d")
 	)
 	(junction
-		(at 60.96 81.28)
+		(at 54.61 53.34)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "4f04f1c9-6ef2-4cea-a959-da7b93f8e903")
+		(uuid "53ee58e9-fa3b-4fad-b1a0-3d9a7ea75bad")
 	)
 	(junction
-		(at 175.26 96.52)
+		(at 215.9 86.36)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6643f3e4-c770-42c4-a132-235e7bc8fe6f")
+	)
+	(junction
+		(at 125.73 95.25)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "66ae5115-db37-49b8-8323-dd2e6ac48a14")
 	)
 	(junction
-		(at 265.43 57.15)
+		(at 264.16 78.74)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "723d1287-9438-4371-bbd0-c1bc51513fbd")
+	)
+	(junction
+		(at 215.9 55.88)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "7482c3e3-be5b-4b32-805f-710c4c71c5d6")
 	)
 	(junction
-		(at 135.89 83.82)
+		(at 39.37 81.28)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "8df70163-b171-4378-bfc3-23730b533160")
+		(uuid "811cbe18-8659-4dd0-958f-8acb1d529c79")
 	)
 	(junction
-		(at 217.17 85.09)
+		(at 128.27 172.72)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "97392e22-0a2b-4c10-90b7-3c301acd5d71")
+	)
+	(junction
+		(at 105.41 158.75)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9e8ae4c7-3591-493c-bc71-6659d5176c9c")
+	)
+	(junction
+		(at 167.64 83.82)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "b935c6a3-dab2-443d-975d-db0774a1a4f2")
 	)
 	(junction
-		(at 265.43 71.12)
+		(at 39.37 104.14)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c3329c83-5f57-4c11-8027-1a88d4d5d9d2")
+	)
+	(junction
+		(at 215.9 69.85)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c7b0f0e8-93cf-4256-88c2-1791c414ec9c")
 	)
 	(junction
-		(at 86.36 68.58)
+		(at 76.2 53.34)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "ce68c610-77a4-4139-b730-57641a4895fd")
+		(uuid "c86a087d-9029-4499-a3e2-88c91c82f8fd")
 	)
 	(junction
-		(at 237.49 71.12)
+		(at 92.71 83.82)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c944f571-c811-42b9-8b20-d31af4086152")
+	)
+	(junction
+		(at 241.3 78.74)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d761be91-d098-46d3-a9e6-9d8cf5e450d8")
+	)
+	(junction
+		(at 241.3 109.22)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e25cfff6-46c0-4be7-b437-5a9e08d3b2db")
+	)
+	(junction
+		(at 187.96 69.85)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e27a1595-24c5-40d7-a257-9a65197ac927")
 	)
 	(junction
-		(at 236.22 71.12)
+		(at 186.69 69.85)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e4909e92-cdcf-43fa-9b82-37c67acecf57")
 	)
 	(junction
-		(at 86.36 83.82)
+		(at 76.2 83.82)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "efd9bd2f-0963-4053-9bff-bc780292f38f")
 	)
 	(wire
 		(pts
-			(xy 68.58 166.37) (xy 68.58 168.91)
+			(xy 226.06 78.74) (xy 226.06 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "00d02398-7814-4a07-ac35-b507ba031a93")
+	)
+	(wire
+		(pts
+			(xy 128.27 171.45) (xy 128.27 172.72)
 		)
 		(stroke
 			(width 0)
@@ -2058,7 +2298,7 @@
 	)
 	(wire
 		(pts
-			(xy 265.43 87.63) (xy 265.43 71.12)
+			(xy 215.9 86.36) (xy 215.9 69.85)
 		)
 		(stroke
 			(width 0)
@@ -2068,7 +2308,7 @@
 	)
 	(wire
 		(pts
-			(xy 86.36 83.82) (xy 95.25 83.82)
+			(xy 76.2 83.82) (xy 80.01 83.82)
 		)
 		(stroke
 			(width 0)
@@ -2078,7 +2318,17 @@
 	)
 	(wire
 		(pts
-			(xy 154.94 71.12) (xy 154.94 83.82)
+			(xy 231.14 109.22) (xy 215.9 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "085bf23f-14b8-4812-87a8-1f355ed88523")
+	)
+	(wire
+		(pts
+			(xy 105.41 69.85) (xy 105.41 82.55)
 		)
 		(stroke
 			(width 0)
@@ -2088,7 +2338,7 @@
 	)
 	(wire
 		(pts
-			(xy 224.79 71.12) (xy 154.94 71.12)
+			(xy 175.26 69.85) (xy 105.41 69.85)
 		)
 		(stroke
 			(width 0)
@@ -2098,27 +2348,7 @@
 	)
 	(wire
 		(pts
-			(xy 60.96 68.58) (xy 60.96 81.28)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1306feb8-ca7a-4bbe-a877-09c955d01e84")
-	)
-	(wire
-		(pts
-			(xy 60.96 58.42) (xy 60.96 68.58)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "138cad5f-37f6-45c3-aaa4-93e1b71ce320")
-	)
-	(wire
-		(pts
-			(xy 107.95 83.82) (xy 107.95 87.63)
+			(xy 92.71 83.82) (xy 92.71 87.63)
 		)
 		(stroke
 			(width 0)
@@ -2128,7 +2358,37 @@
 	)
 	(wire
 		(pts
-			(xy 102.87 102.87) (xy 107.95 102.87)
+			(xy 90.17 158.75) (xy 105.41 158.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "14d521d2-4e3f-437f-891c-8d72eb0cc2c3")
+	)
+	(wire
+		(pts
+			(xy 231.14 78.74) (xy 226.06 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "15d1906b-006c-4d27-b711-a0af48a87ed1")
+	)
+	(wire
+		(pts
+			(xy 105.41 158.75) (xy 105.41 160.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "16a5c0c9-0d1c-4be9-a480-e5138120d3a9")
+	)
+	(wire
+		(pts
+			(xy 87.63 102.87) (xy 92.71 102.87)
 		)
 		(stroke
 			(width 0)
@@ -2138,37 +2398,27 @@
 	)
 	(wire
 		(pts
-			(xy 130.81 83.82) (xy 135.89 83.82)
+			(xy 241.3 109.22) (xy 251.46 109.22)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "228d4fff-359e-433c-8eb5-fb6d8bafe2fb")
+		(uuid "1ba470e3-44b1-4f6f-8e43-97ded2958887")
 	)
 	(wire
 		(pts
-			(xy 135.89 83.82) (xy 135.89 87.63)
+			(xy 54.61 43.18) (xy 54.61 53.34)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "2320eee0-efab-425b-b515-52bfea680e1b")
+		(uuid "1d59090b-dd55-4c9c-b1b0-c040c461d26c")
 	)
 	(wire
 		(pts
-			(xy 72.39 58.42) (xy 60.96 58.42)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "24ec12bb-2e5c-4cef-ba5a-f055fdbace6d")
-	)
-	(wire
-		(pts
-			(xy 163.83 129.54) (xy 172.72 129.54)
+			(xy 114.3 128.27) (xy 123.19 128.27)
 		)
 		(stroke
 			(width 0)
@@ -2178,7 +2428,47 @@
 	)
 	(wire
 		(pts
-			(xy 236.22 57.15) (xy 236.22 71.12)
+			(xy 260.35 90.17) (xy 264.16 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "26fd3141-2964-4c31-b947-3ded1c01a4bc")
+	)
+	(wire
+		(pts
+			(xy 245.11 87.63) (xy 241.3 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "29da49de-a81f-4031-a492-5bfef431328c")
+	)
+	(wire
+		(pts
+			(xy 264.16 90.17) (xy 264.16 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2bf3146a-8cdc-404c-9339-cac5b6883ba6")
+	)
+	(wire
+		(pts
+			(xy 90.17 168.91) (xy 90.17 172.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2d001420-3ea0-41e6-b8e0-9d9a93d6ca3f")
+	)
+	(wire
+		(pts
+			(xy 186.69 55.88) (xy 186.69 69.85)
 		)
 		(stroke
 			(width 0)
@@ -2188,27 +2478,7 @@
 	)
 	(wire
 		(pts
-			(xy 227.33 135.89) (xy 248.92 135.89)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3526da3b-7d92-4de5-a2be-4e30767aca96")
-	)
-	(wire
-		(pts
-			(xy 67.31 81.28) (xy 60.96 81.28)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "36050620-6460-4c0a-aab8-53dec8647a35")
-	)
-	(wire
-		(pts
-			(xy 191.77 96.52) (xy 175.26 96.52)
+			(xy 142.24 95.25) (xy 125.73 95.25)
 		)
 		(stroke
 			(width 0)
@@ -2218,7 +2488,17 @@
 	)
 	(wire
 		(pts
-			(xy 172.72 114.3) (xy 172.72 129.54)
+			(xy 46.99 71.12) (xy 55.88 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "36dcda7e-b6ca-49c2-ab5b-a2d06e4b2794")
+	)
+	(wire
+		(pts
+			(xy 123.19 113.03) (xy 123.19 128.27)
 		)
 		(stroke
 			(width 0)
@@ -2228,17 +2508,27 @@
 	)
 	(wire
 		(pts
-			(xy 80.01 68.58) (xy 86.36 68.58)
+			(xy 39.37 53.34) (xy 39.37 81.28)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "3e7c5d3e-a53a-48a9-8dfe-80b4144ae806")
+		(uuid "371fd0c1-166b-495c-8eb8-1e8f10855d32")
 	)
 	(wire
 		(pts
-			(xy 232.41 85.09) (xy 237.49 85.09)
+			(xy 105.41 158.75) (xy 106.68 158.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "401571a2-a72a-4341-80d0-7f97a1865889")
+	)
+	(wire
+		(pts
+			(xy 182.88 83.82) (xy 187.96 83.82)
 		)
 		(stroke
 			(width 0)
@@ -2248,7 +2538,7 @@
 	)
 	(wire
 		(pts
-			(xy 265.43 57.15) (xy 265.43 50.8)
+			(xy 215.9 55.88) (xy 215.9 49.53)
 		)
 		(stroke
 			(width 0)
@@ -2258,7 +2548,17 @@
 	)
 	(wire
 		(pts
-			(xy 39.37 114.3) (xy 49.53 114.3)
+			(xy 92.71 82.55) (xy 105.41 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "49abf2c9-d3d5-4e5d-83f0-568e6dc3292b")
+	)
+	(wire
+		(pts
+			(xy 29.21 114.3) (xy 39.37 114.3)
 		)
 		(stroke
 			(width 0)
@@ -2268,7 +2568,7 @@
 	)
 	(wire
 		(pts
-			(xy 66.04 86.36) (xy 66.04 104.14)
+			(xy 55.88 86.36) (xy 55.88 104.14)
 		)
 		(stroke
 			(width 0)
@@ -2278,7 +2578,7 @@
 	)
 	(wire
 		(pts
-			(xy 170.18 109.22) (xy 175.26 109.22)
+			(xy 120.65 107.95) (xy 125.73 107.95)
 		)
 		(stroke
 			(width 0)
@@ -2288,7 +2588,17 @@
 	)
 	(wire
 		(pts
-			(xy 237.49 71.12) (xy 237.49 85.09)
+			(xy 259.08 109.22) (xy 264.16 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "575ebebe-33df-41ce-9a5b-b48df1323c28")
+	)
+	(wire
+		(pts
+			(xy 187.96 69.85) (xy 187.96 83.82)
 		)
 		(stroke
 			(width 0)
@@ -2298,7 +2608,7 @@
 	)
 	(wire
 		(pts
-			(xy 66.04 104.14) (xy 49.53 104.14)
+			(xy 55.88 104.14) (xy 39.37 104.14)
 		)
 		(stroke
 			(width 0)
@@ -2308,7 +2618,17 @@
 	)
 	(wire
 		(pts
-			(xy 252.73 57.15) (xy 265.43 57.15)
+			(xy 264.16 109.22) (xy 264.16 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6051c19c-89d5-4541-894a-127256fd04c6")
+	)
+	(wire
+		(pts
+			(xy 203.2 55.88) (xy 215.9 55.88)
 		)
 		(stroke
 			(width 0)
@@ -2318,7 +2638,7 @@
 	)
 	(wire
 		(pts
-			(xy 175.26 96.52) (xy 175.26 109.22)
+			(xy 125.73 95.25) (xy 125.73 107.95)
 		)
 		(stroke
 			(width 0)
@@ -2328,7 +2648,7 @@
 	)
 	(wire
 		(pts
-			(xy 175.26 85.09) (xy 175.26 96.52)
+			(xy 125.73 83.82) (xy 125.73 95.25)
 		)
 		(stroke
 			(width 0)
@@ -2338,17 +2658,17 @@
 	)
 	(wire
 		(pts
-			(xy 227.33 133.35) (xy 243.84 133.35)
+			(xy 66.04 53.34) (xy 76.2 53.34)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "6c14f7c5-9a0d-429f-bcbc-c17cfd4477f2")
+		(uuid "6ca38139-d885-4d84-93fd-de1e2ad711f3")
 	)
 	(wire
 		(pts
-			(xy 49.53 81.28) (xy 60.96 81.28)
+			(xy 39.37 81.28) (xy 57.15 81.28)
 		)
 		(stroke
 			(width 0)
@@ -2358,17 +2678,27 @@
 	)
 	(wire
 		(pts
-			(xy 49.53 85.09) (xy 49.53 81.28)
+			(xy 264.16 78.74) (xy 264.16 68.58)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "6e1bb30a-5ec9-4a39-b1f3-20b19345741b")
+		(uuid "70a9fb82-4686-4b3d-8d64-938aebb5d831")
 	)
 	(wire
 		(pts
-			(xy 68.58 148.59) (xy 68.58 151.13)
+			(xy 55.88 53.34) (xy 55.88 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "731e2d1e-a1fe-4321-a0ef-74fe3f390505")
+	)
+	(wire
+		(pts
+			(xy 128.27 153.67) (xy 128.27 154.94)
 		)
 		(stroke
 			(width 0)
@@ -2378,7 +2708,7 @@
 	)
 	(wire
 		(pts
-			(xy 193.04 111.76) (xy 199.39 111.76)
+			(xy 143.51 110.49) (xy 149.86 110.49)
 		)
 		(stroke
 			(width 0)
@@ -2388,7 +2718,7 @@
 	)
 	(wire
 		(pts
-			(xy 154.94 109.22) (xy 162.56 109.22)
+			(xy 105.41 107.95) (xy 113.03 107.95)
 		)
 		(stroke
 			(width 0)
@@ -2398,7 +2728,17 @@
 	)
 	(wire
 		(pts
-			(xy 236.22 71.12) (xy 237.49 71.12)
+			(xy 105.41 167.64) (xy 105.41 172.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "827d0535-bb40-41eb-8305-16aff2580cfb")
+	)
+	(wire
+		(pts
+			(xy 186.69 69.85) (xy 187.96 69.85)
 		)
 		(stroke
 			(width 0)
@@ -2408,7 +2748,17 @@
 	)
 	(wire
 		(pts
-			(xy 86.36 43.18) (xy 95.25 43.18)
+			(xy 128.27 172.72) (xy 128.27 173.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "855d1200-5777-446b-b8d9-7bec26a67a46")
+	)
+	(wire
+		(pts
+			(xy 76.2 43.18) (xy 85.09 43.18)
 		)
 		(stroke
 			(width 0)
@@ -2418,7 +2768,17 @@
 	)
 	(wire
 		(pts
-			(xy 177.8 114.3) (xy 172.72 114.3)
+			(xy 52.07 53.34) (xy 54.61 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8a7cc4bc-eed8-48de-b7f9-d43aeec0e238")
+	)
+	(wire
+		(pts
+			(xy 128.27 113.03) (xy 123.19 113.03)
 		)
 		(stroke
 			(width 0)
@@ -2428,7 +2788,17 @@
 	)
 	(wire
 		(pts
-			(xy 86.36 68.58) (xy 86.36 83.82)
+			(xy 241.3 87.63) (xy 241.3 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8aec8d41-ec87-4cca-98d5-7cf3173d8c3a")
+	)
+	(wire
+		(pts
+			(xy 76.2 43.18) (xy 76.2 53.34)
 		)
 		(stroke
 			(width 0)
@@ -2438,7 +2808,17 @@
 	)
 	(wire
 		(pts
-			(xy 228.6 105.41) (xy 236.22 105.41)
+			(xy 76.2 53.34) (xy 76.2 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8b294acb-3929-42e6-bba3-9bea3441cdbf")
+	)
+	(wire
+		(pts
+			(xy 179.07 104.14) (xy 186.69 104.14)
 		)
 		(stroke
 			(width 0)
@@ -2448,7 +2828,17 @@
 	)
 	(wire
 		(pts
-			(xy 49.53 114.3) (xy 49.53 104.14)
+			(xy 241.3 78.74) (xy 251.46 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9af43b25-f820-4188-8323-61bacf263a3b")
+	)
+	(wire
+		(pts
+			(xy 39.37 114.3) (xy 39.37 104.14)
 		)
 		(stroke
 			(width 0)
@@ -2458,17 +2848,17 @@
 	)
 	(wire
 		(pts
-			(xy 86.36 58.42) (xy 86.36 68.58)
+			(xy 39.37 81.28) (xy 39.37 85.09)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "9f3cf70e-e8b7-41cf-97f2-6c7fa01d339d")
+		(uuid "a10d6700-5b79-4aa0-b472-40185cd4d603")
 	)
 	(wire
 		(pts
-			(xy 256.54 87.63) (xy 265.43 87.63)
+			(xy 207.01 86.36) (xy 215.9 86.36)
 		)
 		(stroke
 			(width 0)
@@ -2478,7 +2868,17 @@
 	)
 	(wire
 		(pts
-			(xy 182.88 85.09) (xy 175.26 85.09)
+			(xy 44.45 53.34) (xy 39.37 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a331a7e9-44bb-4075-b84b-1291e4676374")
+	)
+	(wire
+		(pts
+			(xy 133.35 83.82) (xy 125.73 83.82)
 		)
 		(stroke
 			(width 0)
@@ -2488,7 +2888,7 @@
 	)
 	(wire
 		(pts
-			(xy 245.11 57.15) (xy 236.22 57.15)
+			(xy 195.58 55.88) (xy 186.69 55.88)
 		)
 		(stroke
 			(width 0)
@@ -2498,17 +2898,37 @@
 	)
 	(wire
 		(pts
-			(xy 49.53 100.33) (xy 49.53 104.14)
+			(xy 241.3 92.71) (xy 241.3 109.22)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "a4df5500-fa23-47b5-9927-181cf70e0f0d")
+		(uuid "a65b1a8f-d7aa-4407-b737-7f4c7572366d")
 	)
 	(wire
 		(pts
-			(xy 154.94 83.82) (xy 154.94 109.22)
+			(xy 215.9 109.22) (xy 215.9 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a925c849-c0bc-443b-8cbb-2afa18f797d0")
+	)
+	(wire
+		(pts
+			(xy 128.27 154.94) (xy 128.27 156.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "aadef081-b4f8-451e-8b2c-b59e14a31416")
+	)
+	(wire
+		(pts
+			(xy 105.41 82.55) (xy 105.41 107.95)
 		)
 		(stroke
 			(width 0)
@@ -2518,7 +2938,7 @@
 	)
 	(wire
 		(pts
-			(xy 241.3 90.17) (xy 236.22 90.17)
+			(xy 191.77 88.9) (xy 186.69 88.9)
 		)
 		(stroke
 			(width 0)
@@ -2528,7 +2948,37 @@
 	)
 	(wire
 		(pts
-			(xy 175.26 109.22) (xy 177.8 109.22)
+			(xy 39.37 43.18) (xy 39.37 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ae6ec302-b233-4bfe-80fa-a3875e8293b2")
+	)
+	(wire
+		(pts
+			(xy 148.59 154.94) (xy 128.27 154.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "afad0958-c368-4ca3-bc43-5d4acc96405a")
+	)
+	(wire
+		(pts
+			(xy 259.08 78.74) (xy 264.16 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b16fd3dd-0bfe-43ae-a8a3-41ba65011f89")
+	)
+	(wire
+		(pts
+			(xy 125.73 107.95) (xy 128.27 107.95)
 		)
 		(stroke
 			(width 0)
@@ -2538,7 +2988,27 @@
 	)
 	(wire
 		(pts
-			(xy 207.01 96.52) (xy 217.17 96.52)
+			(xy 54.61 53.34) (xy 55.88 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b7d9656e-3bcc-4f91-ba21-6208afe9ba8d")
+	)
+	(wire
+		(pts
+			(xy 196.85 144.78) (xy 203.2 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b8aa5c93-bdb7-430f-86d6-7bd00ab05362")
+	)
+	(wire
+		(pts
+			(xy 157.48 95.25) (xy 167.64 95.25)
 		)
 		(stroke
 			(width 0)
@@ -2548,17 +3018,27 @@
 	)
 	(wire
 		(pts
-			(xy 130.81 102.87) (xy 135.89 102.87)
+			(xy 90.17 156.21) (xy 90.17 158.75)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "ba373dcb-472e-42b0-99d6-c44dd8978574")
+		(uuid "bb0f0529-b791-407e-b379-dbfc5ae53c32")
 	)
 	(wire
 		(pts
-			(xy 190.5 85.09) (xy 217.17 85.09)
+			(xy 238.76 78.74) (xy 241.3 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bbcb4a4d-cd74-4163-8f7c-26f1fa4ad61e")
+	)
+	(wire
+		(pts
+			(xy 140.97 83.82) (xy 167.64 83.82)
 		)
 		(stroke
 			(width 0)
@@ -2568,7 +3048,27 @@
 	)
 	(wire
 		(pts
-			(xy 107.95 102.87) (xy 107.95 95.25)
+			(xy 264.16 68.58) (xy 275.59 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c1610001-5cb1-42c4-9c6e-d2299241c8f5")
+	)
+	(wire
+		(pts
+			(xy 52.07 43.18) (xy 54.61 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c1d9dc27-6075-43c7-a841-29ef8dcff54f")
+	)
+	(wire
+		(pts
+			(xy 92.71 102.87) (xy 92.71 95.25)
 		)
 		(stroke
 			(width 0)
@@ -2578,7 +3078,7 @@
 	)
 	(wire
 		(pts
-			(xy 232.41 71.12) (xy 236.22 71.12)
+			(xy 182.88 69.85) (xy 186.69 69.85)
 		)
 		(stroke
 			(width 0)
@@ -2588,7 +3088,7 @@
 	)
 	(wire
 		(pts
-			(xy 102.87 83.82) (xy 107.95 83.82)
+			(xy 87.63 83.82) (xy 92.71 83.82)
 		)
 		(stroke
 			(width 0)
@@ -2598,27 +3098,17 @@
 	)
 	(wire
 		(pts
-			(xy 86.36 58.42) (xy 86.36 43.18)
+			(xy 55.88 53.34) (xy 58.42 53.34)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "c63f1088-89c8-4ef0-8ccd-395e5d95dc80")
+		(uuid "c5c05d89-f5ab-4b17-896f-73f1e18c6309")
 	)
 	(wire
 		(pts
-			(xy 80.01 58.42) (xy 86.36 58.42)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "cba96a0f-ec66-4bc8-8e1d-416d6b5861ef")
-	)
-	(wire
-		(pts
-			(xy 237.49 85.09) (xy 241.3 85.09)
+			(xy 187.96 83.82) (xy 191.77 83.82)
 		)
 		(stroke
 			(width 0)
@@ -2628,7 +3118,17 @@
 	)
 	(wire
 		(pts
-			(xy 217.17 96.52) (xy 217.17 85.09)
+			(xy 39.37 100.33) (xy 39.37 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d074610e-5026-4fa2-8d06-01d7cee87955")
+	)
+	(wire
+		(pts
+			(xy 167.64 95.25) (xy 167.64 83.82)
 		)
 		(stroke
 			(width 0)
@@ -2638,7 +3138,27 @@
 	)
 	(wire
 		(pts
-			(xy 67.31 86.36) (xy 66.04 86.36)
+			(xy 90.17 146.05) (xy 90.17 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d1bfc6fb-7465-4893-874d-94dc32f56b15")
+	)
+	(wire
+		(pts
+			(xy 148.59 161.29) (xy 148.59 154.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d2752005-4838-4e55-bf8f-b91709f55409")
+	)
+	(wire
+		(pts
+			(xy 57.15 86.36) (xy 55.88 86.36)
 		)
 		(stroke
 			(width 0)
@@ -2648,17 +3168,7 @@
 	)
 	(wire
 		(pts
-			(xy 72.39 68.58) (xy 60.96 68.58)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d64f33c5-9bdd-4778-9fbb-204bfca6bbce")
-	)
-	(wire
-		(pts
-			(xy 237.49 71.12) (xy 245.11 71.12)
+			(xy 187.96 69.85) (xy 195.58 69.85)
 		)
 		(stroke
 			(width 0)
@@ -2668,17 +3178,7 @@
 	)
 	(wire
 		(pts
-			(xy 135.89 83.82) (xy 154.94 83.82)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e0180d5a-573d-4325-a23c-0f0a6c379f1b")
-	)
-	(wire
-		(pts
-			(xy 265.43 57.15) (xy 265.43 71.12)
+			(xy 215.9 55.88) (xy 215.9 69.85)
 		)
 		(stroke
 			(width 0)
@@ -2688,7 +3188,17 @@
 	)
 	(wire
 		(pts
-			(xy 86.36 83.82) (xy 82.55 83.82)
+			(xy 106.68 157.48) (xy 106.68 158.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e4080bc0-6d71-4e09-9b49-ed4c670f2090")
+	)
+	(wire
+		(pts
+			(xy 76.2 83.82) (xy 72.39 83.82)
 		)
 		(stroke
 			(width 0)
@@ -2698,7 +3208,37 @@
 	)
 	(wire
 		(pts
-			(xy 217.17 85.09) (xy 224.79 85.09)
+			(xy 44.45 43.18) (xy 39.37 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e6da66e8-c764-453a-b432-057c1d8a70eb")
+	)
+	(wire
+		(pts
+			(xy 148.59 168.91) (xy 148.59 172.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e799b572-ab88-45ea-be49-679e87149384")
+	)
+	(wire
+		(pts
+			(xy 55.88 71.12) (xy 55.88 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e802bb31-eccc-404a-9ee2-4a62f660e1b8")
+	)
+	(wire
+		(pts
+			(xy 167.64 83.82) (xy 175.26 83.82)
 		)
 		(stroke
 			(width 0)
@@ -2708,7 +3248,37 @@
 	)
 	(wire
 		(pts
-			(xy 265.43 71.12) (xy 252.73 71.12)
+			(xy 148.59 172.72) (xy 128.27 172.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ec604ee2-73be-443d-81bc-f62f28c96cf0")
+	)
+	(wire
+		(pts
+			(xy 245.11 92.71) (xy 241.3 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f3049b44-3357-4604-863f-4b16371158c9")
+	)
+	(wire
+		(pts
+			(xy 90.17 158.75) (xy 90.17 161.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f4b824af-d746-489a-a357-526bd4e9cf5d")
+	)
+	(wire
+		(pts
+			(xy 215.9 69.85) (xy 203.2 69.85)
 		)
 		(stroke
 			(width 0)
@@ -2718,17 +3288,17 @@
 	)
 	(wire
 		(pts
-			(xy 107.95 83.82) (xy 123.19 83.82)
+			(xy 92.71 82.55) (xy 92.71 83.82)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "f78be9b6-2925-4138-b9d5-8932a4f78806")
+		(uuid "f87d106a-3f26-45a8-a6ab-08a364d38f29")
 	)
 	(wire
 		(pts
-			(xy 236.22 90.17) (xy 236.22 105.41)
+			(xy 186.69 88.9) (xy 186.69 104.14)
 		)
 		(stroke
 			(width 0)
@@ -2738,7 +3308,17 @@
 	)
 	(wire
 		(pts
-			(xy 265.43 50.8) (xy 274.32 50.8)
+			(xy 238.76 109.22) (xy 241.3 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fa212c95-de3b-4904-aa1a-4ff0b895d7f7")
+	)
+	(wire
+		(pts
+			(xy 215.9 49.53) (xy 269.24 49.53)
 		)
 		(stroke
 			(width 0)
@@ -2748,17 +3328,7 @@
 	)
 	(wire
 		(pts
-			(xy 135.89 102.87) (xy 135.89 95.25)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fd388763-8264-4f31-909e-d141c952729d")
-	)
-	(wire
-		(pts
-			(xy 199.39 111.76) (xy 199.39 101.6)
+			(xy 149.86 110.49) (xy 149.86 100.33)
 		)
 		(stroke
 			(width 0)
@@ -2766,9 +3336,188 @@
 		)
 		(uuid "fdcc8763-451a-4a36-b7b4-9024354c9f99")
 	)
-	(text "PART VALUES LIKLEY ALL WACKY HERE"
+	(image
+		(at 41.148 160.02)
+		(uuid "bcaceffc-bd89-4e63-a5b2-fb20afea2074")
+		(data "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"
+		)
+	)
+	(text "PART VALUES NEED ADJUSTMENT"
 		(exclude_from_sim no)
-		(at 64.77 30.48 0)
+		(at 54.61 30.48 0)
 		(effects
 			(font
 				(size 2 2)
@@ -2777,9 +3526,19 @@
 		)
 		(uuid "0f00f86e-ca6c-4042-8249-1dd2455f171f")
 	)
+	(text "for less hectic PCB layout,\nthe 4 stages of this op-amp\ncould be rearranged"
+		(exclude_from_sim no)
+		(at 167.894 38.354 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "3679bd93-6bb3-488f-8b3a-018e27f8f357")
+	)
 	(text "full-wave precision rectrifier\ngenerates DC signal from an AC input"
 		(exclude_from_sim no)
-		(at 173.99 64.77 0)
+		(at 124.46 63.5 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2790,7 +3549,7 @@
 	)
 	(text "AC coupling filter\ncould be fancier\nfilter if needed"
 		(exclude_from_sim no)
-		(at 93.98 113.03 0)
+		(at 78.74 113.03 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2799,20 +3558,9 @@
 		)
 		(uuid "6b313aef-ec93-4708-afff-dc528832dccf")
 	)
-	(text "use +2.5V as reference\nfor external DMM ?"
-		(exclude_from_sim no)
-		(at 252.73 34.29 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "8c914bf1-8746-478e-abff-badf28415a38")
-	)
 	(text "check for light tight box\nby checking DC level\nat the detector output\nhere"
 		(exclude_from_sim no)
-		(at 90.932 40.386 0)
+		(at 102.362 45.974 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2823,7 +3571,7 @@
 	)
 	(text "the detector stage op-amps\nuse +5V and GND,\nand a +2.5V ref"
 		(exclude_from_sim no)
-		(at 88.9 161.29 0)
+		(at 101.854 192.278 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2832,9 +3580,19 @@
 		)
 		(uuid "d537c01e-5eb6-4bfa-bb2f-cd50b971a6d2")
 	)
-	(global_label "light-tight"
+	(text "difference amp\nsubtracts the +2.5V reference\nto provide signal relative to GND\nsuitable for A2D"
+		(exclude_from_sim no)
+		(at 241.808 120.142 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "d5ea1384-cb37-4606-ab58-08435268e13c")
+	)
+	(global_label "detect"
 		(shape input)
-		(at 95.25 43.18 0)
+		(at 275.59 68.58 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2842,9 +3600,9 @@
 			)
 			(justify left)
 		)
-		(uuid "0b864b07-a61a-476a-8ddb-281202340347")
+		(uuid "00d49884-d97e-461d-b877-ec53443a5e75")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 108.4555 43.18 0)
+			(at 284.4414 68.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2856,7 +3614,7 @@
 	)
 	(global_label "light-tight"
 		(shape input)
-		(at 227.33 128.27 0)
+		(at 85.09 43.18 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2864,9 +3622,53 @@
 			)
 			(justify left)
 		)
-		(uuid "2a96f48c-32f7-4d5a-86aa-eaafc0d05e76")
+		(uuid "14a261c1-4695-4a8b-8221-34d4a3f6eb8e")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 240.5355 128.27 0)
+			(at 98.2955 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "rect"
+		(shape input)
+		(at 269.24 49.53 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "501946c4-c5d0-4f7a-b9f9-e49bff7d0e46")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 275.9143 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "rect"
+		(shape input)
+		(at 196.85 149.86 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "7ec6dfbb-c514-4a94-8028-08d4c7dba4b5")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 203.5243 149.86 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2878,7 +3680,7 @@
 	)
 	(global_label "detect"
 		(shape input)
-		(at 227.33 130.81 0)
+		(at 196.85 152.4 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2886,9 +3688,9 @@
 			)
 			(justify left)
 		)
-		(uuid "5c286cef-c125-4b26-b52a-32369d0c9c9c")
+		(uuid "bf57ec48-680d-4282-b3da-bf591c4bfb65")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 236.1814 130.81 0)
+			(at 205.7014 152.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2898,9 +3700,9 @@
 			)
 		)
 	)
-	(global_label "detect"
+	(global_label "light-tight"
 		(shape input)
-		(at 274.32 50.8 0)
+		(at 196.85 147.32 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2908,9 +3710,9 @@
 			)
 			(justify left)
 		)
-		(uuid "a44cd2ca-a375-4d78-8614-5d33377e70e6")
+		(uuid "caa207a3-3612-4102-a3e7-35961a3fb6ba")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 283.1714 50.8 0)
+			(at 210.0555 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2921,17 +3723,89 @@
 		)
 	)
 	(symbol
+		(lib_id "symbols:SD008-2171-112")
+		(at 39.37 92.71 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "06b1f5ba-471d-4103-9b47-d6aee9c010e7")
+		(property "Reference" "D2"
+			(at 41.148 98.298 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SD008-2171-112"
+			(at 36.322 101.092 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_THT:TO-18-3"
+			(at 48.26 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.hamamatsu.com/resources/pdf/ssd/s5971_etc_kpin1025e.pdf"
+			(at 20.32 96.266 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Si PIN Photodiode, 0.1 GHz, TO-18-3"
+			(at 22.86 96.266 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "09ed95de-7c19-4acc-9c6c-0579d92baa0c")
+		)
+		(pin "1"
+			(uuid "0cc6334c-34de-4afb-8da4-6fc20c5443d6")
+		)
+		(pin "3"
+			(uuid "7ddcd04f-9cdd-4eea-94c6-8e9a4577fd1a")
+		)
+		(instances
+			(project "UV-Detector-v0.2"
+				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
+					(reference "D2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
-		(at 68.58 168.91 0)
+		(at 105.41 172.72 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "18ffd4d0-8e00-444e-b7bc-85e17ac39498")
-		(property "Reference" "#PWR03"
-			(at 68.58 175.26 0)
+		(uuid "0793ccd1-f310-4309-8257-5867b99a3051")
+		(property "Reference" "#PWR017"
+			(at 105.41 179.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2940,7 +3814,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 68.58 173.99 0)
+			(at 105.41 177.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2948,7 +3822,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 68.58 168.91 0)
+			(at 105.41 172.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2957,7 +3831,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 68.58 168.91 0)
+			(at 105.41 172.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2966,7 +3840,278 @@
 			)
 		)
 		(property "Description" ""
-			(at 68.58 168.91 0)
+			(at 105.41 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3270a283-ee12-4532-b06e-e575575fc4a1")
+		)
+		(instances
+			(project "UV-Detector-v0.2"
+				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
+					(reference "#PWR017")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_US")
+		(at 234.95 78.74 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0bb311c1-5ec4-4cda-b39c-f170f566cd6b")
+		(property "Reference" "R9"
+			(at 234.95 72.39 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10K"
+			(at 234.95 74.93 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+			(at 235.204 77.724 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 234.95 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 234.95 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d5666505-e51f-4d69-9e0a-739a78fd20eb")
+		)
+		(pin "2"
+			(uuid "133a5b3f-6626-447e-a444-0441193307b7")
+		)
+		(instances
+			(project "UV-Detector-v0.2"
+				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
+					(reference "R9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+2V5")
+		(at 46.99 71.12 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "14260405-695b-4b7a-8a14-280091e03661")
+		(property "Reference" "#PWR08"
+			(at 46.99 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+2V5"
+			(at 46.99 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 46.99 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 46.99 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 46.99 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e9f8e9e2-ce3b-4291-9450-616cba82f207")
+		)
+		(instances
+			(project "UV-Detector-v0.2"
+				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
+					(reference "#PWR08")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Reference_Voltage:LM4040DBZ-2.5")
+		(at 90.17 165.1 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "1809f0c9-b667-4413-a3ae-f636349bae86")
+		(property "Reference" "U2"
+			(at 83.312 165.354 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "LM4040DBZ-2.5"
+			(at 70.612 168.148 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 95.25 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/lm4040-n.pdf"
+			(at 90.17 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "2.500V Precision Micropower Shunt Voltage Reference, SOT-23"
+			(at 90.17 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a6076444-3483-436d-b9a8-37133ca61163")
+		)
+		(pin "2"
+			(uuid "766bb656-27a3-4c03-939d-38dfd83e17ed")
+		)
+		(instances
+			(project "UV-Detector-v0.2"
+				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
+					(reference "U2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 128.27 173.99 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "18ffd4d0-8e00-444e-b7bc-85e17ac39498")
+		(property "Reference" "#PWR03"
+			(at 128.27 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 128.27 179.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 128.27 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 128.27 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 128.27 173.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2978,7 +4123,7 @@
 			(uuid "5f62e64d-67bc-43f2-8971-4d5d037bd99e")
 		)
 		(instances
-			(project "UV-Detector"
+			(project "UV-Detector-v0.2"
 				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
 					(reference "#PWR03")
 					(unit 1)
@@ -2988,7 +4133,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_US")
-		(at 248.92 71.12 90)
+		(at 199.39 69.85 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2997,7 +4142,7 @@
 		(fields_autoplaced yes)
 		(uuid "1c55660d-ddda-4a93-8e18-40cbccee4bd6")
 		(property "Reference" "R5"
-			(at 248.92 64.77 90)
+			(at 199.39 63.5 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3005,7 +4150,7 @@
 			)
 		)
 		(property "Value" "10K"
-			(at 248.92 67.31 90)
+			(at 199.39 66.04 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3013,7 +4158,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 249.174 70.104 90)
+			(at 199.644 68.834 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3022,7 +4167,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 248.92 71.12 0)
+			(at 199.39 69.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3031,7 +4176,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 248.92 71.12 0)
+			(at 199.39 69.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3046,7 +4191,7 @@
 			(uuid "bcb574ee-f6a7-44ff-b4d8-18583845d78d")
 		)
 		(instances
-			(project "UV-Detector"
+			(project "UV-Detector-v0.2"
 				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
 					(reference "R5")
 					(unit 1)
@@ -3055,33 +4200,17 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:Conn_01x05_Female")
-		(at 222.25 133.35 180)
+		(lib_id "power:GND")
+		(at 90.17 172.72 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "231c0b0c-227f-4ab8-9f54-2fa6c90324fd")
-		(property "Reference" "J2"
-			(at 222.885 123.19 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Conn_01x05_Female"
-			(at 222.885 125.73 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x05_P2.54mm_Vertical"
-			(at 222.25 133.35 0)
+		(uuid "220edc28-0698-42fa-b39f-437a2ce9b258")
+		(property "Reference" "#PWR016"
+			(at 90.17 179.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3089,8 +4218,16 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
-			(at 222.25 133.35 0)
+		(property "Value" "GND"
+			(at 90.17 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 90.17 172.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3098,150 +4235,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Generic connector, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 222.25 133.35 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "5"
-			(uuid "5253e650-402e-4af6-bda7-f5b9acaa677d")
-		)
-		(pin "4"
-			(uuid "ceb45fb8-2b62-4137-9e2b-3624cbcece3f")
-		)
-		(pin "1"
-			(uuid "bd1296dd-e36b-4c9c-b981-447d991be6e6")
-		)
-		(pin "2"
-			(uuid "3ecb1332-ceaf-4acd-be2f-be0127150359")
-		)
-		(pin "3"
-			(uuid "675ec166-eb4b-4c57-afd5-4cd217bd4822")
-		)
-		(instances
-			(project "UV-Detector"
-				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
-					(reference "J2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "symbols:SD008-2171-112")
-		(at 49.53 92.71 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "267847c0-2086-43ab-abf2-9ecca9b712da")
-		(property "Reference" "D3"
-			(at 54.61 91.4399 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "SD008-2171-112"
-			(at 26.162 86.614 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-46-3"
-			(at 58.42 92.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.hamamatsu.com/resources/pdf/ssd/s5971_etc_kpin1025e.pdf"
-			(at 30.48 96.266 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Si PIN Photodiode, 0.1 GHz, TO-18-3"
-			(at 33.02 96.266 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "a31ab774-1533-4b03-a959-517b9362d6af")
-		)
-		(pin "3"
-			(uuid "399dee8a-ee3d-41fa-84ef-5b470fe9ab6e")
-		)
-		(pin "1"
-			(uuid "112a1c31-1095-45a6-8e4c-292b17f0b615")
-		)
-		(instances
-			(project "UV-Detector"
-				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
-					(reference "D3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Amplifier_Operational:OPA4340UA")
-		(at 71.12 158.75 0)
-		(unit 5)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "2bacdaf9-c4c1-4277-861e-e85558fabac0")
-		(property "Reference" "U1"
-			(at 69.85 157.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "OPA4340UA"
-			(at 69.85 160.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
-			(at 69.85 156.21 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/opa340.pdf"
-			(at 72.39 153.67 0)
+		(property "Datasheet" ""
+			(at 90.17 172.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3250,7 +4245,74 @@
 			)
 		)
 		(property "Description" ""
-			(at 71.12 158.75 0)
+			(at 90.17 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "590e1cf6-590d-40c1-83b7-72fa860ee58e")
+		)
+		(instances
+			(project "UV-Detector-v0.2"
+				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
+					(reference "#PWR016")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Amplifier_Operational:OPA4340UA")
+		(at 130.81 163.83 0)
+		(unit 5)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2bacdaf9-c4c1-4277-861e-e85558fabac0")
+		(property "Reference" "U1"
+			(at 129.54 162.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "OPA4340UA"
+			(at 129.54 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
+			(at 129.54 161.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/opa340.pdf"
+			(at 132.08 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 130.81 163.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3301,7 +4363,7 @@
 			(uuid "0b129bc4-e7e4-4b04-b2b0-f1a9c5e1ed71")
 		)
 		(instances
-			(project "UV-Detector"
+			(project "UV-Detector-v0.2"
 				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
 					(reference "U1")
 					(unit 5)
@@ -3311,7 +4373,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_US")
-		(at 228.6 85.09 90)
+		(at 179.07 83.82 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3320,7 +4382,7 @@
 		(fields_autoplaced yes)
 		(uuid "2e8c9506-a8b2-44cf-8749-9779d8c3aa3b")
 		(property "Reference" "R4"
-			(at 228.6 78.74 90)
+			(at 179.07 77.47 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3328,7 +4390,7 @@
 			)
 		)
 		(property "Value" "4.99K"
-			(at 228.6 81.28 90)
+			(at 179.07 80.01 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3336,7 +4398,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 228.854 84.074 90)
+			(at 179.324 82.804 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3345,7 +4407,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 228.6 85.09 0)
+			(at 179.07 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3354,7 +4416,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 228.6 85.09 0)
+			(at 179.07 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3369,7 +4431,7 @@
 			(uuid "27385113-594d-4c77-94b9-3aed0c00b6dc")
 		)
 		(instances
-			(project "UV-Detector"
+			(project "UV-Detector-v0.2"
 				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
 					(reference "R4")
 					(unit 1)
@@ -3379,7 +4441,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_US")
-		(at 76.2 68.58 90)
+		(at 62.23 53.34 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3387,15 +4449,15 @@
 		(dnp no)
 		(uuid "2ec97749-5b3f-4758-9832-029e64ca8f3c")
 		(property "Reference" "R6"
-			(at 72.39 66.04 90)
+			(at 66.548 51.054 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "10K"
-			(at 72.39 71.12 90)
+		(property "Value" "51K"
+			(at 66.802 55.626 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3403,7 +4465,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 76.454 67.564 90)
+			(at 62.484 52.324 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3412,7 +4474,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 76.2 68.58 0)
+			(at 62.23 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3421,7 +4483,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 76.2 68.58 0)
+			(at 62.23 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3436,7 +4498,7 @@
 			(uuid "953a2b3f-944d-4005-9eac-d970a5746e18")
 		)
 		(instances
-			(project "UV-Detector"
+			(project "UV-Detector-v0.2"
 				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
 					(reference "R6")
 					(unit 1)
@@ -3445,83 +4507,17 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 41.91 92.71 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "378d7fd1-6af6-4cf8-bf3e-98d3bf96433a")
-		(property "Reference" "#PWR012"
-			(at 41.91 99.06 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 41.91 97.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 41.91 92.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 41.91 92.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 41.91 92.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "95f82dc3-225a-499c-a7ec-12953c7b0264")
-		)
-		(instances
-			(project "UV-Detector"
-				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
-					(reference "#PWR012")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Mechanical:MountingHole")
-		(at 191.77 147.32 0)
+		(at 238.76 160.02 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "3b51459e-9276-4a81-9fd0-18a37f742b56")
-		(property "Reference" "H2"
-			(at 194.31 146.0499 0)
+		(uuid "3b0cbbd0-5d07-4823-8984-4779861fd54c")
+		(property "Reference" "H4"
+			(at 241.3 158.7499 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3530,7 +4526,7 @@
 			)
 		)
 		(property "Value" "MountingHole"
-			(at 194.31 148.5899 0)
+			(at 241.3 161.2899 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3538,8 +4534,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_2.7mm_M2.5"
-			(at 191.77 147.32 0)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+			(at 238.76 160.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3548,7 +4544,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 191.77 147.32 0)
+			(at 238.76 160.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3557,7 +4553,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole without connection"
-			(at 191.77 147.32 0)
+			(at 238.76 160.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3566,9 +4562,9 @@
 			)
 		)
 		(instances
-			(project "UV-Detector"
+			(project "UV-Detector-v0.2"
 				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
-					(reference "H2")
+					(reference "H4")
 					(unit 1)
 				)
 			)
@@ -3576,7 +4572,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_US")
-		(at 186.69 85.09 90)
+		(at 137.16 83.82 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3585,7 +4581,7 @@
 		(fields_autoplaced yes)
 		(uuid "3e33c480-c73d-4170-8159-7579bb7dd6f4")
 		(property "Reference" "R2"
-			(at 186.69 78.74 90)
+			(at 137.16 77.47 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3593,7 +4589,7 @@
 			)
 		)
 		(property "Value" "10K"
-			(at 186.69 81.28 90)
+			(at 137.16 80.01 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3601,7 +4597,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 186.944 84.074 90)
+			(at 137.414 82.804 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3610,7 +4606,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 186.69 85.09 0)
+			(at 137.16 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3619,7 +4615,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 186.69 85.09 0)
+			(at 137.16 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3634,7 +4630,7 @@
 			(uuid "5f8a95ce-c84c-44cb-a4a7-30c50f5d07de")
 		)
 		(instances
-			(project "UV-Detector"
+			(project "UV-Detector-v0.2"
 				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
 					(reference "R2")
 					(unit 1)
@@ -3643,8 +4639,72 @@
 		)
 	)
 	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 238.76 146.05 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "49e2dc04-42f3-42ba-8243-14748fb6ee65")
+		(property "Reference" "H2"
+			(at 241.3 144.7799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 241.3 147.3199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+			(at 238.76 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 238.76 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 238.76 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "UV-Detector-v0.2"
+				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
+					(reference "H2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+2V5")
-		(at 228.6 105.41 0)
+		(at 179.07 104.14 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3653,7 +4713,7 @@
 		(fields_autoplaced yes)
 		(uuid "5fa57235-4e15-4e88-942e-00ba7095ef6f")
 		(property "Reference" "#PWR05"
-			(at 228.6 109.22 0)
+			(at 179.07 107.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3662,7 +4722,7 @@
 			)
 		)
 		(property "Value" "+2V5"
-			(at 228.6 100.33 0)
+			(at 179.07 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3670,7 +4730,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 228.6 105.41 0)
+			(at 179.07 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3679,7 +4739,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 228.6 105.41 0)
+			(at 179.07 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3688,7 +4748,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 228.6 105.41 0)
+			(at 179.07 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3700,7 +4760,7 @@
 			(uuid "9c81b149-3428-4a3b-b86f-cd9b6ef74c2a")
 		)
 		(instances
-			(project "UV-Detector"
+			(project "UV-Detector-v0.2"
 				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
 					(reference "#PWR05")
 					(unit 1)
@@ -3710,7 +4770,7 @@
 	)
 	(symbol
 		(lib_id "power:+2V5")
-		(at 39.37 114.3 0)
+		(at 29.21 114.3 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3719,7 +4779,7 @@
 		(fields_autoplaced yes)
 		(uuid "63e32efc-5d50-4d56-8d92-add67a71ce8d")
 		(property "Reference" "#PWR01"
-			(at 39.37 118.11 0)
+			(at 29.21 118.11 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3728,7 +4788,7 @@
 			)
 		)
 		(property "Value" "+2V5"
-			(at 39.37 109.22 0)
+			(at 29.21 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3736,7 +4796,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 39.37 114.3 0)
+			(at 29.21 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3745,7 +4805,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 39.37 114.3 0)
+			(at 29.21 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3754,7 +4814,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 39.37 114.3 0)
+			(at 29.21 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3766,7 +4826,7 @@
 			(uuid "e3632e95-80c8-4af1-aa11-07fe45967017")
 		)
 		(instances
-			(project "UV-Detector"
+			(project "UV-Detector-v0.2"
 				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
 					(reference "#PWR01")
 					(unit 1)
@@ -3776,7 +4836,7 @@
 	)
 	(symbol
 		(lib_id "Amplifier_Operational:OPA4340UA")
-		(at 185.42 111.76 0)
+		(at 135.89 110.49 0)
 		(mirror x)
 		(unit 3)
 		(exclude_from_sim no)
@@ -3785,7 +4845,7 @@
 		(dnp no)
 		(uuid "6a56baa8-0e3f-4bb9-94bb-48b48914f3a9")
 		(property "Reference" "U1"
-			(at 189.23 118.11 0)
+			(at 139.7 116.84 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3793,7 +4853,7 @@
 			)
 		)
 		(property "Value" "OPA4340UA"
-			(at 193.04 115.57 0)
+			(at 143.51 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3801,7 +4861,7 @@
 			)
 		)
 		(property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
-			(at 184.15 114.3 0)
+			(at 134.62 113.03 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3810,7 +4870,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/opa340.pdf"
-			(at 186.69 116.84 0)
+			(at 137.16 115.57 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3819,7 +4879,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 185.42 111.76 0)
+			(at 135.89 110.49 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3870,7 +4930,7 @@
 			(uuid "214fd3b0-bed6-4a84-8dfd-91117ea4b8d5")
 		)
 		(instances
-			(project "UV-Detector"
+			(project "UV-Detector-v0.2"
 				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
 					(reference "U1")
 					(unit 3)
@@ -3879,17 +4939,17 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R_US")
-		(at 107.95 91.44 180)
+		(lib_id "Device:C")
+		(at 105.41 163.83 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "799b58cd-b472-494c-b305-32a7eefa5629")
-		(property "Reference" "R7"
-			(at 110.49 90.17 0)
+		(uuid "6cd786f2-3635-4155-8ee5-eb978a2a2dfa")
+		(property "Reference" "C4"
+			(at 109.22 162.5599 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3897,8 +4957,8 @@
 				(justify right)
 			)
 		)
-		(property "Value" "10K"
-			(at 110.49 92.71 0)
+		(property "Value" "0.1uF"
+			(at 109.22 165.0999 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3906,8 +4966,8 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 106.934 91.186 90)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+			(at 104.4448 160.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3916,7 +4976,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 107.95 91.44 0)
+			(at 105.41 163.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3925,7 +4985,424 @@
 			)
 		)
 		(property "Description" ""
-			(at 107.95 91.44 0)
+			(at 105.41 163.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5c1c3892-3ec5-4994-8b86-aecc019410f0")
+		)
+		(pin "2"
+			(uuid "59d9eb32-6931-4a68-aa6f-8bf41789e0eb")
+		)
+		(instances
+			(project "UV-Detector-v0.2"
+				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
+					(reference "C4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 148.59 165.1 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6fdcbd0d-e3f9-4cb5-a76d-7c509fc30eef")
+		(property "Reference" "C5"
+			(at 152.4 163.8299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "0.1uF"
+			(at 152.4 166.3699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+			(at 147.6248 161.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 148.59 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 148.59 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2e189682-8f68-4be9-bb0b-f620754f4c5f")
+		)
+		(pin "2"
+			(uuid "7407b06f-f760-4f70-9e8c-2d61c64d03bf")
+		)
+		(instances
+			(project "UV-Detector-v0.2"
+				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
+					(reference "C5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Conn_01x06_Male")
+		(at 191.77 147.32 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "71db9f7b-df87-43ce-83ad-89d7bc3270c0")
+		(property "Reference" "J1"
+			(at 188.722 141.986 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn_01x06_Male"
+			(at 181.61 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x06_P2.54mm_Vertical"
+			(at 191.77 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 191.77 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 191.77 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "5"
+			(uuid "89acef64-ff5e-4a94-8bc3-0e9ac046f939")
+		)
+		(pin "2"
+			(uuid "15fce560-6815-43a1-b25e-97b30492e268")
+		)
+		(pin "3"
+			(uuid "ba3d7e39-e6ca-469b-86c8-6c7a4b6350e3")
+		)
+		(pin "1"
+			(uuid "9f93faba-3e84-4c99-a66f-e9f1d5d64331")
+		)
+		(pin "4"
+			(uuid "e4798ae1-dbaf-43a0-90bf-cf451603bd4a")
+		)
+		(pin "6"
+			(uuid "8faadc21-d157-48ec-8b6a-11d0119ef619")
+		)
+		(instances
+			(project "UV-Detector-v0.2"
+				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
+					(reference "J1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 90.17 146.05 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "747e59f9-6db0-4654-b2fe-6237e44b7ada")
+		(property "Reference" "#PWR015"
+			(at 90.17 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 90.17 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 90.17 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 90.17 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 90.17 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b7c12b45-de4d-460b-8f3a-a43641466814")
+		)
+		(instances
+			(project "UV-Detector-v0.2"
+				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
+					(reference "#PWR015")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 196.85 142.24 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "75e2fc87-2fad-4c06-8ba2-2b52e70140d3")
+		(property "Reference" "#PWR013"
+			(at 196.85 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 196.85 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 196.85 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 196.85 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 196.85 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e24960a8-ee4b-4d06-ab0f-06b02c5cff5d")
+		)
+		(instances
+			(project "UV-Detector-v0.2"
+				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
+					(reference "#PWR013")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 264.16 110.49 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "771e5b64-b6c8-4eec-bdba-feb02f54cd92")
+		(property "Reference" "#PWR09"
+			(at 264.16 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 264.16 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 264.16 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 264.16 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 264.16 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c3ee7933-e584-4981-8282-78ab255079ba")
+		)
+		(instances
+			(project "UV-Detector-v0.2"
+				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
+					(reference "#PWR09")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_US")
+		(at 92.71 91.44 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "799b58cd-b472-494c-b305-32a7eefa5629")
+		(property "Reference" "R7"
+			(at 95.25 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "10K"
+			(at 95.25 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+			(at 91.694 91.186 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 92.71 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 92.71 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3940,7 +5417,7 @@
 			(uuid "9de80341-6313-4f73-b739-b000db35ee87")
 		)
 		(instances
-			(project "UV-Detector"
+			(project "UV-Detector-v0.2"
 				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
 					(reference "R7")
 					(unit 1)
@@ -3949,621 +5426,17 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R_US")
-		(at 127 83.82 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "7d578e9f-07dd-4842-bdbe-a94c509ce00a")
-		(property "Reference" "R8"
-			(at 127 77.47 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "10K"
-			(at 127 80.01 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 126.746 84.836 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 127 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 127 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "3c4f540c-e232-4b24-85d2-4670d91576e2")
-		)
-		(pin "2"
-			(uuid "f61b3d42-9b0e-4596-9619-1559f2ff6603")
-		)
-		(instances
-			(project "UV-Detector"
-				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
-					(reference "R8")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Mechanical:MountingHole")
-		(at 191.77 154.94 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "8424cd8f-54d3-48f3-885d-d2f7ff99c5fa")
-		(property "Reference" "H3"
-			(at 194.31 153.6699 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "MountingHole"
-			(at 194.31 156.2099 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "MountingHole:MountingHole_2.7mm_M2.5"
-			(at 191.77 154.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 191.77 154.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Mounting Hole without connection"
-			(at 191.77 154.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(instances
-			(project "UV-Detector"
-				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
-					(reference "H3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 99.06 83.82 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "8c5f9ad8-8ad2-48b5-9eed-4c0d2cd9d842")
-		(property "Reference" "C3"
-			(at 99.06 76.2 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1uF"
-			(at 99.06 78.74 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
-			(at 102.87 82.8548 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 99.06 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 99.06 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "bacb3ae4-3471-4705-adb8-d6f13e19e1e1")
-		)
-		(pin "2"
-			(uuid "3daf1327-be7f-45d8-bbfa-3d3b9501b184")
-		)
-		(instances
-			(project "UV-Detector"
-				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
-					(reference "C3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 248.92 57.15 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "906cfe0f-dd45-46ae-9bd5-9caa515b91b0")
-		(property "Reference" "C1"
-			(at 248.92 49.53 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1uF"
-			(at 248.92 52.07 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
-			(at 252.73 56.1848 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 248.92 57.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 248.92 57.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "4d393a02-3aa2-4545-aa52-e01fec23e328")
-		)
-		(pin "2"
-			(uuid "c96ca91a-2215-46bb-bc86-a54aa9e36a77")
-		)
-		(instances
-			(project "UV-Detector"
-				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
-					(reference "C1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+2V5")
-		(at 130.81 102.87 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "9fd114e3-3918-4224-8c1b-f3efe22d7dea")
-		(property "Reference" "#PWR08"
-			(at 130.81 106.68 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+2V5"
-			(at 130.81 97.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 130.81 102.87 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 130.81 102.87 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 130.81 102.87 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "6269d0eb-c5f5-4f94-82f5-52ac9c950bc1")
-		)
-		(instances
-			(project "UV-Detector"
-				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
-					(reference "#PWR08")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Diode:BAT54S")
-		(at 199.39 96.52 0)
-		(mirror y)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "a2e8656b-c99e-45f0-b6fb-11ef50b2547c")
-		(property "Reference" "D1"
-			(at 199.39 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "BAT54S"
-			(at 199.39 92.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
-			(at 197.485 93.345 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/ds11005.pdf"
-			(at 202.438 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 199.39 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "d1ea9a4f-428e-4359-a398-1f4c9ebef2d9")
-		)
-		(pin "1"
-			(uuid "5f5365a6-5137-45fc-8549-1ebb2135e954")
-		)
-		(pin "3"
-			(uuid "c7d482c4-cd23-4c0c-9177-819ae4e9583e")
-		)
-		(instances
-			(project "UV-Detector"
-				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
-					(reference "D1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 227.33 138.43 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "b144604e-98bc-4f03-928c-04a9aabbb44d")
-		(property "Reference" "#PWR011"
-			(at 227.33 144.78 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 227.33 143.51 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 227.33 138.43 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 227.33 138.43 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 227.33 138.43 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "b652bb64-622f-417f-9ede-ea9a73081988")
-		)
-		(instances
-			(project "UV-Detector"
-				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
-					(reference "#PWR011")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+2V5")
-		(at 102.87 102.87 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "b531edb9-5169-42cf-9654-246899599cab")
-		(property "Reference" "#PWR06"
-			(at 102.87 106.68 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+2V5"
-			(at 102.87 97.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 102.87 102.87 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 102.87 102.87 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 102.87 102.87 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "a7d07d81-e3cf-4fd5-9c35-62dcea88979a")
-		)
-		(instances
-			(project "UV-Detector"
-				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
-					(reference "#PWR06")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+2V5")
-		(at 248.92 33.02 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "b6124346-0c0b-472c-81a1-c339995fbf22")
-		(property "Reference" "#PWR07"
-			(at 248.92 36.83 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+2V5"
-			(at 248.92 27.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 248.92 33.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 248.92 33.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 248.92 33.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "57221759-a703-45e4-b224-1542b44c11a7")
-		)
-		(instances
-			(project "UV-Detector"
-				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
-					(reference "#PWR07")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Amplifier_Operational:OPA4340UA")
-		(at 74.93 83.82 0)
+		(at 252.73 90.17 0)
 		(mirror x)
-		(unit 4)
+		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "bfe47b0d-8153-4af3-a703-d28206af229b")
+		(uuid "7e3ec784-8b23-4a08-a758-5072884a5a43")
 		(property "Reference" "U1"
-			(at 74.93 93.98 0)
+			(at 252.73 100.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4571,7 +5444,7 @@
 			)
 		)
 		(property "Value" "OPA4340UA"
-			(at 74.93 91.44 0)
+			(at 252.73 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4579,7 +5452,7 @@
 			)
 		)
 		(property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
-			(at 73.66 86.36 0)
+			(at 251.46 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4588,7 +5461,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/opa340.pdf"
-			(at 76.2 88.9 0)
+			(at 254 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4597,7 +5470,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 74.93 83.82 0)
+			(at 252.73 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4609,10 +5482,10 @@
 			(uuid "2b3cfe76-ed02-4d0e-b718-178c1d687ffe")
 		)
 		(pin "12"
-			(uuid "446a132e-1b60-4718-b947-40cf8093f4c7")
+			(uuid "610b46d0-1214-4fef-8556-fe398edf5198")
 		)
 		(pin "14"
-			(uuid "083bd097-c0b2-423e-bc90-b489ff6bde22")
+			(uuid "e006a8bb-7312-4dd0-8c5e-414ce93e159d")
 		)
 		(pin "4"
 			(uuid "cf4ebf61-6af1-4c81-a3a0-f4cbed37e821")
@@ -4636,7 +5509,7 @@
 			(uuid "ca565a94-c561-4eff-8b5a-6d8cf76ebf1d")
 		)
 		(pin "13"
-			(uuid "7eea3a83-277b-43c3-955b-6f5b37f845ca")
+			(uuid "068cce5e-69a8-4564-8f96-654427e9dcbb")
 		)
 		(pin "10"
 			(uuid "22d92ecb-219e-469a-a459-7c93061bc3d9")
@@ -4648,7 +5521,584 @@
 			(uuid "0b129bc4-e7e4-4b04-b2b0-f1a9c5e1ed70")
 		)
 		(instances
-			(project "UV-Detector"
+			(project "UV-Detector-v0.2"
+				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
+					(reference "U1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 83.82 83.82 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8c5f9ad8-8ad2-48b5-9eed-4c0d2cd9d842")
+		(property "Reference" "C3"
+			(at 83.82 76.2 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1uF"
+			(at 83.82 78.74 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+			(at 87.63 82.8548 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 83.82 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 83.82 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "bacb3ae4-3471-4705-adb8-d6f13e19e1e1")
+		)
+		(pin "2"
+			(uuid "3daf1327-be7f-45d8-bbfa-3d3b9501b184")
+		)
+		(instances
+			(project "UV-Detector-v0.2"
+				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
+					(reference "C3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 199.39 55.88 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "906cfe0f-dd45-46ae-9bd5-9caa515b91b0")
+		(property "Reference" "C1"
+			(at 199.39 48.26 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1uF"
+			(at 199.39 50.8 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+			(at 203.2 54.9148 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 199.39 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 199.39 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4d393a02-3aa2-4545-aa52-e01fec23e328")
+		)
+		(pin "2"
+			(uuid "c96ca91a-2215-46bb-bc86-a54aa9e36a77")
+		)
+		(instances
+			(project "UV-Detector-v0.2"
+				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
+					(reference "C1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_US")
+		(at 48.26 53.34 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "9a9d2f80-e2a5-4375-b4cd-4f1ac78c9b9e")
+		(property "Reference" "R8"
+			(at 43.18 51.816 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1Meg"
+			(at 44.45 55.88 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+			(at 48.514 52.324 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 48.26 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 48.26 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6abcd0cc-b47a-4ab3-8f31-5677345c8331")
+		)
+		(pin "2"
+			(uuid "732c3291-875f-4334-812f-d75920ba9d68")
+		)
+		(instances
+			(project "UV-Detector-v0.2"
+				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
+					(reference "R8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Diode:BAT54S")
+		(at 149.86 95.25 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a2e8656b-c99e-45f0-b6fb-11ef50b2547c")
+		(property "Reference" "D1"
+			(at 149.86 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "BAT54S"
+			(at 149.86 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 147.955 92.075 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/ds11005.pdf"
+			(at 152.908 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 149.86 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "d1ea9a4f-428e-4359-a398-1f4c9ebef2d9")
+		)
+		(pin "1"
+			(uuid "5f5365a6-5137-45fc-8549-1ebb2135e954")
+		)
+		(pin "3"
+			(uuid "c7d482c4-cd23-4c0c-9177-819ae4e9583e")
+		)
+		(instances
+			(project "UV-Detector-v0.2"
+				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
+					(reference "D1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+2V5")
+		(at 203.2 144.78 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b1388185-9ddb-48e3-8243-29fd093fe528")
+		(property "Reference" "#PWR018"
+			(at 203.2 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+2V5"
+			(at 203.2 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 203.2 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 203.2 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 203.2 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "fbb9656e-b9e5-4586-ae30-143483fa4ce2")
+		)
+		(instances
+			(project "UV-Detector-v0.2"
+				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
+					(reference "#PWR018")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+2V5")
+		(at 87.63 102.87 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b531edb9-5169-42cf-9654-246899599cab")
+		(property "Reference" "#PWR06"
+			(at 87.63 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+2V5"
+			(at 87.63 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 87.63 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 87.63 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 87.63 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a7d07d81-e3cf-4fd5-9c35-62dcea88979a")
+		)
+		(instances
+			(project "UV-Detector-v0.2"
+				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
+					(reference "#PWR06")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 196.85 154.94 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "bf89f95d-1b77-4723-b3da-ba51eb3154f6")
+		(property "Reference" "#PWR012"
+			(at 196.85 161.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 196.85 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 196.85 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 196.85 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 196.85 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2b594247-795a-414e-ad5c-3b04309e5653")
+		)
+		(instances
+			(project "UV-Detector-v0.2"
+				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
+					(reference "#PWR012")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Amplifier_Operational:OPA4340UA")
+		(at 64.77 83.82 0)
+		(mirror x)
+		(unit 4)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "bfe47b0d-8153-4af3-a703-d28206af229b")
+		(property "Reference" "U1"
+			(at 64.77 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "OPA4340UA"
+			(at 64.77 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
+			(at 63.5 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/opa340.pdf"
+			(at 66.04 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 64.77 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "2b3cfe76-ed02-4d0e-b718-178c1d688001")
+		)
+		(pin "12"
+			(uuid "446a132e-1b60-4718-b947-40cf8093f4c7")
+		)
+		(pin "14"
+			(uuid "083bd097-c0b2-423e-bc90-b489ff6bde22")
+		)
+		(pin "4"
+			(uuid "cf4ebf61-6af1-4c81-a3a0-f4cbed37e822")
+		)
+		(pin "1"
+			(uuid "46cddc40-5991-40e2-8e7b-4d4734e260ba")
+		)
+		(pin "2"
+			(uuid "b1d2c095-6a2e-4a7e-a9c4-39e366e2695a")
+		)
+		(pin "5"
+			(uuid "ed8ba09c-70f0-4c20-b3cf-eec9aa5da44e")
+		)
+		(pin "6"
+			(uuid "ce61f3ef-1329-4e21-b4c3-65be0fc76115")
+		)
+		(pin "7"
+			(uuid "513442fc-5602-4a87-895e-a3e70116103e")
+		)
+		(pin "11"
+			(uuid "ca565a94-c561-4eff-8b5a-6d8cf76ebf1e")
+		)
+		(pin "13"
+			(uuid "7eea3a83-277b-43c3-955b-6f5b37f845ca")
+		)
+		(pin "10"
+			(uuid "22d92ecb-219e-469a-a459-7c93061bc3db")
+		)
+		(pin "8"
+			(uuid "9c9b6c89-1d98-4b95-8acd-8cdc8e79ddc6")
+		)
+		(pin "9"
+			(uuid "0b129bc4-e7e4-4b04-b2b0-f1a9c5e1ed72")
+		)
+		(instances
+			(project "UV-Detector-v0.2"
 				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
 					(reference "U1")
 					(unit 4)
@@ -4658,7 +6108,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_US")
-		(at 228.6 71.12 90)
+		(at 179.07 69.85 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4667,7 +6117,7 @@
 		(fields_autoplaced yes)
 		(uuid "c16fc5ff-3772-4fef-b76a-f6a82cfb888d")
 		(property "Reference" "R3"
-			(at 228.6 64.77 90)
+			(at 179.07 63.5 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4675,7 +6125,7 @@
 			)
 		)
 		(property "Value" "10K"
-			(at 228.6 67.31 90)
+			(at 179.07 66.04 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4683,7 +6133,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 228.854 70.104 90)
+			(at 179.324 68.834 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4692,7 +6142,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 228.6 71.12 0)
+			(at 179.07 69.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4701,7 +6151,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 228.6 71.12 0)
+			(at 179.07 69.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4716,7 +6166,7 @@
 			(uuid "df98cd35-57d9-4fa5-91b9-4848d163b6f7")
 		)
 		(instances
-			(project "UV-Detector"
+			(project "UV-Detector-v0.2"
 				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
 					(reference "R3")
 					(unit 1)
@@ -4726,7 +6176,7 @@
 	)
 	(symbol
 		(lib_id "Amplifier_Operational:OPA4340UA")
-		(at 248.92 87.63 0)
+		(at 199.39 86.36 0)
 		(mirror x)
 		(unit 2)
 		(exclude_from_sim no)
@@ -4735,7 +6185,7 @@
 		(dnp no)
 		(uuid "c9a0ebd4-081d-4095-92d5-b3a04c77ddec")
 		(property "Reference" "U1"
-			(at 248.92 97.79 0)
+			(at 199.39 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4743,7 +6193,7 @@
 			)
 		)
 		(property "Value" "OPA4340UA"
-			(at 248.92 95.25 0)
+			(at 199.39 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4751,7 +6201,7 @@
 			)
 		)
 		(property "Footprint" "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm"
-			(at 247.65 90.17 0)
+			(at 198.12 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4760,7 +6210,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/opa340.pdf"
-			(at 250.19 92.71 0)
+			(at 200.66 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4769,7 +6219,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 248.92 87.63 0)
+			(at 199.39 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4820,7 +6270,7 @@
 			(uuid "0b129bc4-e7e4-4b04-b2b0-f1a9c5e1ed6f")
 		)
 		(instances
-			(project "UV-Detector"
+			(project "UV-Detector-v0.2"
 				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
 					(reference "U1")
 					(unit 2)
@@ -4829,33 +6279,17 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R_US")
-		(at 166.37 109.22 90)
+		(lib_id "power:GND")
+		(at 31.75 92.71 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "d6437bfb-c488-4f25-8a43-879b6f87781d")
-		(property "Reference" "R1"
-			(at 166.37 102.87 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "10K"
-			(at 166.37 105.41 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 166.624 108.204 90)
+		(uuid "d0637776-949c-49ca-b989-bf910dd28f58")
+		(property "Reference" "#PWR011"
+			(at 31.75 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4863,8 +6297,25 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
-			(at 166.37 109.22 0)
+		(property "Value" "GND"
+			(at 31.75 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 31.75 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 31.75 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4873,7 +6324,138 @@
 			)
 		)
 		(property "Description" ""
-			(at 166.37 109.22 0)
+			(at 31.75 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "aedfad02-6f07-4324-86a4-6b1fa6a40754")
+		)
+		(instances
+			(project "UV-Detector-v0.2"
+				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
+					(reference "#PWR011")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+2V5")
+		(at 106.68 157.48 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d158b798-c84f-428d-a4c3-4812c9e63bcf")
+		(property "Reference" "#PWR014"
+			(at 106.68 161.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+2V5"
+			(at 106.68 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 106.68 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 106.68 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 106.68 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "78b0765f-b759-4f70-8d6d-84367f9455df")
+		)
+		(instances
+			(project "UV-Detector-v0.2"
+				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
+					(reference "#PWR014")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_US")
+		(at 116.84 107.95 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d6437bfb-c488-4f25-8a43-879b6f87781d")
+		(property "Reference" "R1"
+			(at 116.84 101.6 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10K"
+			(at 116.84 104.14 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+			(at 117.094 106.934 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 116.84 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 116.84 107.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4888,7 +6470,7 @@
 			(uuid "3de7d011-9b7e-46ff-9db4-62635825d502")
 		)
 		(instances
-			(project "UV-Detector"
+			(project "UV-Detector-v0.2"
 				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
 					(reference "R1")
 					(unit 1)
@@ -4897,17 +6479,83 @@
 		)
 	)
 	(symbol
-		(lib_id "Mechanical:MountingHole")
-		(at 191.77 139.7 0)
+		(lib_id "power:+2V5")
+		(at 226.06 77.47 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "daf65a1f-f649-46cf-bcdb-cc14225c08ce")
-		(property "Reference" "H1"
-			(at 194.31 138.4299 0)
+		(uuid "d834b784-a355-4285-ab71-92e724c7251c")
+		(property "Reference" "#PWR010"
+			(at 226.06 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+2V5"
+			(at 226.06 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 226.06 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 226.06 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 226.06 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "708dc745-a5da-4774-9f29-ea44cc8e75b1")
+		)
+		(instances
+			(project "UV-Detector-v0.2"
+				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
+					(reference "#PWR010")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 238.76 153.67 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "dffdd61a-d070-4198-935b-17d067d4fd55")
+		(property "Reference" "H3"
+			(at 241.3 152.3999 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4916,7 +6564,7 @@
 			)
 		)
 		(property "Value" "MountingHole"
-			(at 194.31 140.9699 0)
+			(at 241.3 154.9399 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4924,8 +6572,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_2.7mm_M2.5"
-			(at 191.77 139.7 0)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+			(at 238.76 153.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4934,7 +6582,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 191.77 139.7 0)
+			(at 238.76 153.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4943,7 +6591,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole without connection"
-			(at 191.77 139.7 0)
+			(at 238.76 153.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4952,79 +6600,9 @@
 			)
 		)
 		(instances
-			(project "UV-Detector"
+			(project "UV-Detector-v0.2"
 				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
-					(reference "H1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 135.89 91.44 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "dd5fcf76-511c-40c4-9701-5696d4f2170a")
-		(property "Reference" "C4"
-			(at 139.7 90.1699 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "1uF"
-			(at 139.7 92.7099 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
-			(at 136.8552 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 135.89 91.44 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 135.89 91.44 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "dafb19f0-1ceb-4d39-b1f7-fa22ef68397b")
-		)
-		(pin "2"
-			(uuid "6995b671-7988-4a72-b73d-73262cc7b950")
-		)
-		(instances
-			(project "UV-Detector"
-				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
-					(reference "C4")
+					(reference "H3")
 					(unit 1)
 				)
 			)
@@ -5032,73 +6610,7 @@
 	)
 	(symbol
 		(lib_id "power:+2V5")
-		(at 248.92 135.89 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "de067cb1-cf48-4e8a-94bd-dddb0185df83")
-		(property "Reference" "#PWR09"
-			(at 248.92 139.7 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+2V5"
-			(at 248.92 130.81 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 248.92 135.89 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 248.92 135.89 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 248.92 135.89 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "b71157d0-ff7c-4d21-9f6c-801acbe3f7e2")
-		)
-		(instances
-			(project "UV-Detector"
-				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
-					(reference "#PWR09")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+2V5")
-		(at 163.83 129.54 0)
+		(at 114.3 128.27 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5107,7 +6619,7 @@
 		(fields_autoplaced yes)
 		(uuid "e11e156e-857e-47ad-9ca3-28337f153e85")
 		(property "Reference" "#PWR04"
-			(at 163.83 133.35 0)
+			(at 114.3 132.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5116,7 +6628,7 @@
 			)
 		)
 		(property "Value" "+2V5"
-			(at 163.83 124.46 0)
+			(at 114.3 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5124,7 +6636,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 163.83 129.54 0)
+			(at 114.3 128.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5133,7 +6645,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 163.83 129.54 0)
+			(at 114.3 128.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5142,7 +6654,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 163.83 129.54 0)
+			(at 114.3 128.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5154,7 +6666,7 @@
 			(uuid "b5748d8e-11f3-47b4-aa7a-8aac0d523a92")
 		)
 		(instances
-			(project "UV-Detector"
+			(project "UV-Detector-v0.2"
 				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
 					(reference "#PWR04")
 					(unit 1)
@@ -5163,32 +6675,33 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
-		(at 76.2 58.42 90)
+		(lib_id "Device:R_US")
+		(at 255.27 78.74 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "e8a820ce-b5f5-4791-9530-ed1681d7deb2")
-		(property "Reference" "C2"
-			(at 72.39 55.88 90)
+		(fields_autoplaced yes)
+		(uuid "e7815888-0180-43e1-9663-ab0c1360aa42")
+		(property "Reference" "R10"
+			(at 255.27 72.39 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "1uF"
-			(at 72.39 60.96 90)
+		(property "Value" "10K"
+			(at 255.27 74.93 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
-			(at 80.01 57.4548 0)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+			(at 255.524 77.724 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5197,7 +6710,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 76.2 58.42 0)
+			(at 255.27 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5206,7 +6719,74 @@
 			)
 		)
 		(property "Description" ""
-			(at 76.2 58.42 0)
+			(at 255.27 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6f20c3ba-f461-4ce9-bf7c-7efb24b2f860")
+		)
+		(pin "2"
+			(uuid "285bd676-df7c-4a08-9f4d-612866f7e0f7")
+		)
+		(instances
+			(project "UV-Detector-v0.2"
+				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
+					(reference "R10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 48.26 43.18 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e8a820ce-b5f5-4791-9530-ed1681d7deb2")
+		(property "Reference" "C2"
+			(at 43.434 41.402 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10pF"
+			(at 43.434 45.72 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+			(at 52.07 42.2148 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 48.26 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 48.26 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5221,7 +6801,7 @@
 			(uuid "c3c8af50-e91b-41f8-ab56-002d76f715cd")
 		)
 		(instances
-			(project "UV-Detector"
+			(project "UV-Detector-v0.2"
 				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
 					(reference "C2")
 					(unit 1)
@@ -5230,17 +6810,33 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+5V")
-		(at 68.58 148.59 0)
+		(lib_id "Device:R_US")
+		(at 255.27 109.22 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "ea693919-f4cd-4127-b157-b04bceabd3c8")
-		(property "Reference" "#PWR02"
-			(at 68.58 152.4 0)
+		(uuid "e8b1efd5-a1c3-4bc2-9ac1-f7dc0e812d07")
+		(property "Reference" "R12"
+			(at 255.27 102.87 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10K"
+			(at 255.27 105.41 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+			(at 255.524 108.204 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5248,25 +6844,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+5V"
-			(at 68.58 143.51 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 68.58 148.59 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 68.58 148.59 0)
+		(property "Datasheet" "~"
+			(at 255.27 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5275,7 +6854,140 @@
 			)
 		)
 		(property "Description" ""
-			(at 68.58 148.59 0)
+			(at 255.27 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a6c9574e-6ba6-41e9-b0b4-0f45c121112e")
+		)
+		(pin "2"
+			(uuid "a29e56ea-879e-42f6-9117-93bf4d81a77e")
+		)
+		(instances
+			(project "UV-Detector-v0.2"
+				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
+					(reference "R12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 238.76 138.43 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e8cf8e09-0b06-4a36-b0fa-4af8ff2578d2")
+		(property "Reference" "H1"
+			(at 241.3 137.1599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 241.3 139.6999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+			(at 238.76 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 238.76 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 238.76 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "UV-Detector-v0.2"
+				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
+					(reference "H1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 128.27 153.67 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ea693919-f4cd-4127-b157-b04bceabd3c8")
+		(property "Reference" "#PWR02"
+			(at 128.27 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 128.27 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 128.27 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 128.27 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 128.27 153.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5287,7 +6999,7 @@
 			(uuid "9b40fbe2-907b-478f-b6b3-dc61e78b4c1a")
 		)
 		(instances
-			(project "UV-Detector"
+			(project "UV-Detector-v0.2"
 				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
 					(reference "#PWR02")
 					(unit 1)
@@ -5296,35 +7008,35 @@
 		)
 	)
 	(symbol
-		(lib_id "Mechanical:MountingHole")
-		(at 191.77 162.56 0)
+		(lib_id "Device:R_US")
+		(at 55.88 64.77 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "ec575eeb-919b-4850-9437-4bed119108ad")
-		(property "Reference" "H4"
-			(at 194.31 161.2899 0)
+		(uuid "f45ed6d3-43f2-44ef-83bc-6b691d0b971c")
+		(property "Reference" "R14"
+			(at 58.42 63.4999 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
-		(property "Value" "MountingHole"
-			(at 194.31 163.8299 0)
+		(property "Value" "1K"
+			(at 58.42 66.0399 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_2.7mm_M2.5"
-			(at 191.77 162.56 0)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+			(at 54.864 64.516 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5333,70 +7045,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 191.77 162.56 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Mounting Hole without connection"
-			(at 191.77 162.56 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(instances
-			(project "UV-Detector"
-				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
-					(reference "H4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+5V")
-		(at 243.84 133.35 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "f4db7af6-2ed9-440d-a500-ab6054a03e81")
-		(property "Reference" "#PWR010"
-			(at 243.84 137.16 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+5V"
-			(at 243.84 128.27 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 243.84 133.35 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 243.84 133.35 0)
+			(at 55.88 64.77 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5405,7 +7054,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 243.84 133.35 0)
+			(at 55.88 64.77 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5414,12 +7063,153 @@
 			)
 		)
 		(pin "1"
-			(uuid "fe06a403-0d26-48e6-b68f-00630804a7c7")
+			(uuid "4c4f5cc4-940b-41a7-889e-6649f8b5f9c1")
+		)
+		(pin "2"
+			(uuid "c1ea0cda-2f80-41d4-a3db-d371b2905c4f")
 		)
 		(instances
-			(project "UV-Detector"
+			(project "UV-Detector-v0.2"
 				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
-					(reference "#PWR010")
+					(reference "R14")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_US")
+		(at 90.17 152.4 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f8fce9fc-2a16-4973-a69e-8a787c590b29")
+		(property "Reference" "R15"
+			(at 92.71 151.1299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "4.99K"
+			(at 92.71 153.6699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+			(at 89.154 152.146 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 90.17 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 90.17 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "af8b0cc3-a208-49fd-95fe-ef070944e93d")
+		)
+		(pin "2"
+			(uuid "b6c02392-01c6-4128-b523-c3baaf40396c")
+		)
+		(instances
+			(project "UV-Detector-v0.2"
+				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
+					(reference "R15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_US")
+		(at 234.95 109.22 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "fc7b74cb-3f0f-4fac-a6b2-17a3240703f9")
+		(property "Reference" "R11"
+			(at 234.95 102.87 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10K"
+			(at 234.95 105.41 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+			(at 235.204 108.204 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 234.95 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 234.95 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6527ccc3-4112-499b-860f-e030d81e0faf")
+		)
+		(pin "2"
+			(uuid "407b152c-1d67-468d-9b19-5263b63cd19a")
+		)
+		(instances
+			(project "UV-Detector-v0.2"
+				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
+					(reference "R11")
 					(unit 1)
 				)
 			)
