@@ -1,0 +1,15 @@
+"Id";"Designator";"Footprint";"Quantity";"Designation";"Supplier and ref";
+1;"R4,R15";"R_0603_1608Metric_Pad0.98x0.95mm_HandSolder";2;"4.99K";;;
+2;"U2";"SOT-23";1;"LM4040DBZ-2.5";;;
+3;"R6";"R_0603_1608Metric_Pad0.98x0.95mm_HandSolder";1;"51K";;;
+4;"R14";"R_0603_1608Metric_Pad0.98x0.95mm_HandSolder";1;"1K";;;
+5;"C5,C4";"C_0603_1608Metric_Pad1.08x0.95mm_HandSolder";2;"0.1uF";;;
+6;"R5,R7,R10,R3,R2,R11,R12,R9,R1";"R_0603_1608Metric_Pad0.98x0.95mm_HandSolder";9;"10K";;;
+7;"H1,H3,H4,H2";"MountingHole_3.2mm_M3";4;"MountingHole";;;
+8;"C2";"C_0603_1608Metric_Pad1.08x0.95mm_HandSolder";1;"10pF";;;
+9;"C3,C1";"C_0805_2012Metric_Pad1.18x1.45mm_HandSolder";2;"1uF";;;
+10;"J1";"PinHeader_1x06_P2.54mm_Horizontal";1;"Conn_01x06_Male";;;
+11;"U1";"SOIC-14_3.9x8.7mm_P1.27mm";1;"OPA4340UA";;;
+12;"D1";"SOT-23";1;"BAT54S";;;
+13;"R8";"R_0603_1608Metric_Pad0.98x0.95mm_HandSolder";1;"1Meg";;;
+14;"D2";"TO-18-3";1;"SD008-2171-112";;;

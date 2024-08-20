@@ -2308,6 +2308,16 @@
 	)
 	(wire
 		(pts
+			(xy 195.58 142.24) (xy 196.85 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0137035a-4ef9-40b8-ba81-8310734ddfc1")
+	)
+	(wire
+		(pts
 			(xy 76.2 83.82) (xy 80.01 83.82)
 		)
 		(stroke
@@ -2458,6 +2468,16 @@
 	)
 	(wire
 		(pts
+			(xy 195.58 154.94) (xy 196.85 154.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2c9b7e89-b5d5-41c9-80d3-988b4695e15f")
+	)
+	(wire
+		(pts
 			(xy 90.17 168.91) (xy 90.17 172.72)
 		)
 		(stroke
@@ -2465,6 +2485,16 @@
 			(type default)
 		)
 		(uuid "2d001420-3ea0-41e6-b8e0-9d9a93d6ca3f")
+	)
+	(wire
+		(pts
+			(xy 195.58 152.4) (xy 196.85 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2fbb9b5d-ecca-433b-9e17-0c28c7b4e700")
 	)
 	(wire
 		(pts
@@ -2525,6 +2555,16 @@
 			(type default)
 		)
 		(uuid "401571a2-a72a-4341-80d0-7f97a1865889")
+	)
+	(wire
+		(pts
+			(xy 195.58 149.86) (xy 196.85 149.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "40310239-c0f4-4a74-abe5-e95d3a02af0d")
 	)
 	(wire
 		(pts
@@ -2998,16 +3038,6 @@
 	)
 	(wire
 		(pts
-			(xy 196.85 144.78) (xy 203.2 144.78)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b8aa5c93-bdb7-430f-86d6-7bd00ab05362")
-	)
-	(wire
-		(pts
 			(xy 157.48 95.25) (xy 167.64 95.25)
 		)
 		(stroke
@@ -3105,6 +3135,16 @@
 			(type default)
 		)
 		(uuid "c5c05d89-f5ab-4b17-896f-73f1e18c6309")
+	)
+	(wire
+		(pts
+			(xy 195.58 144.78) (xy 203.2 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cb0a74f4-cc32-4e43-87ab-73978612dd8d")
 	)
 	(wire
 		(pts
@@ -3235,6 +3275,16 @@
 			(type default)
 		)
 		(uuid "e802bb31-eccc-404a-9ee2-4a62f660e1b8")
+	)
+	(wire
+		(pts
+			(xy 195.58 147.32) (xy 196.85 147.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e979ac66-cb70-482a-8d40-8edd31e6e23e")
 	)
 	(wire
 		(pts
@@ -3786,7 +3836,7 @@
 			(uuid "7ddcd04f-9cdd-4eea-94c6-8e9a4577fd1a")
 		)
 		(instances
-			(project "UV-Detector-v0.2"
+			(project "UV-Detector"
 				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
 					(reference "D2")
 					(unit 1)
@@ -3852,7 +3902,7 @@
 			(uuid "3270a283-ee12-4532-b06e-e575575fc4a1")
 		)
 		(instances
-			(project "UV-Detector-v0.2"
+			(project "UV-Detector"
 				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
 					(reference "#PWR017")
 					(unit 1)
@@ -3886,7 +3936,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 235.204 77.724 90)
 			(effects
 				(font
@@ -3920,7 +3970,7 @@
 			(uuid "133a5b3f-6626-447e-a444-0441193307b7")
 		)
 		(instances
-			(project "UV-Detector-v0.2"
+			(project "UV-Detector"
 				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
 					(reference "R9")
 					(unit 1)
@@ -3986,7 +4036,7 @@
 			(uuid "e9f8e9e2-ce3b-4291-9450-616cba82f207")
 		)
 		(instances
-			(project "UV-Detector-v0.2"
+			(project "UV-Detector"
 				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
 					(reference "#PWR08")
 					(unit 1)
@@ -4057,7 +4107,7 @@
 			(uuid "766bb656-27a3-4c03-939d-38dfd83e17ed")
 		)
 		(instances
-			(project "UV-Detector-v0.2"
+			(project "UV-Detector"
 				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
 					(reference "U2")
 					(unit 1)
@@ -4123,7 +4173,7 @@
 			(uuid "5f62e64d-67bc-43f2-8971-4d5d037bd99e")
 		)
 		(instances
-			(project "UV-Detector-v0.2"
+			(project "UV-Detector"
 				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
 					(reference "#PWR03")
 					(unit 1)
@@ -4157,7 +4207,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 199.644 68.834 90)
 			(effects
 				(font
@@ -4191,7 +4241,7 @@
 			(uuid "bcb574ee-f6a7-44ff-b4d8-18583845d78d")
 		)
 		(instances
-			(project "UV-Detector-v0.2"
+			(project "UV-Detector"
 				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
 					(reference "R5")
 					(unit 1)
@@ -4257,7 +4307,7 @@
 			(uuid "590e1cf6-590d-40c1-83b7-72fa860ee58e")
 		)
 		(instances
-			(project "UV-Detector-v0.2"
+			(project "UV-Detector"
 				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
 					(reference "#PWR016")
 					(unit 1)
@@ -4363,7 +4413,7 @@
 			(uuid "0b129bc4-e7e4-4b04-b2b0-f1a9c5e1ed71")
 		)
 		(instances
-			(project "UV-Detector-v0.2"
+			(project "UV-Detector"
 				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
 					(reference "U1")
 					(unit 5)
@@ -4397,7 +4447,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 179.324 82.804 90)
 			(effects
 				(font
@@ -4431,7 +4481,7 @@
 			(uuid "27385113-594d-4c77-94b9-3aed0c00b6dc")
 		)
 		(instances
-			(project "UV-Detector-v0.2"
+			(project "UV-Detector"
 				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
 					(reference "R4")
 					(unit 1)
@@ -4464,7 +4514,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 62.484 52.324 90)
 			(effects
 				(font
@@ -4498,7 +4548,7 @@
 			(uuid "953a2b3f-944d-4005-9eac-d970a5746e18")
 		)
 		(instances
-			(project "UV-Detector-v0.2"
+			(project "UV-Detector"
 				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
 					(reference "R6")
 					(unit 1)
@@ -4562,7 +4612,7 @@
 			)
 		)
 		(instances
-			(project "UV-Detector-v0.2"
+			(project "UV-Detector"
 				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
 					(reference "H4")
 					(unit 1)
@@ -4596,7 +4646,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 137.414 82.804 90)
 			(effects
 				(font
@@ -4630,7 +4680,7 @@
 			(uuid "5f8a95ce-c84c-44cb-a4a7-30c50f5d07de")
 		)
 		(instances
-			(project "UV-Detector-v0.2"
+			(project "UV-Detector"
 				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
 					(reference "R2")
 					(unit 1)
@@ -4694,7 +4744,7 @@
 			)
 		)
 		(instances
-			(project "UV-Detector-v0.2"
+			(project "UV-Detector"
 				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
 					(reference "H2")
 					(unit 1)
@@ -4760,7 +4810,7 @@
 			(uuid "9c81b149-3428-4a3b-b86f-cd9b6ef74c2a")
 		)
 		(instances
-			(project "UV-Detector-v0.2"
+			(project "UV-Detector"
 				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
 					(reference "#PWR05")
 					(unit 1)
@@ -4826,7 +4876,7 @@
 			(uuid "e3632e95-80c8-4af1-aa11-07fe45967017")
 		)
 		(instances
-			(project "UV-Detector-v0.2"
+			(project "UV-Detector"
 				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
 					(reference "#PWR01")
 					(unit 1)
@@ -4930,7 +4980,7 @@
 			(uuid "214fd3b0-bed6-4a84-8dfd-91117ea4b8d5")
 		)
 		(instances
-			(project "UV-Detector-v0.2"
+			(project "UV-Detector"
 				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
 					(reference "U1")
 					(unit 3)
@@ -4966,7 +5016,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 104.4448 160.02 0)
 			(effects
 				(font
@@ -5000,7 +5050,7 @@
 			(uuid "59d9eb32-6931-4a68-aa6f-8bf41789e0eb")
 		)
 		(instances
-			(project "UV-Detector-v0.2"
+			(project "UV-Detector"
 				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
 					(reference "C4")
 					(unit 1)
@@ -5036,7 +5086,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 147.6248 161.29 0)
 			(effects
 				(font
@@ -5070,7 +5120,7 @@
 			(uuid "7407b06f-f760-4f70-9e8c-2d61c64d03bf")
 		)
 		(instances
-			(project "UV-Detector-v0.2"
+			(project "UV-Detector"
 				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
 					(reference "C5")
 					(unit 1)
@@ -5080,7 +5130,7 @@
 	)
 	(symbol
 		(lib_id "Connector:Conn_01x06_Male")
-		(at 191.77 147.32 0)
+		(at 190.5 147.32 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5088,7 +5138,7 @@
 		(dnp no)
 		(uuid "71db9f7b-df87-43ce-83ad-89d7bc3270c0")
 		(property "Reference" "J1"
-			(at 188.722 141.986 0)
+			(at 187.452 141.986 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5096,15 +5146,15 @@
 			)
 		)
 		(property "Value" "Conn_01x06_Male"
-			(at 181.61 144.78 0)
+			(at 180.34 144.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x06_P2.54mm_Vertical"
-			(at 191.77 147.32 0)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Horizontal"
+			(at 190.5 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5113,7 +5163,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 191.77 147.32 0)
+			(at 190.5 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5122,7 +5172,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 191.77 147.32 0)
+			(at 190.5 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5149,7 +5199,7 @@
 			(uuid "8faadc21-d157-48ec-8b6a-11d0119ef619")
 		)
 		(instances
-			(project "UV-Detector-v0.2"
+			(project "UV-Detector"
 				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
 					(reference "J1")
 					(unit 1)
@@ -5215,7 +5265,7 @@
 			(uuid "b7c12b45-de4d-460b-8f3a-a43641466814")
 		)
 		(instances
-			(project "UV-Detector-v0.2"
+			(project "UV-Detector"
 				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
 					(reference "#PWR015")
 					(unit 1)
@@ -5281,7 +5331,7 @@
 			(uuid "e24960a8-ee4b-4d06-ab0f-06b02c5cff5d")
 		)
 		(instances
-			(project "UV-Detector-v0.2"
+			(project "UV-Detector"
 				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
 					(reference "#PWR013")
 					(unit 1)
@@ -5347,7 +5397,7 @@
 			(uuid "c3ee7933-e584-4981-8282-78ab255079ba")
 		)
 		(instances
-			(project "UV-Detector-v0.2"
+			(project "UV-Detector"
 				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
 					(reference "#PWR09")
 					(unit 1)
@@ -5383,7 +5433,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 91.694 91.186 90)
 			(effects
 				(font
@@ -5417,7 +5467,7 @@
 			(uuid "9de80341-6313-4f73-b739-b000db35ee87")
 		)
 		(instances
-			(project "UV-Detector-v0.2"
+			(project "UV-Detector"
 				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
 					(reference "R7")
 					(unit 1)
@@ -5521,7 +5571,7 @@
 			(uuid "0b129bc4-e7e4-4b04-b2b0-f1a9c5e1ed70")
 		)
 		(instances
-			(project "UV-Detector-v0.2"
+			(project "UV-Detector"
 				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
 					(reference "U1")
 					(unit 1)
@@ -5589,7 +5639,7 @@
 			(uuid "3daf1327-be7f-45d8-bbfa-3d3b9501b184")
 		)
 		(instances
-			(project "UV-Detector-v0.2"
+			(project "UV-Detector"
 				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
 					(reference "C3")
 					(unit 1)
@@ -5657,7 +5707,7 @@
 			(uuid "c96ca91a-2215-46bb-bc86-a54aa9e36a77")
 		)
 		(instances
-			(project "UV-Detector-v0.2"
+			(project "UV-Detector"
 				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
 					(reference "C1")
 					(unit 1)
@@ -5690,7 +5740,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 48.514 52.324 90)
 			(effects
 				(font
@@ -5724,7 +5774,7 @@
 			(uuid "732c3291-875f-4334-812f-d75920ba9d68")
 		)
 		(instances
-			(project "UV-Detector-v0.2"
+			(project "UV-Detector"
 				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
 					(reference "R8")
 					(unit 1)
@@ -5796,7 +5846,7 @@
 			(uuid "c7d482c4-cd23-4c0c-9177-819ae4e9583e")
 		)
 		(instances
-			(project "UV-Detector-v0.2"
+			(project "UV-Detector"
 				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
 					(reference "D1")
 					(unit 1)
@@ -5862,7 +5912,7 @@
 			(uuid "fbb9656e-b9e5-4586-ae30-143483fa4ce2")
 		)
 		(instances
-			(project "UV-Detector-v0.2"
+			(project "UV-Detector"
 				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
 					(reference "#PWR018")
 					(unit 1)
@@ -5928,7 +5978,7 @@
 			(uuid "a7d07d81-e3cf-4fd5-9c35-62dcea88979a")
 		)
 		(instances
-			(project "UV-Detector-v0.2"
+			(project "UV-Detector"
 				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
 					(reference "#PWR06")
 					(unit 1)
@@ -5994,7 +6044,7 @@
 			(uuid "2b594247-795a-414e-ad5c-3b04309e5653")
 		)
 		(instances
-			(project "UV-Detector-v0.2"
+			(project "UV-Detector"
 				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
 					(reference "#PWR012")
 					(unit 1)
@@ -6098,7 +6148,7 @@
 			(uuid "0b129bc4-e7e4-4b04-b2b0-f1a9c5e1ed72")
 		)
 		(instances
-			(project "UV-Detector-v0.2"
+			(project "UV-Detector"
 				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
 					(reference "U1")
 					(unit 4)
@@ -6132,7 +6182,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 179.324 68.834 90)
 			(effects
 				(font
@@ -6166,7 +6216,7 @@
 			(uuid "df98cd35-57d9-4fa5-91b9-4848d163b6f7")
 		)
 		(instances
-			(project "UV-Detector-v0.2"
+			(project "UV-Detector"
 				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
 					(reference "R3")
 					(unit 1)
@@ -6270,7 +6320,7 @@
 			(uuid "0b129bc4-e7e4-4b04-b2b0-f1a9c5e1ed6f")
 		)
 		(instances
-			(project "UV-Detector-v0.2"
+			(project "UV-Detector"
 				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
 					(reference "U1")
 					(unit 2)
@@ -6336,7 +6386,7 @@
 			(uuid "aedfad02-6f07-4324-86a4-6b1fa6a40754")
 		)
 		(instances
-			(project "UV-Detector-v0.2"
+			(project "UV-Detector"
 				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
 					(reference "#PWR011")
 					(unit 1)
@@ -6402,7 +6452,7 @@
 			(uuid "78b0765f-b759-4f70-8d6d-84367f9455df")
 		)
 		(instances
-			(project "UV-Detector-v0.2"
+			(project "UV-Detector"
 				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
 					(reference "#PWR014")
 					(unit 1)
@@ -6436,7 +6486,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 117.094 106.934 90)
 			(effects
 				(font
@@ -6470,7 +6520,7 @@
 			(uuid "3de7d011-9b7e-46ff-9db4-62635825d502")
 		)
 		(instances
-			(project "UV-Detector-v0.2"
+			(project "UV-Detector"
 				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
 					(reference "R1")
 					(unit 1)
@@ -6536,7 +6586,7 @@
 			(uuid "708dc745-a5da-4774-9f29-ea44cc8e75b1")
 		)
 		(instances
-			(project "UV-Detector-v0.2"
+			(project "UV-Detector"
 				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
 					(reference "#PWR010")
 					(unit 1)
@@ -6600,7 +6650,7 @@
 			)
 		)
 		(instances
-			(project "UV-Detector-v0.2"
+			(project "UV-Detector"
 				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
 					(reference "H3")
 					(unit 1)
@@ -6666,7 +6716,7 @@
 			(uuid "b5748d8e-11f3-47b4-aa7a-8aac0d523a92")
 		)
 		(instances
-			(project "UV-Detector-v0.2"
+			(project "UV-Detector"
 				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
 					(reference "#PWR04")
 					(unit 1)
@@ -6700,7 +6750,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 255.524 77.724 90)
 			(effects
 				(font
@@ -6734,7 +6784,7 @@
 			(uuid "285bd676-df7c-4a08-9f4d-612866f7e0f7")
 		)
 		(instances
-			(project "UV-Detector-v0.2"
+			(project "UV-Detector"
 				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
 					(reference "R10")
 					(unit 1)
@@ -6767,7 +6817,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
 			(at 52.07 42.2148 0)
 			(effects
 				(font
@@ -6801,7 +6851,7 @@
 			(uuid "c3c8af50-e91b-41f8-ab56-002d76f715cd")
 		)
 		(instances
-			(project "UV-Detector-v0.2"
+			(project "UV-Detector"
 				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
 					(reference "C2")
 					(unit 1)
@@ -6835,7 +6885,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 255.524 108.204 90)
 			(effects
 				(font
@@ -6869,7 +6919,7 @@
 			(uuid "a29e56ea-879e-42f6-9117-93bf4d81a77e")
 		)
 		(instances
-			(project "UV-Detector-v0.2"
+			(project "UV-Detector"
 				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
 					(reference "R12")
 					(unit 1)
@@ -6933,7 +6983,7 @@
 			)
 		)
 		(instances
-			(project "UV-Detector-v0.2"
+			(project "UV-Detector"
 				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
 					(reference "H1")
 					(unit 1)
@@ -6999,7 +7049,7 @@
 			(uuid "9b40fbe2-907b-478f-b6b3-dc61e78b4c1a")
 		)
 		(instances
-			(project "UV-Detector-v0.2"
+			(project "UV-Detector"
 				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
 					(reference "#PWR02")
 					(unit 1)
@@ -7035,7 +7085,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 54.864 64.516 90)
 			(effects
 				(font
@@ -7069,7 +7119,7 @@
 			(uuid "c1ea0cda-2f80-41d4-a3db-d371b2905c4f")
 		)
 		(instances
-			(project "UV-Detector-v0.2"
+			(project "UV-Detector"
 				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
 					(reference "R14")
 					(unit 1)
@@ -7105,7 +7155,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 89.154 152.146 90)
 			(effects
 				(font
@@ -7139,7 +7189,7 @@
 			(uuid "b6c02392-01c6-4128-b523-c3baaf40396c")
 		)
 		(instances
-			(project "UV-Detector-v0.2"
+			(project "UV-Detector"
 				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
 					(reference "R15")
 					(unit 1)
@@ -7173,7 +7223,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 235.204 108.204 90)
 			(effects
 				(font
@@ -7207,7 +7257,7 @@
 			(uuid "407b152c-1d67-468d-9b19-5263b63cd19a")
 		)
 		(instances
-			(project "UV-Detector-v0.2"
+			(project "UV-Detector"
 				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
 					(reference "R11")
 					(unit 1)
