@@ -3276,6 +3276,16 @@
 	)
 	(wire
 		(pts
+			(xy 236.22 144.78) (xy 242.57 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e22a2d9a-a129-4679-9701-b250326b1fef")
+	)
+	(wire
+		(pts
 			(xy 111.76 158.75) (xy 111.76 161.29)
 		)
 		(stroke
@@ -3724,6 +3734,28 @@
 	)
 	(global_label "rect"
 		(shape input)
+		(at 236.22 149.86 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "4f7589c5-05a1-4722-9f93-71f6b7d133a5")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 242.8943 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "rect"
+		(shape input)
 		(at 269.24 49.53 0)
 		(fields_autoplaced yes)
 		(effects
@@ -3735,6 +3767,28 @@
 		(uuid "501946c4-c5d0-4f7a-b9f9-e49bff7d0e46")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 275.9143 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "light-tight"
+		(shape input)
+		(at 236.22 147.32 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "5b95bdc1-034d-4249-93af-70a4d415db5b")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 249.4255 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3779,6 +3833,28 @@
 		(uuid "bf57ec48-680d-4282-b3da-bf591c4bfb65")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 205.7014 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "detect"
+		(shape input)
+		(at 236.22 152.4 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "c9adf47b-00ac-454c-a300-4bc0a1bf8bb1")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 245.0714 152.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4220,6 +4296,85 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:Conn_01x06_Male")
+		(at 231.14 147.32 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "1a9e3453-35de-4043-9ff1-10e2e65bae9e")
+		(property "Reference" "J2"
+			(at 228.092 141.986 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn_01x06_Male"
+			(at 220.98 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_JST:JST_PH_B6B-PH-K_1x06_P2.00mm_Vertical"
+			(at 231.14 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 231.14 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 231.14 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "5"
+			(uuid "0af310b1-4fb8-4234-ac0f-e513692c45fe")
+		)
+		(pin "2"
+			(uuid "66135fd3-9139-4276-88e8-ba2f8dfac863")
+		)
+		(pin "3"
+			(uuid "60861689-44e7-47f5-81ab-3ccf639842f0")
+		)
+		(pin "1"
+			(uuid "d0fab12d-90d6-4b80-a297-e135e004c724")
+		)
+		(pin "4"
+			(uuid "cb1a0e7f-251f-48d2-b334-36403bfce9b7")
+		)
+		(pin "6"
+			(uuid "2c37eb20-eba7-44e9-8b23-e4d87b11fd41")
+		)
+		(instances
+			(project "uv-detector"
+				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
+					(reference "J2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R_US")
 		(at 199.39 69.85 90)
 		(unit 1)
@@ -4536,7 +4691,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "2ec97749-5b3f-4758-9832-029e64ca8f3c")
-		(property "Reference" "R6_X1"
+		(property "Reference" "RX6"
 			(at 66.548 51.054 90)
 			(effects
 				(font
@@ -4588,7 +4743,7 @@
 		(instances
 			(project "UV-Detector-v0.2"
 				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
-					(reference "R6_X1")
+					(reference "RX6")
 					(unit 1)
 				)
 			)
@@ -4596,7 +4751,7 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole")
-		(at 238.76 160.02 0)
+		(at 257.81 160.02 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4605,7 +4760,7 @@
 		(fields_autoplaced yes)
 		(uuid "3b0cbbd0-5d07-4823-8984-4779861fd54c")
 		(property "Reference" "H4"
-			(at 241.3 158.7499 0)
+			(at 260.35 158.7499 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4614,7 +4769,7 @@
 			)
 		)
 		(property "Value" "MountingHole"
-			(at 241.3 161.2899 0)
+			(at 260.35 161.2899 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4623,7 +4778,7 @@
 			)
 		)
 		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
-			(at 238.76 160.02 0)
+			(at 257.81 160.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4632,7 +4787,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 238.76 160.02 0)
+			(at 257.81 160.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4641,7 +4796,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole without connection"
-			(at 238.76 160.02 0)
+			(at 257.81 160.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4728,7 +4883,7 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole")
-		(at 238.76 146.05 0)
+		(at 257.81 146.05 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4737,7 +4892,7 @@
 		(fields_autoplaced yes)
 		(uuid "49e2dc04-42f3-42ba-8243-14748fb6ee65")
 		(property "Reference" "H2"
-			(at 241.3 144.7799 0)
+			(at 260.35 144.7799 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4746,7 +4901,7 @@
 			)
 		)
 		(property "Value" "MountingHole"
-			(at 241.3 147.3199 0)
+			(at 260.35 147.3199 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4755,7 +4910,7 @@
 			)
 		)
 		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
-			(at 238.76 146.05 0)
+			(at 257.81 146.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4764,7 +4919,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 238.76 146.05 0)
+			(at 257.81 146.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4773,7 +4928,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole without connection"
-			(at 238.76 146.05 0)
+			(at 257.81 146.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4799,7 +4954,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "5516aca9-af76-495a-ac74-5505783a2fc3")
-		(property "Reference" "C4_X1"
+		(property "Reference" "CX4"
 			(at 115.062 162.56 0)
 			(effects
 				(font
@@ -4853,7 +5008,7 @@
 		(instances
 			(project "UV-Detector"
 				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
-					(reference "C4_X1")
+					(reference "CX4")
 					(unit 1)
 				)
 			)
@@ -5889,6 +6044,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 236.22 154.94 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "92d57e88-3d48-443c-b0f5-7f21a869379f")
+		(property "Reference" "#PWR020"
+			(at 236.22 161.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 236.22 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 236.22 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 236.22 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 236.22 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "0961004d-1ca1-4815-85e7-3440174148a7")
+		)
+		(instances
+			(project "uv-detector"
+				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
+					(reference "#PWR020")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R_US")
 		(at 48.26 53.34 90)
 		(unit 1)
@@ -6022,6 +6243,72 @@
 			(project "UV-Detector-v0.2"
 				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
 					(reference "D1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+2V5")
+		(at 242.57 144.78 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a5f76c18-586b-4f49-80f7-2caabd46eca0")
+		(property "Reference" "#PWR021"
+			(at 242.57 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+2V5"
+			(at 242.57 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 242.57 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 242.57 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 242.57 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "0b4e098b-8b8b-4e94-a215-766a6ddf7735")
+		)
+		(instances
+			(project "uv-detector"
+				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
+					(reference "#PWR021")
 					(unit 1)
 				)
 			)
@@ -6235,7 +6522,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "bfa30edd-479f-484a-924d-7d3ed7d9e0e4")
-		(property "Reference" "C5_X1"
+		(property "Reference" "CX5"
 			(at 167.64 163.8299 0)
 			(effects
 				(font
@@ -6289,7 +6576,7 @@
 		(instances
 			(project "UV-Detector"
 				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
-					(reference "C5_X1")
+					(reference "CX5")
 					(unit 1)
 				)
 			)
@@ -6839,7 +7126,7 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole")
-		(at 238.76 153.67 0)
+		(at 257.81 153.67 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6848,7 +7135,7 @@
 		(fields_autoplaced yes)
 		(uuid "dffdd61a-d070-4198-935b-17d067d4fd55")
 		(property "Reference" "H3"
-			(at 241.3 152.3999 0)
+			(at 260.35 152.3999 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6857,7 +7144,7 @@
 			)
 		)
 		(property "Value" "MountingHole"
-			(at 241.3 154.9399 0)
+			(at 260.35 154.9399 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6866,7 +7153,7 @@
 			)
 		)
 		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
-			(at 238.76 153.67 0)
+			(at 257.81 153.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6875,7 +7162,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 238.76 153.67 0)
+			(at 257.81 153.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6884,7 +7171,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole without connection"
-			(at 238.76 153.67 0)
+			(at 257.81 153.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6977,7 +7264,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e7815888-0180-43e1-9663-ab0c1360aa42")
-		(property "Reference" "R10_X1"
+		(property "Reference" "RX10"
 			(at 255.27 72.39 90)
 			(effects
 				(font
@@ -7029,7 +7316,7 @@
 		(instances
 			(project "UV-Detector-v0.2"
 				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
-					(reference "R10_X1")
+					(reference "RX10")
 					(unit 1)
 				)
 			)
@@ -7112,7 +7399,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e8b1efd5-a1c3-4bc2-9ac1-f7dc0e812d07")
-		(property "Reference" "R12_X1"
+		(property "Reference" "RX12"
 			(at 255.27 102.87 90)
 			(effects
 				(font
@@ -7164,7 +7451,7 @@
 		(instances
 			(project "UV-Detector-v0.2"
 				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
-					(reference "R12_X1")
+					(reference "RX12")
 					(unit 1)
 				)
 			)
@@ -7172,7 +7459,7 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole")
-		(at 238.76 138.43 0)
+		(at 257.81 138.43 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7181,7 +7468,7 @@
 		(fields_autoplaced yes)
 		(uuid "e8cf8e09-0b06-4a36-b0fa-4af8ff2578d2")
 		(property "Reference" "H1"
-			(at 241.3 137.1599 0)
+			(at 260.35 137.1599 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7190,7 +7477,7 @@
 			)
 		)
 		(property "Value" "MountingHole"
-			(at 241.3 139.6999 0)
+			(at 260.35 139.6999 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7199,7 +7486,7 @@
 			)
 		)
 		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
-			(at 238.76 138.43 0)
+			(at 257.81 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7208,7 +7495,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 238.76 138.43 0)
+			(at 257.81 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7217,7 +7504,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole without connection"
-			(at 238.76 138.43 0)
+			(at 257.81 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7310,7 +7597,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f198f59f-b035-4067-bd1b-54519e955ee9")
-		(property "Reference" "R13_X1"
+		(property "Reference" "RX13"
 			(at 76.2 77.47 90)
 			(effects
 				(font
@@ -7362,7 +7649,7 @@
 		(instances
 			(project "UV-Detector"
 				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
-					(reference "R13_X1")
+					(reference "RX13")
 					(unit 1)
 				)
 			)
@@ -7503,6 +7790,72 @@
 			(project "UV-Detector-v0.2"
 				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
 					(reference "R15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 236.22 142.24 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "fbd32f61-e557-4945-9edb-477daf75766e")
+		(property "Reference" "#PWR019"
+			(at 236.22 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 236.22 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 236.22 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 236.22 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 236.22 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6fc605da-8b01-460f-8809-4ff568465e8f")
+		)
+		(instances
+			(project "uv-detector"
+				(path "/91cc9d15-231f-4b99-b8f8-b41b9ee23926"
+					(reference "#PWR019")
 					(unit 1)
 				)
 			)
