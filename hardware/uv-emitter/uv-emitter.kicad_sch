@@ -4079,7 +4079,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "footprints:LED_IN-C35PPCTGU0"
+		(property "Footprint" "uv254:LED_IN-C35PPCTGU0"
 			(at 195.58 33.02 0)
 			(effects
 				(font

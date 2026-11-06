@@ -8420,7 +8420,7 @@
 			)
 		)
 	)
-	(footprint "lucc:ssd1306_b"
+	(footprint "uv254:ssd1306_b"
 		(layer "F.Cu")
 		(uuid "8962e629-51b8-4448-b01a-33e93233be48")
 		(at 193.8128 95.6886 -90)
@@ -8449,7 +8449,7 @@
 				)
 			)
 		)
-		(property "Footprint" "lucc:ssd1306_b"
+		(property "Footprint" "uv254:ssd1306_b"
 			(at 0 0 -90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -8993,7 +8993,7 @@
 			)
 		)
 	)
-	(footprint "lucc:itsybitsy"
+	(footprint "uv254:itsybitsy"
 		(layer "F.Cu")
 		(uuid "96138bcd-b9ec-4f5f-b98e-d509eeffba52")
 		(at 161.165 65.23)
@@ -9022,7 +9022,7 @@
 				)
 			)
 		)
-		(property "Footprint" "lucc:itsybitsy"
+		(property "Footprint" "uv254:itsybitsy"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")

@@ -1901,7 +1901,7 @@
 				)
 			)
 		)
-		(symbol "symbols:SD008-2171-112"
+		(symbol "uv254:SD008-2171-112"
 			(pin_names
 				(offset 0.254) hide)
 			(exclude_from_sim no)
@@ -3887,7 +3887,7 @@
 		)
 	)
 	(symbol
-		(lib_id "symbols:SD008-2171-112")
+		(lib_id "uv254:SD008-2171-112")
 		(at 39.37 92.71 270)
 		(unit 1)
 		(exclude_from_sim no)

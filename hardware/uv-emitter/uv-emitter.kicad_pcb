@@ -3912,7 +3912,7 @@
 			)
 		)
 	)
-	(footprint "footprints:LED_IN-C35PPCTGU0"
+	(footprint "uv254:LED_IN-C35PPCTGU0"
 		(layer "B.Cu")
 		(uuid "75411ffc-03cc-4dde-81a2-2a01766355fb")
 		(at 17 17 180)
@@ -3942,7 +3942,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Footprint" "footprints:LED_IN-C35PPCTGU0"
+		(property "Footprint" "uv254:LED_IN-C35PPCTGU0"
 			(at -1.9 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
