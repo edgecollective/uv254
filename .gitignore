@@ -1,0 +1,32 @@
+# --- KiCad: per-user state, caches, backups, locks ---------------------------
+# Window layout, visible layers, etc. Personal, and changes on every open.
+*.kicad_prl
+# Footprint cache; rebuilt automatically
+fp-info-cache
+# Automatic project backups (Preferences > Common > Project Backup)
+*-backups/
+# Autosave and lock files
+_autosave-*
+\#auto_saved_files\#
+*.lck
+# Editor backups
+*.kicad_sch-bak
+*.kicad_pcb-bak
+*.bak
+# Legacy-format caches / rescue libraries
+*-cache.lib
+*-rescue.lib
+*-rescue.dcm
+*_rescue.*
+
+# --- Generated outputs -------------------------------------------------------
+# scripts/build-fab.sh writes here by default. Copy a finished release into
+# hardware/<board>/fab/<version>/ to commit it (see CONTRIBUTING.md).
+/build/
+
+# --- OS / editors / tooling --------------------------------------------------
+.DS_Store
+Thumbs.db
+*~
+*.swp
+__pycache__/

@@ -1,0 +1,15 @@
+# KiCad files are plain text. Force LF so diffs stay clean across OSes.
+*.kicad_pro   text eol=lf
+*.kicad_sch   text eol=lf
+*.kicad_pcb   text eol=lf
+*.kicad_sym   text eol=lf
+*.kicad_mod   text eol=lf
+*.kicad_wks   text eol=lf
+*-lib-table   text eol=lf
+
+# Committed fabrication outputs are generated files: collapse them in GitHub
+# diffs and keep them out of language statistics.
+hardware/*/fab/**   linguist-generated=true
+
+# Compiled CircuitPython libraries
+*.mpy   binary
