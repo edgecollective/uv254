@@ -1,0 +1,118 @@
+name: KiCad
+
+# - Every push and pull request: ERC + DRC on all boards. Reports are attached to
+#   the run and summarised on its page. Report-only for now; see CONTRIBUTING.md
+#   for making it a required check.
+# - A pushed tag like `uv-detector/v0.4`: build that board's fab package with
+#   scripts/build-fab.sh and publish it as a GitHub Release.
+
+on:
+  push:
+    branches: [main]
+    tags: ['uv-*/v*']
+  pull_request:
+  workflow_dispatch:
+
+# Keep the image in step with the KiCad version in CONTRIBUTING.md.
+# (`container:` can't read workflow env vars, so it is repeated below.)
+
+jobs:
+  check:
+    name: ERC/DRC ${{ matrix.board }}
+    runs-on: ubuntu-latest
+    container:
+      image: kicad/kicad:10.0
+      options: --user root
+    strategy:
+      fail-fast: false
+      matrix:
+        board: [uv-control, uv-detector, uv-emitter]
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install KiCad's default library tables
+        run: |
+          cfg="$HOME/.config/kicad/$(kicad-cli version | cut -d. -f1).0"
+          mkdir -p "$cfg"
+          cp -n /usr/share/kicad/template/sym-lib-table /usr/share/kicad/template/fp-lib-table "$cfg/"
+          kicad-cli version
+
+      - name: ERC and DRC
+        env:
+          BOARD: ${{ matrix.board }}
+        run: |
+          mkdir -p reports
+          kicad-cli sch erc --format report --severity-all \
+            -o "reports/$BOARD-erc.rpt" "hardware/$BOARD/$BOARD.kicad_sch"
+          kicad-cli pcb drc --format report --severity-all --schematic-parity \
+            -o "reports/$BOARD-drc.rpt" "hardware/$BOARD/$BOARD.kicad_pcb"
+          {
+            echo "### $BOARD"
+            echo '```'
+            grep -hE '^ ?\*\* (ERC messages|Found [0-9]+ )' reports/"$BOARD"-*.rpt || true
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: reports-${{ matrix.board }}
+          path: reports/
+
+  build-release:
+    name: Build fab package
+    if: startsWith(github.ref, 'refs/tags/')
+    runs-on: ubuntu-latest
+    container:
+      image: kicad/kicad:10.0
+      options: --user root
+    outputs:
+      name: ${{ steps.tag.outputs.name }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install KiCad's default library tables
+        run: |
+          cfg="$HOME/.config/kicad/$(kicad-cli version | cut -d. -f1).0"
+          mkdir -p "$cfg"
+          cp -n /usr/share/kicad/template/sym-lib-table /usr/share/kicad/template/fp-lib-table "$cfg/"
+
+      - name: Parse tag
+        id: tag
+        run: |
+          tag="$GITHUB_REF_NAME"            # e.g. uv-detector/v0.4
+          echo "board=${tag%%/*}" >> "$GITHUB_OUTPUT"
+          echo "version=${tag#*/}" >> "$GITHUB_OUTPUT"
+          echo "name=${tag%%/*}-${tag#*/}" >> "$GITHUB_OUTPUT"
+
+      - name: Build
+        run: scripts/build-fab.sh "${{ steps.tag.outputs.board }}" "${{ steps.tag.outputs.version }}" "dist/${{ steps.tag.outputs.name }}"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: fab
+          path: dist/
+
+  publish-release:
+    name: Publish GitHub Release
+    needs: build-release
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: fab
+          path: dist
+
+      - name: Create release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          NAME: ${{ needs.build-release.outputs.name }}
+        run: |
+          (cd "dist/$NAME" && zip -q -r "../$NAME-fab.zip" .)
+          gh release create "$GITHUB_REF_NAME" --repo "$GITHUB_REPOSITORY" --verify-tag \
+            --title "${GITHUB_REF_NAME%%/*} ${GITHUB_REF_NAME#*/}" --notes-from-tag \
+            "dist/$NAME-fab.zip" \
+            "dist/$NAME/$NAME-gerbers.zip" \
+            "dist/$NAME/$NAME-bom.csv" \
+            "dist/$NAME/$NAME-schematic.pdf"
