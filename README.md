@@ -64,8 +64,9 @@ checked by regenerating them from the tagged design.
 
 ## License
 
-The hardware design files are licensed under the
-[CERN Open Hardware Licence Version 2 – Strongly Reciprocal](LICENSE)
-(CERN-OHL-S-2.0).
+- **Hardware** (everything except `firmware/`): [CERN Open Hardware Licence
+  Version 2 – Strongly Reciprocal](LICENSE) (CERN-OHL-S-2.0).
+- **Firmware** (`firmware/`): [MIT License](firmware/uv-control/LICENSE). The
+  bundled Adafruit libraries are also MIT, under Adafruit's copyright.
 
 Contributors: Don Blair, Craig Versek.

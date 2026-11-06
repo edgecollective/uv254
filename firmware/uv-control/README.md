@@ -29,3 +29,8 @@ which are MIT-licensed by Adafruit Industries. Several scripts started from
 Adafruit examples and keep their `SPDX-License-Identifier: MIT` headers. To
 refresh the libraries instead of using these copies, use
 [circup](https://github.com/adafruit/circup).
+
+## License
+
+The firmware is licensed under the [MIT License](LICENSE). The hardware in this
+repository is under CERN-OHL-S-2.0 (see the top-level [LICENSE](../../LICENSE)).
