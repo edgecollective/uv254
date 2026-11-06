@@ -455,7 +455,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Module:Adafruit_Feather"
+		(property "Footprint" "uv254:itsybitsy"
 			(at -5.842 27.178 0)
 			(effects
 				(font
@@ -1044,7 +1044,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Module:Adafruit_Feather"
+		(property "Footprint" "uv254:ssd1306_b"
 			(at -13.208 -11.684 0)
 			(effects
 				(font
