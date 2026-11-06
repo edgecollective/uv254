@@ -1,7 +1,7 @@
 (footprint "itsybitsy"
-	(version 20240108)
+	(version 20260206)
 	(generator "pcbnew")
-	(generator_version "8.0")
+	(generator_version "10.0")
 	(layer "F.Cu")
 	(descr "Through hole straight socket strip, 1x14, 2.54mm pitch, single row (from Kicad 4.0.7), script generated")
 	(tags "Through hole socket strip THT 1x14 2.54mm single row")
@@ -24,18 +24,6 @@
 			(font
 				(size 1 1)
 				(thickness 0.15)
-			)
-		)
-	)
-	(property "Footprint" ""
-		(at 0 0 0)
-		(unlocked yes)
-		(layer "F.Fab")
-		(hide yes)
-		(uuid "b34138cc-9ab9-4dd7-ba5e-fe53401fb7a6")
-		(effects
-			(font
-				(size 1.27 1.27)
 			)
 		)
 	)
@@ -64,6 +52,7 @@
 		)
 	)
 	(attr through_hole)
+	(duplicate_pad_numbers_are_jumpers no)
 	(fp_line
 		(start -1.33 1.27)
 		(end -1.33 34.35)
@@ -191,7 +180,7 @@
 			(width 0.12)
 			(type default)
 		)
-		(fill none)
+		(fill no)
 		(layer "F.SilkS")
 		(uuid "a9a0605c-8b00-4fce-8905-62c1a974a900")
 	)
@@ -202,7 +191,7 @@
 			(width 0.12)
 			(type default)
 		)
-		(fill none)
+		(fill no)
 		(layer "F.SilkS")
 		(uuid "ec6f3559-6e36-4628-803d-9d165034317c")
 	)
@@ -655,6 +644,7 @@
 		(remove_unused_layers no)
 		(uuid "947d13b5-0c52-47e2-93ac-7e1ee032c6cf")
 	)
+	(embedded_fonts no)
 	(model "${KICAD6_3DMODEL_DIR}/Connector_PinSocket_2.54mm.3dshapes/PinSocket_1x14_P2.54mm_Vertical.wrl"
 		(offset
 			(xyz 0 0 0)

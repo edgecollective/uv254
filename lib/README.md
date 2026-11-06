@@ -38,5 +38,3 @@ example `git show uv-control/v0.1_A:hardware/uv-control/lucc.kicad_sym`.
 - `LED_IN-C35PPCTGU0`: the description and 3D model are left over from the
   0805 LED footprint it was made from, so the 3D view shows an 0805 LED. Add
   the real model under `uv254.3dshapes/`.
-- `ssd1306_b` uses the KiCad 6 file format; it will be upgraded along with the
-  rest of the library when moving to KiCad 10.

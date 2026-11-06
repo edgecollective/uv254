@@ -10,6 +10,13 @@ the board. Move to a new major version together, in one commit that does
 nothing else. CI uses the same version (the `kicad/kicad:10.0` image in
 `.github/workflows/kicad.yml`).
 
+If the 3D viewer shows bare boards with no parts, your KiCad install has no 3D
+model library; AppImage builds, for example, don't include one. Install
+KiCad's 3D models and point `KICAD10_3DMODEL_DIR` at them in *Preferences >
+Configure Paths*. Paths in the boards written as `${KICAD6_3DMODEL_DIR}` or
+`${KICAD8_3DMODEL_DIR}` are fine, because KiCad 10 resolves them to the same
+place.
+
 ## Libraries
 
 - **Standard parts** come from KiCad's built-in libraries (`Device`,
