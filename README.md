@@ -37,11 +37,15 @@ scripts/render-images.sh      renders schematic, layout and 3D images for the RE
 
 ## Opening the boards
 
-Use **KiCad 10.0.x**, the version everyone on the project uses (see
-[CONTRIBUTING.md](CONTRIBUTING.md)). Clone the repository and open
-`hardware/<board>/<board>.kicad_pro`. Custom parts come from `lib/` through the
+**[Download the latest design files (zip)](https://github.com/edgecollective/uv254/archive/refs/heads/main.zip)** if you just want to look
+at or build the boards, or clone the repository to work on them. Either way,
+open `hardware/<board>/<board>.kicad_pro` in **KiCad 10.0.x**, the version
+everyone on the project uses (see [CONTRIBUTING.md](CONTRIBUTING.md)).
+
+Keep the folder structure as it is. Custom parts come from `lib/` through each
 project's own library tables, so you don't need any global library setup beyond
-KiCad's standard libraries.
+KiCad's standard libraries, but a board folder copied out on its own will be
+missing its custom parts.
 
 ## Versions and releases
 
@@ -53,6 +57,9 @@ git tag -l 'uv-detector/*'          # list detector revisions
 git checkout uv-detector/v0.3       # the exact design ordered from JLCPCB in Aug 2024
 git checkout main                   # back to the current work
 ```
+
+To download one revision as a zip, use its tag, for example
+<https://github.com/edgecollective/uv254/archive/refs/tags/uv-detector/v0.3.zip>.
 
 `hardware/<board>/fab/<version>/` holds the files that were actually sent to
 the fab house for that revision. Each board's README has the revision history.
