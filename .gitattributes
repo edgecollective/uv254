@@ -7,9 +7,10 @@
 *.kicad_wks   text eol=lf
 *-lib-table   text eol=lf
 
-# Committed fabrication outputs are generated files: collapse them in GitHub
-# diffs and keep them out of language statistics.
+# Committed fabrication outputs and README images are generated files:
+# collapse them in GitHub diffs and keep them out of language statistics.
 hardware/*/fab/**   linguist-generated=true
+hardware/*/docs/**  linguist-generated=true
 
 # Compiled CircuitPython libraries
 *.mpy   binary

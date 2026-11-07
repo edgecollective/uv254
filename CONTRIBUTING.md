@@ -10,12 +10,11 @@ the board. Move to a new major version together, in one commit that does
 nothing else. CI uses the same version (the `kicad/kicad:10.0` image in
 `.github/workflows/kicad.yml`).
 
-If the 3D viewer shows bare boards with no parts, your KiCad install has no 3D
-model library; AppImage builds, for example, don't include one. Install
-KiCad's 3D models and point `KICAD10_3DMODEL_DIR` at them in *Preferences >
-Configure Paths*. Paths in the boards written as `${KICAD6_3DMODEL_DIR}` or
-`${KICAD8_3DMODEL_DIR}` are fine, because KiCad 10 resolves them to the same
-place.
+The 3D viewer and `scripts/render-images.sh` need KiCad's 3D model library.
+The official installers and the AppImage include it; some Linux distributions
+package it separately (Debian/Ubuntu: `kicad-packages3d`). Paths in the boards
+written as `${KICAD6_3DMODEL_DIR}` or `${KICAD8_3DMODEL_DIR}` are fine, because
+KiCad 10 resolves them to the same place.
 
 ## Libraries
 
@@ -76,14 +75,32 @@ kicad-cli sch erc --severity-all hardware/uv-detector/uv-detector.kicad_sch
 kicad-cli pcb drc --severity-all --schematic-parity hardware/uv-detector/uv-detector.kicad_pcb
 ```
 
+## Board images in the READMEs
+
+Each board's README shows its schematic, PCB layout and 3D views, from
+`hardware/<board>/docs/`. A script makes them:
+
+```sh
+scripts/render-images.sh uv-detector          # about 2 minutes
+scripts/render-images.sh --fast uv-detector   # flat 3D shading, a few seconds
+```
+
+Re-run it after changing a board, and commit the images with the design. It
+also writes the schematic PDF and updates the image section of the README. It
+only replaces files whose picture changed, so running it on an unchanged board
+leaves git clean. Besides KiCad it needs Inkscape, ImageMagick and poppler
+(`sudo apt install inkscape imagemagick poppler-utils`).
+
 ## Releasing a board revision
 
 Versions are per board: `v<major>.<minor>`, with an optional `_A`, `_B` suffix
 for variants of a revision (as with `uv-detector/v0.2_A`). Any change that gets
 fabricated gets a new version.
 
-1. Update the version wherever it appears on the board: silkscreen text and the
-   title block (*File > Page Settings* in both the schematic and PCB editors).
+1. Update the version on the board. Set `VERSION` in *Schematic Setup >
+   Project > Text Variables*; both title blocks show it as their Rev. Set the
+   date in *File > Page Settings* in both the schematic and PCB editors.
+   Silkscreen text needs updating too, unless it's written as `${VERSION}`.
 2. Run the checks above and fix what matters.
 3. Build the fab package into the board's `fab/` folder:
    ```sh
@@ -94,14 +111,15 @@ fabricated gets a new version.
    PDF and ERC/DRC reports. It also builds an interactive BOM if
    [InteractiveHtmlBom](https://github.com/openscopeproject/InteractiveHtmlBom)
    is installed.
-4. Commit the design and `fab/v0.4/` together, then add an annotated tag. Its
-   message becomes the release notes:
+4. Refresh the README images with `scripts/render-images.sh uv-detector`.
+5. Commit the design, `fab/v0.4/` and `docs/` together, then add an annotated
+   tag. Its message becomes the release notes:
    ```sh
    git commit -m "uv-detector v0.4: fab release"
    git tag -a uv-detector/v0.4 -m "uv-detector v0.4" -m "What changed and why."
    git push origin main uv-detector/v0.4
    ```
-5. CI rebuilds the package from the tag and publishes a GitHub Release with
+6. CI rebuilds the package from the tag and publishes a GitHub Release with
    the files. Order from the committed `fab/v0.4/` files. CI is a cross-check,
    since its KiCad point release may differ slightly from yours.
 

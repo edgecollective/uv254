@@ -22,6 +22,7 @@ hardware/
     uv-control.kicad_pcb
     sym-lib-table             -> lib/uv254.kicad_sym
     fp-lib-table              -> lib/uv254.pretty
+    docs/                     schematic PDF and the images in the board's README
     fab/<version>/            fabrication files that were actually sent out
   uv-emitter/
   uv-detector/
@@ -30,6 +31,7 @@ lib/                          shared project library (custom parts only)
   uv254.pretty/
 firmware/uv-control/          CircuitPython scripts for the control board
 scripts/build-fab.sh          builds gerbers, drill, BOM, PDF, positions
+scripts/render-images.sh      renders schematic, layout and 3D images for the READMEs
 .github/workflows/kicad.yml   ERC/DRC on every push; fab package on release tags
 ```
 
