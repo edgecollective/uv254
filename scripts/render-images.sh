@@ -209,7 +209,8 @@ lines += [
     f'| ![{title} 3D render, back](docs/{board}-3d-back.png) |',
     '',
     f'Images of the current design, made with `scripts/render-images.sh {board}`.',
-    'Re-run it after changing the board.',
+    'Re-run it after changing the board; see',
+    '[Updating the board images](../../README.md#updating-the-board-images).',
     end,
 ]
 section = '\n'.join(lines)

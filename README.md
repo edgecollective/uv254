@@ -9,6 +9,12 @@ boards, each its own KiCad project:
 | **UV-Emitter** | [`hardware/uv-emitter`](hardware/uv-emitter) | Inolux IN-C35PPCTGU0 UV-C LED and its driver | v0.4 (in progress) |
 | **UV-Detector** | [`hardware/uv-detector`](hardware/uv-detector) | SD008-2171-112 photodiode with an op-amp front end | v0.4 (in progress) |
 
+| [UV-Control](hardware/uv-control) | [UV-Emitter](hardware/uv-emitter) | [UV-Detector](hardware/uv-detector) |
+|:---:|:---:|:---:|
+| <a href="hardware/uv-control"><img src="hardware/uv-control/docs/uv-control-3d-front.png" alt="UV-Control 3D render" height="170"></a> | <a href="hardware/uv-emitter"><img src="hardware/uv-emitter/docs/uv-emitter-3d-front.png" alt="UV-Emitter 3D render" height="170"></a> | <a href="hardware/uv-detector"><img src="hardware/uv-detector/docs/uv-detector-3d-front.png" alt="UV-Detector 3D render" height="170"></a> |
+
+Each board's README has its schematic, PCB layout and 3D views.
+
 UV-Emitter was called *UV-LED-source* in earlier revisions. Background notes
 are at <https://edgecollective.io/notes/uvf/>.
 
@@ -46,6 +52,47 @@ Keep the folder structure as it is. Custom parts come from `lib/` through each
 project's own library tables, so you don't need any global library setup beyond
 KiCad's standard libraries, but a board folder copied out on its own will be
 missing its custom parts.
+
+## Updating the board images
+
+Each board's README shows its schematic, PCB layout and 3D views. These are
+files in `hardware/<board>/docs/`, made by `scripts/render-images.sh`, so they
+don't change by themselves when the design does. After changing a board, save
+it in KiCad, then refresh the images from the top of the repository:
+
+```sh
+scripts/render-images.sh uv-detector                         # one board
+scripts/render-images.sh uv-control uv-detector uv-emitter   # all three
+```
+
+Then commit what changed (`git status` shows it) along with the design change.
+
+What the script does:
+
+- Writes to `hardware/<board>/docs/`: the schematic as PDF and PNG, the PCB
+  layout front and back (the back mirrored, as seen from below), and 3D renders
+  front and back.
+- Updates the image section of the board's README, between the
+  `render-images` markers. Anything you write between those markers gets
+  overwritten, so put your own notes outside them.
+- Only replaces files whose picture changed. A board whose 3D look changed
+  takes about 2 minutes (two raytraced renders). An unchanged board takes about
+  15 seconds and leaves git clean.
+- Uses KiCad's default colour theme, so everyone's images come out the same
+  whatever their own KiCad preferences.
+
+For a quick look while you work, `--fast` makes flat-shaded 3D renders in a few
+seconds. Commit the full renders, though: run it again without `--fast` before
+committing.
+
+It needs KiCad 10 (`kicad-cli` on your `PATH`), plus Inkscape, ImageMagick and
+poppler. On Debian or Ubuntu:
+
+```sh
+sudo apt install inkscape imagemagick poppler-utils
+```
+
+It has only been tested on Linux.
 
 ## Versions and releases
 

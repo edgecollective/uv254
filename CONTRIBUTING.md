@@ -77,19 +77,10 @@ kicad-cli pcb drc --severity-all --schematic-parity hardware/uv-detector/uv-dete
 
 ## Board images in the READMEs
 
-Each board's README shows its schematic, PCB layout and 3D views, from
-`hardware/<board>/docs/`. A script makes them:
-
-```sh
-scripts/render-images.sh uv-detector          # about 2 minutes
-scripts/render-images.sh --fast uv-detector   # flat 3D shading, a few seconds
-```
-
-Re-run it after changing a board, and commit the images with the design. It
-also writes the schematic PDF and updates the image section of the README. It
-only replaces files whose picture changed, so running it on an unchanged board
-leaves git clean. Besides KiCad it needs Inkscape, ImageMagick and poppler
-(`sudo apt install inkscape imagemagick poppler-utils`).
+Each board's README shows its schematic, layout and 3D views. After changing a
+board, refresh them with `scripts/render-images.sh <board>` and commit them with
+the design. See
+[Updating the board images](README.md#updating-the-board-images) in the README.
 
 ## Releasing a board revision
 

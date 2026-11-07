@@ -35,7 +35,8 @@ Copper and silkscreen. The back is mirrored, as seen from below.
 | ![UV-Control 3D render, front](docs/uv-control-3d-front.png) | ![UV-Control 3D render, back](docs/uv-control-3d-back.png) |
 
 Images of the current design, made with `scripts/render-images.sh uv-control`.
-Re-run it after changing the board.
+Re-run it after changing the board; see
+[Updating the board images](../../README.md#updating-the-board-images).
 <!-- render-images:end -->
 
 ## Revisions

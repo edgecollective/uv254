@@ -34,7 +34,8 @@ Copper and silkscreen. The back is mirrored, as seen from below.
 | ![UV-Detector 3D render, front](docs/uv-detector-3d-front.png) | ![UV-Detector 3D render, back](docs/uv-detector-3d-back.png) |
 
 Images of the current design, made with `scripts/render-images.sh uv-detector`.
-Re-run it after changing the board.
+Re-run it after changing the board; see
+[Updating the board images](../../README.md#updating-the-board-images).
 <!-- render-images:end -->
 
 ## Revisions
