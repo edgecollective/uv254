@@ -4,6 +4,14 @@
 	(generator_version "10.0")
 	(uuid "851f5012-c9ae-45fe-a88f-b12b28049edf")
 	(paper "A3")
+	(title_block
+		(title "UV-Control")
+		(date "2026-10-25")
+		(rev "${VERSION}")
+		(company "Edge Collective")
+		(comment 1 "https://github.com/edgecollective/uv254")
+		(comment 2 "License: CERN-OHL-S-2.0")
+	)
 	(lib_symbols
 		(symbol "555_nicepins_1"
 			(exclude_from_sim no)
