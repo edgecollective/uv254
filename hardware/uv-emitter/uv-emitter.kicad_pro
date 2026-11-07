@@ -653,7 +653,9 @@
       "Root"
     ]
   ],
-  "text_variables": {},
+  "text_variables": {
+    "VERSION": "v0.4"
+  },
   "tuning_profiles": {
     "meta": {
       "version": 0
