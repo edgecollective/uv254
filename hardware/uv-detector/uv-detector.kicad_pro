@@ -76,7 +76,12 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        [
+          "starved_thermal|22000000|30500000|0fa75121-1164-4b41-a1f5-74b927e72649|22f3e0c1-81aa-44a3-908b-0d37ae7c028b|F.Cu",
+          ""
+        ]
+      ],
       "meta": {
         "version": 2
       },
@@ -149,7 +154,7 @@
         "max_error": 0.005,
         "min_clearance": 0.0,
         "min_connection": 0.0,
-        "min_copper_edge_clearance": 0.0,
+        "min_copper_edge_clearance": 0.5,
         "min_groove_width": 0.0,
         "min_hole_clearance": 0.25,
         "min_hole_to_hole": 0.25,
