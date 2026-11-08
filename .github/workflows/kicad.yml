@@ -110,8 +110,13 @@ jobs:
           NAME: ${{ needs.build-release.outputs.name }}
         run: |
           (cd "dist/$NAME" && zip -q -r "../$NAME-fab.zip" .)
+          # Release notes: the annotated tag's message, minus its first line (the
+          # title). Read through the API because this job has no checkout, and
+          # gh's --notes-from-tag only reads tags from a local clone.
+          tag_sha=$(gh api "repos/$GITHUB_REPOSITORY/git/ref/tags/$GITHUB_REF_NAME" --jq .object.sha)
+          gh api "repos/$GITHUB_REPOSITORY/git/tags/$tag_sha" --jq .message | tail -n +2 > notes.md
           gh release create "$GITHUB_REF_NAME" --repo "$GITHUB_REPOSITORY" --verify-tag \
-            --title "${GITHUB_REF_NAME%%/*} ${GITHUB_REF_NAME#*/}" --notes-from-tag \
+            --title "${GITHUB_REF_NAME%%/*} ${GITHUB_REF_NAME#*/}" --notes-file notes.md \
             "dist/$NAME-fab.zip" \
             "dist/$NAME/$NAME-gerbers.zip" \
             "dist/$NAME/$NAME-bom.csv" \
