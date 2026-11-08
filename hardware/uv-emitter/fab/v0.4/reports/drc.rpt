@@ -1,0 +1,56 @@
+** Drc report for uv-emitter.kicad_pcb **
+** Created on 2026-11-08T09:57:07 **
+** Report includes: Errors, Warnings, Exclusions **
+
+** Found 12 DRC violations **
+[lib_footprint_mismatch]: Footprint 'JST_PH_B6B-PH-K_1x06_P2.00mm_Vertical' does not match copy in library 'Connector_JST'
+    Local override; warning
+    @(12.0000 mm, 30.7500 mm): Footprint J2
+[lib_footprint_mismatch]: Footprint 'R_0805_2012Metric_Pad1.20x1.40mm_HandSolder' does not match copy in library 'Resistor_SMD'
+    Local override; warning
+    @(13.5000 mm, 13.5000 mm): Footprint R4
+[lib_footprint_mismatch]: Footprint 'R_0805_2012Metric_Pad1.20x1.40mm_HandSolder' does not match copy in library 'Resistor_SMD'
+    Local override; warning
+    @(24.5000 mm, 7.5000 mm): Footprint R2
+[lib_footprint_mismatch]: Footprint 'SOT-23' does not match copy in library 'Package_TO_SOT_SMD'
+    Local override; warning
+    @(30.9375 mm, 12.0500 mm): Footprint Q2
+[lib_footprint_mismatch]: Footprint 'C_0805_2012Metric_Pad1.18x1.45mm_HandSolder' does not match copy in library 'Capacitor_SMD'
+    Local override; warning
+    @(9.7875 mm, 3.5000 mm): Footprint CX2
+[lib_footprint_mismatch]: Footprint 'C_0805_2012Metric_Pad1.18x1.45mm_HandSolder' does not match copy in library 'Capacitor_SMD'
+    Local override; warning
+    @(24.2875 mm, 3.5000 mm): Footprint CX1
+[lib_footprint_mismatch]: Footprint 'SOT-23' does not match copy in library 'Package_TO_SOT_SMD'
+    Local override; warning
+    @(24.5000 mm, 11.0625 mm): Footprint Q1
+[lib_footprint_mismatch]: Footprint 'R_0805_2012Metric_Pad1.20x1.40mm_HandSolder' does not match copy in library 'Resistor_SMD'
+    Local override; warning
+    @(9.0000 mm, 8.5000 mm): Footprint R3
+[lib_footprint_mismatch]: Footprint 'R_0805_2012Metric_Pad1.20x1.40mm_HandSolder' does not match copy in library 'Resistor_SMD'
+    Local override; warning
+    @(19.0000 mm, 13.0000 mm): Footprint R1
+[lib_footprint_mismatch]: Footprint 'R_0805_2012Metric_Pad1.20x1.40mm_HandSolder' does not match copy in library 'Resistor_SMD'
+    Local override; warning
+    @(31.0000 mm, 16.0000 mm): Footprint R5
+[lib_footprint_mismatch]: Footprint 'SOIC-14_3.9x8.7mm_P1.27mm' does not match copy in library 'Package_SO'
+    Local override; warning
+    @(16.9600 mm, 5.4750 mm): Footprint U1
+[lib_footprint_mismatch]: Footprint 'PinSocket_1x06_P2.54mm_Vertical' does not match copy in library 'Connector_PinSocket_2.54mm'
+    Local override; warning
+    @(2.0000 mm, 11.7000 mm): Footprint J1
+
+** Found 0 unconnected pads **
+
+** Found 0 Footprint errors **
+
+** Ignored checks **
+    - Footprint has no courtyard defined
+    - Track endpoint not centered on via
+    - Tuning profile track geometries
+    - Footprint doesn't match symbol's footprint filters
+    - PTH inside courtyard
+    - NPTH inside courtyard
+    - Footprint component type doesn't match footprint pads
+
+** End of Report **

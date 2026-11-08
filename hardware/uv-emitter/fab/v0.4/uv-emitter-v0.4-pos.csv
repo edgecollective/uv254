@@ -1,0 +1,18 @@
+Ref,Val,Package,PosX,PosY,Rot,Side
+"D1","UV LED","LED_IN-C35PPCTGU0",17.000000,-17.000000,180.000000,bottom
+"CX1","0.1 uF","C_0805_2012Metric_Pad1.18x1.45mm_HandSolder",24.287500,-3.500000,0.000000,top
+"CX2","1 uF","C_0805_2012Metric_Pad1.18x1.45mm_HandSolder",9.787500,-3.500000,0.000000,top
+"H1","MountingHole","MountingHole_3.2mm_M3",4.000000,-4.000000,0.000000,top
+"H2","MountingHole","MountingHole_3.2mm_M3",30.000000,-4.000000,0.000000,top
+"H3","MountingHole","MountingHole_3.2mm_M3",4.000000,-30.000000,0.000000,top
+"H4","MountingHole","MountingHole_3.2mm_M3",30.000000,-30.000000,0.000000,top
+"J1","Conn_01x06_Socket","PinSocket_1x06_P2.54mm_Vertical",2.000000,-11.700000,0.000000,top
+"J2","Conn_01x06_Socket","JST_PH_B6B-PH-K_1x06_P2.00mm_Vertical",12.000000,-30.750000,0.000000,top
+"Q1","2N7000","SOT-23",24.500000,-11.062500,-90.000000,top
+"Q2","2N7000","SOT-23",30.937500,-12.050000,90.000000,top
+"R1","49.9","R_0805_2012Metric_Pad1.20x1.40mm_HandSolder",19.000000,-13.000000,0.000000,top
+"R2","24.9","R_0805_2012Metric_Pad1.20x1.40mm_HandSolder",24.500000,-7.500000,180.000000,top
+"R3","100K","R_0805_2012Metric_Pad1.20x1.40mm_HandSolder",9.000000,-8.500000,0.000000,top
+"R4","24.9K","R_0805_2012Metric_Pad1.20x1.40mm_HandSolder",13.500000,-13.500000,0.000000,top
+"R5","10K","R_0805_2012Metric_Pad1.20x1.40mm_HandSolder",31.000000,-16.000000,0.000000,top
+"U1","OPA4340UA","SOIC-14_3.9x8.7mm_P1.27mm",16.960000,-5.475000,90.000000,top

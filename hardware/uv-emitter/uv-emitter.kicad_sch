@@ -6,7 +6,7 @@
 	(paper "A4")
 	(title_block
 		(title "UV-Emitter")
-		(date "2026-11-05")
+		(date "2026-11-08")
 		(rev "${VERSION}")
 		(company "Edge Collective")
 		(comment 1 "https://github.com/edgecollective/uv254")
@@ -2317,6 +2317,16 @@
 	)
 	(wire
 		(pts
+			(xy 142.24 161.29) (xy 142.24 168.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "19c6c102-1892-4c60-892c-ec1fc0257854")
+	)
+	(wire
+		(pts
 			(xy 102.87 91.44) (xy 82.55 91.44)
 		)
 		(stroke
@@ -2324,6 +2334,16 @@
 			(type default)
 		)
 		(uuid "1ab8711a-f675-4648-8d3a-1f853f1db5d0")
+	)
+	(wire
+		(pts
+			(xy 142.24 168.91) (xy 127 168.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1b441091-cf7c-444a-a473-b60ba9ef822b")
 	)
 	(wire
 		(pts
@@ -2344,6 +2364,16 @@
 			(type default)
 		)
 		(uuid "24f891e6-7a41-4078-90ae-7e117be32b66")
+	)
+	(wire
+		(pts
+			(xy 120.65 142.24) (xy 120.65 147.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "26cb1c4c-12d7-4c00-9c0d-89a864fd880b")
 	)
 	(wire
 		(pts
@@ -2397,6 +2427,16 @@
 	)
 	(wire
 		(pts
+			(xy 127 142.24) (xy 120.65 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "42aff1df-246f-4b82-bacd-86313ff2fd0a")
+	)
+	(wire
+		(pts
 			(xy 189.23 25.4) (xy 195.58 25.4)
 		)
 		(stroke
@@ -2404,6 +2444,26 @@
 			(type default)
 		)
 		(uuid "4ea4965d-ead2-4a5e-a173-6170a444dad9")
+	)
+	(wire
+		(pts
+			(xy 142.24 132.08) (xy 127 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4ec21488-d14b-4206-908a-f78609f4dca2")
+	)
+	(wire
+		(pts
+			(xy 142.24 125.73) (xy 142.24 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "54407404-5513-4242-89b1-cf9bba0c167a")
 	)
 	(wire
 		(pts
@@ -2444,6 +2504,16 @@
 			(type default)
 		)
 		(uuid "6071c8c9-e763-4273-815f-9c8348b2c6c8")
+	)
+	(wire
+		(pts
+			(xy 127 158.75) (xy 120.65 158.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "62198b31-88b8-4083-b6b0-ca259c5c8367")
 	)
 	(wire
 		(pts
@@ -2567,6 +2637,26 @@
 	)
 	(wire
 		(pts
+			(xy 120.65 158.75) (xy 120.65 163.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a8aa53a5-57d4-4495-8d06-ac0fe41ab9e5")
+	)
+	(wire
+		(pts
+			(xy 142.24 144.78) (xy 142.24 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "acb5e840-df6a-47f4-85c3-c57480b30b24")
+	)
+	(wire
+		(pts
 			(xy 195.58 60.96) (xy 195.58 62.23)
 		)
 		(stroke
@@ -2607,6 +2697,36 @@
 	)
 	(wire
 		(pts
+			(xy 127 132.08) (xy 127 128.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c6ebd05a-ab1c-48b6-a455-42d92963b7ae")
+	)
+	(wire
+		(pts
+			(xy 127 168.91) (xy 127 163.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c8b469b1-734a-4fa0-a96a-06e91adc410f")
+	)
+	(wire
+		(pts
+			(xy 142.24 152.4) (xy 127 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ccbe7b7b-9eeb-4c29-87cb-6a5a61ee3026")
+	)
+	(wire
+		(pts
 			(xy 41.91 27.94) (xy 43.18 27.94)
 		)
 		(stroke
@@ -2614,6 +2734,16 @@
 			(type default)
 		)
 		(uuid "cdd688c5-db80-4752-aeb9-6ec0c0510068")
+	)
+	(wire
+		(pts
+			(xy 127 152.4) (xy 127 147.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e6306426-574b-40f1-be71-ead16a31dd7d")
 	)
 	(wire
 		(pts
@@ -2647,6 +2777,16 @@
 	)
 	(wire
 		(pts
+			(xy 127 123.19) (xy 120.65 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f5a7b89c-40d3-4680-af27-e98635b7d36b")
+	)
+	(wire
+		(pts
 			(xy 41.91 53.34) (xy 43.18 53.34)
 		)
 		(stroke
@@ -2664,6 +2804,16 @@
 			(type default)
 		)
 		(uuid "fc34d1b7-1dfb-4707-85ca-aadb06493e82")
+	)
+	(wire
+		(pts
+			(xy 120.65 123.19) (xy 120.65 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fcd3b17a-1c4a-4adb-81f1-d8e7ce62c3ae")
 	)
 	(image
 		(at 264.16 53.34)
@@ -3956,6 +4106,84 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 120.65 127 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2e3a5aef-d063-488a-b624-3d92d2d58b91")
+		(property "Reference" "#PWR09"
+			(at 120.65 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 120.65 132.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 120.65 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 120.65 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 120.65 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "d54a781d-a238-484e-8778-c567c4ae597d")
+		)
+		(instances
+			(project "uv-emitter"
+				(path "/74d1271a-646f-4f00-a90e-b62b18e88539"
+					(reference "#PWR09")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Amplifier_Operational:OPA4340UA")
 		(at 134.62 125.73 0)
 		(unit 3)
@@ -4398,6 +4626,84 @@
 			(project "uv-emitter"
 				(path "/74d1271a-646f-4f00-a90e-b62b18e88539"
 					(reference "J2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 120.65 163.83 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6b24a991-f613-4e88-a94a-c538704ffc7a")
+		(property "Reference" "#PWR011"
+			(at 120.65 170.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 120.65 168.91 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 120.65 163.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 120.65 163.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 120.65 163.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "06255a08-c9f7-42bd-94c1-3cd6aac60b65")
+		)
+		(instances
+			(project "uv-emitter"
+				(path "/74d1271a-646f-4f00-a90e-b62b18e88539"
+					(reference "#PWR011")
 					(unit 1)
 				)
 			)
@@ -4852,6 +5158,84 @@
 			(project "uv-emitter"
 				(path "/74d1271a-646f-4f00-a90e-b62b18e88539"
 					(reference "CX1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 120.65 147.32 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9a7e457f-8409-4195-ae2c-929162b65c5c")
+		(property "Reference" "#PWR010"
+			(at 120.65 153.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 120.65 152.4 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 120.65 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 120.65 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 120.65 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "6231fc77-c7f6-4789-b1df-a2fdac2a490b")
+		)
+		(instances
+			(project "uv-emitter"
+				(path "/74d1271a-646f-4f00-a90e-b62b18e88539"
+					(reference "#PWR010")
 					(unit 1)
 				)
 			)
@@ -5861,4 +6245,5 @@
 			(page "1")
 		)
 	)
+	(embedded_fonts no)
 )

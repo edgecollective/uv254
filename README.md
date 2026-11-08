@@ -6,7 +6,7 @@ boards, each its own KiCad project:
 | Board | Folder | What's on it | Current design |
 |---|---|---|---|
 | **UV-Control** | [`hardware/uv-control`](hardware/uv-control) | Adafruit ItsyBitsy nRF52840 Express, SSD1306 OLED display, buttons, power circuitry | v0.1_A plus later edits |
-| **UV-Emitter** | [`hardware/uv-emitter`](hardware/uv-emitter) | Inolux IN-C35PPCTGU0 UV-C LED and its driver | v0.4 (in progress) |
+| **UV-Emitter** | [`hardware/uv-emitter`](hardware/uv-emitter) | Inolux IN-C35PPCTGU0 UV-C LED and its driver | v0.4 (released 2026-11-08) |
 | **UV-Detector** | [`hardware/uv-detector`](hardware/uv-detector) | SD008-2171-112 photodiode with an op-amp front end | v0.4 (released 2026-11-08) |
 
 | [UV-Control](hardware/uv-control) | [UV-Emitter](hardware/uv-emitter) | [UV-Detector](hardware/uv-detector) |
