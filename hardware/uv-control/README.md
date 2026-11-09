@@ -1,8 +1,18 @@
 # UV-Control
 
-Controller board: an Adafruit ItsyBitsy nRF52840 Express, an SSD1306 OLED
-display, push buttons and power circuitry. Firmware is in
-[`firmware/uv-control`](../../firmware/uv-control).
+Controller board. **v0.4 is in progress on `main`:** a Pro Micro nRF52840, an
+ADS1115 ADC, a 2.0 in ST7789 color TFT on a cable, JST cables to the
+emitter and detector, and an on-board 8 V boost (LMR62014) for the UV LED. See
+[`v0.4-design.md`](v0.4-design.md) for the pin map and what to check before
+building. So far only the schematic is drafted, as a first version; the PCB
+file still holds the v0.1_A+ layout, so the layout and 3D images below show
+that board.
+
+v0.1 (fabricated in 2024) used an Adafruit ItsyBitsy nRF52840 Express, an
+SSD1306 OLED display, push buttons and a 555-based boost circuit.
+
+Firmware is in [`firmware/uv-control`](../../firmware/uv-control). The v0.4
+bring-up code is in its [`v0.4`](../../firmware/uv-control/v0.4) folder.
 
 Open `uv-control.kicad_pro` in KiCad 10. Custom parts come from
 [`lib/`](../../lib).
@@ -45,9 +55,11 @@ Re-run it after changing the board; see
 |---|---|---|---|---|
 | v0.1 | 2024-07-29 | gerbers released; ordered from JLCPCB on 2024-08-19 | tag `uv-control/v0.1` | [`fab/v0.1`](fab/v0.1) |
 | v0.1_A | 2026-06-26 | branched from v0.1; sent to Josh | tag `uv-control/v0.1_A` | — |
-| **next** | 2026-10 | **on `main`**: board edits made after v0.1_A was sent, untagged | `main` | — |
+| v0.1_A+ | 2026-10 | edits made after v0.1_A was sent; never fabricated; superseded by v0.4 | commit `db4232b` | — |
+| **v0.4** | 2026-11 | **in progress on `main`**: first-draft schematic; layout not started | `main` | — |
 
 Notes:
 
-- The silkscreen still points to `gitlab.com/edgecollective/uv-water/` and
-  reads `UV-Control v0.1 / July 2024`. Update both before the next fabrication.
+- **v0.1_A+** isn't tagged. To get it back: `git checkout db4232b -- hardware/uv-control`.
+  Its silkscreen points to `gitlab.com/edgecollective/uv-water/` and reads
+  `UV-Control v0.1 / July 2024`.

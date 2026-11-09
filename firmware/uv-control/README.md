@@ -4,6 +4,9 @@ CircuitPython scripts for the UV-Control board (Adafruit ItsyBitsy nRF52840
 Express with an SSD1306 OLED). These are experiments from 2024, imported as-is
 from `uv-water`.
 
+Bring-up code for the v0.4 board (Pro Micro nRF52840, ADS1115, ST7789 TFT) is
+in [`v0.4/`](v0.4).
+
 ## Running a script
 
 1. Install CircuitPython 8.x or 9.x on the ItsyBitsy. The bundled libraries
