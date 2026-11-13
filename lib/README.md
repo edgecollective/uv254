@@ -12,6 +12,8 @@ are in [CONTRIBUTING.md](../CONTRIBUTING.md#libraries).
 | `itsybitsy_nrf52840_express` | uv-control (A1) | `uv254:itsybitsy` |
 | `ssd1306` | uv-control (A2) | `uv254:ssd1306_b` |
 | `SD008-2171-112` | uv-detector (D2) | `Package_TO_SOT_THT:TO-18-3` |
+| `nice_nano_clean` | uv-control (U2), from Rook v0.4 | `uv254:nice_nano_cleanest` |
+| `st7789` | uv-control (U5), from Rook v0.4 | `uv254:st7789_154in_240x240` |
 
 ## Footprints (`uv254.pretty`)
 
@@ -20,6 +22,11 @@ are in [CONTRIBUTING.md](../CONTRIBUTING.md#libraries).
 | `itsybitsy` | uv-control: socket strips for the ItsyBitsy module |
 | `ssd1306_b` | uv-control: 4-pin socket strip for the OLED module |
 | `LED_IN-C35PPCTGU0` | uv-emitter: Inolux IN-C35PPCTGU0 UV-C LED |
+| `nice_nano_cleanest` | uv-control: Pro Micro nRF52840 (SuperMini / nice!nano), 26 pads incl. B+/B-; from Rook v0.4 |
+| `st7789_154in_240x240` | uv-control: 1.54 in ST7789 display header; from Rook v0.4 |
+| `st7789_tft_2in_320x240` | 2.0 in ST7789 display header (same pin order); from Rook's library |
+| `DM3D-SF_outline` | uv-control: Hirose DM3D-SF microSD socket; from Rook v0.4 |
+| `SSW_1825232-1` | uv-control: TE 1825232-1 slide switch (display backlight); from Rook v0.4 |
 
 ## Where these came from
 

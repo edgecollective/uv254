@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "uv254")(type "KiCad")(uri "${KIPRJMOD}/../../../../lib/uv254.pretty")(options "")(descr "uv254 project library, shared by all boards"))
+)

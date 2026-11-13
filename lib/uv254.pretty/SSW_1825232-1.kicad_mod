@@ -1,0 +1,257 @@
+(footprint "SSW_1825232-1"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "CuK miniature slide switch, OS series, SPDT, right angle, http://www.ckswitches.com/media/1428/os.pdf")
+	(tags "switch SPDT")
+	(property "Reference" "REF**"
+		(at -8.375 -3.075 0)
+		(layer "F.Fab")
+		(uuid "0de119ac-4e15-4877-8270-aa7b2a53d549")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Slide_Switch_SPDT_1825232-1"
+		(at -2.3 7.7 0)
+		(layer "F.Fab")
+		(uuid "b326f9cc-95de-442d-8188-fd07628912e9")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "a0988e01-9f51-4cc3-9ec8-4eb1285406f0")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "0f5d25a9-f8da-456a-b4a7-67e29daa52c2")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr through_hole)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -6.3 -2.3)
+		(end 2.3 -2.3)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "07a2e0b0-3750-41c1-a925-aff7aaa65ad0")
+	)
+	(fp_line
+		(start -6.3 2.3)
+		(end -4.1 2.3)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "816a36ca-77d9-4853-af84-942b1e4ecd2d")
+	)
+	(fp_line
+		(start 0 2.3)
+		(end 2.3 2.3)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "75393dc7-af39-4ea1-8e28-137e5d712283")
+	)
+	(fp_line
+		(start -7.7 -2.7)
+		(end 3.7 -2.7)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "f6ce35e3-ffbf-4bff-a324-dd802837a97d")
+	)
+	(fp_line
+		(start -7.7 6.7)
+		(end -7.7 -2.7)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "de3469c4-77f4-4232-a449-e5c56d2953fd")
+	)
+	(fp_line
+		(start 3.7 -2.7)
+		(end 3.7 6.7)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "8c1e0372-00b7-4b32-bb19-6c31055062a2")
+	)
+	(fp_line
+		(start 3.7 6.7)
+		(end -7.7 6.7)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "0cbea89b-596d-4111-afa0-47b10e75853a")
+	)
+	(fp_line
+		(start -6.3 -2.2)
+		(end -6.3 2.2)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "9c3a3cc6-4765-49da-8d25-4a29ad9a3283")
+	)
+	(fp_line
+		(start -6.3 -2.2)
+		(end 2.3 -2.2)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "ac9a7c84-4dde-4f68-8e7d-41bf9be1e72d")
+	)
+	(fp_line
+		(start -6.3 2.2)
+		(end 2.3 2.2)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "0407dcaa-953e-42f4-83bd-da7d80f1d306")
+	)
+	(fp_line
+		(start -4 6.2)
+		(end -4 2.2)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "2c03173e-cbc3-4872-9791-299688f4d00c")
+	)
+	(fp_line
+		(start -2 2.2)
+		(end -2 6.2)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "7ab4b066-48df-4638-a2dd-35219d0a439b")
+	)
+	(fp_line
+		(start -2 6.2)
+		(end -4 6.2)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "d1adb212-7ebc-4ddd-a9c5-71fc72c1e0a8")
+	)
+	(fp_line
+		(start 2.3 2.2)
+		(end 2.3 -2.2)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "e2eed5b1-e157-41cc-9c1f-badce15ed77f")
+	)
+	(fp_text user "REF**"
+		(at -1.7 1.7 0)
+		(layer "F.Fab")
+		(uuid "8dc8385f-37cb-4cbe-b1b8-befa8a1f360a")
+		(effects
+			(font
+				(size 0.5 0.5)
+				(thickness 0.1)
+			)
+		)
+	)
+	(pad "" thru_hole oval
+		(at -6.1 0)
+		(size 1.8 3.5)
+		(drill 1.2)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "9390d9da-76d1-4a74-91e7-cef31415c37d")
+	)
+	(pad "" thru_hole oval
+		(at 2.1 0)
+		(size 1.8 3.5)
+		(drill 1.2)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "337c2c30-25f3-4a06-8c22-2be2d6d1ccc2")
+	)
+	(pad "1" thru_hole rect
+		(at 0 0)
+		(size 1.1 2.5)
+		(drill 0.9)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "8d7cb800-134f-43da-9138-e150476a6c45")
+	)
+	(pad "2" thru_hole oval
+		(at -2 0)
+		(size 1.1 2.5)
+		(drill 0.9)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "36699ddc-2c2d-4f14-bf80-c57b68df4fa7")
+	)
+	(pad "3" thru_hole oval
+		(at -4 0)
+		(size 1.1 2.5)
+		(drill 0.9)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "9ffc8262-d013-4133-9577-66559214d6a6")
+	)
+	(embedded_fonts no)
+	(model "${KISYS3DMOD}/Buttons_Switches_THT.3dshapes/SW_CuK_OS102011MA1QN1_SPDT_Angled.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

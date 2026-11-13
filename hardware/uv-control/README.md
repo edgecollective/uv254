@@ -1,12 +1,11 @@
 # UV-Control
 
-Controller board. **v0.4 is in progress on `main`:** a Pro Micro nRF52840, an
-ADS1115 ADC, a 2.0 in ST7789 color TFT on a cable, JST cables to the
-emitter and detector, and an on-board 8 V boost (LMR62014) for the UV LED. See
-[`v0.4-design.md`](v0.4-design.md) for the pin map and what to check before
-building. So far only the schematic is drafted, as a first version; the PCB
-file still holds the v0.1_A+ layout, so the layout and 3D images below show
-that board.
+Controller board. **v0.4 is in progress on `main`, restarted from Rook v0.4**
+(Edge Collective's validated Pro Micro nRF52840 board): its Pro Micro, ST7789
+display, buttons and microSD, plus an ADS1115 ADC, JST connectors to the emitter
+and detector, and test points. The boost for the UV LED is still to be added. See
+[`v0.4-design.md`](v0.4-design.md) for the pin map and what's left to do. The
+first v0.4 draft is in [`reference/v0.4-draft`](reference/v0.4-draft).
 
 v0.1 (fabricated in 2024) used an Adafruit ItsyBitsy nRF52840 Express, an
 SSD1306 OLED display, push buttons and a 555-based boost circuit.
