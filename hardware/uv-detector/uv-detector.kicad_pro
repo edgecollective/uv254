@@ -76,12 +76,7 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [
-        [
-          "starved_thermal|22000000|30500000|0fa75121-1164-4b41-a1f5-74b927e72649|22f3e0c1-81aa-44a3-908b-0d37ae7c028b|F.Cu",
-          ""
-        ]
-      ],
+      "drc_exclusions": [],
       "meta": {
         "version": 2
       },
@@ -267,7 +262,7 @@
       "internal_id": "",
       "mfg": "",
       "mpn": "",
-      "sch_revision": ""
+      "sch_revision": "${VERSION}"
     },
     "layer_pairs": [],
     "layer_presets": [],
@@ -674,16 +669,16 @@
       {
         "filename": "uv-detector.kicad_sch",
         "name": "uv-detector",
-        "uuid": "00000000-0000-0000-0000-000000000000"
+        "uuid": "91cc9d15-231f-4b99-b8f8-b41b9ee23926"
       }
     ],
-    "used_designators": "",
+    "used_designators": "#PWR1-2,#PWR22-36,C6,CX6,U3-4",
     "variants": []
   },
   "sheets": [
     [
       "91cc9d15-231f-4b99-b8f8-b41b9ee23926",
-      "Root"
+      "uv-detector"
     ]
   ],
   "text_variables": {

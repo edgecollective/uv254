@@ -551,15 +551,15 @@
 		(uuid "3ab8cb95-7761-4011-86ca-33716ee5857a")
 	)
 	(embedded_fonts no)
-	(model "/Users/danny/Documents/proj/custom-keyboard/kicad-libs/3d_models/ArduinoProMicro.wrl"
+	(model "${KIPRJMOD}/../../lib/uv254.3dshapes/ProMicro_nRF52840_on_header.step"
 		(offset
-			(xyz -13.96999979 -7.619999886 -5.841999912)
+			(xyz 0 0 0)
 		)
 		(scale
-			(xyz 0.395 0.395 0.395)
+			(xyz 1 1 1)
 		)
 		(rotate
-			(xyz 90 180 180)
+			(xyz 0 0 0)
 		)
 	)
 )

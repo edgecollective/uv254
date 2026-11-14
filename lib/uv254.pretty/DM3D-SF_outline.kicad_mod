@@ -887,30 +887,6 @@
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(uuid "3ba6f261-1e17-402a-8887-e5c8beb9467f")
 	)
-	(pad "9" smd rect
-		(at -5.7 0.75)
-		(size 1.3 1.5)
-		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "4c820920-bf0d-40c5-8bd4-90576e66e656")
-	)
-	(pad "10" smd rect
-		(at -5.95 -6.85)
-		(size 0.8 1.5)
-		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "7a5b3060-c6ff-4607-b3c5-ded3025c423d")
-	)
-	(pad "11" smd rect
-		(at 6 -7.5)
-		(size 0.8 1.4)
-		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "d6c0ac43-5a44-4ced-adc6-9b5b41c0fa6d")
-	)
-	(pad "12" smd rect
-		(at 5.65 0.75)
-		(size 1.5 1.5)
-		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "294cd56c-06ec-44d0-a559-53c8ce7a4cfd")
-	)
 	(pad "A" smd rect
 		(at 5.6 -9.925)
 		(size 1 1.55)
@@ -923,10 +899,34 @@
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(uuid "8e01bfc6-e9d2-41fc-ae1c-2d535686937a")
 	)
+	(pad "SH" smd rect
+		(at -5.95 -6.85)
+		(size 0.8 1.5)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "7a5b3060-c6ff-4607-b3c5-ded3025c423d")
+	)
+	(pad "SH" smd rect
+		(at -5.7 0.75)
+		(size 1.3 1.5)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "4c820920-bf0d-40c5-8bd4-90576e66e656")
+	)
+	(pad "SH" smd rect
+		(at 5.65 0.75)
+		(size 1.5 1.5)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "294cd56c-06ec-44d0-a559-53c8ce7a4cfd")
+	)
+	(pad "SH" smd rect
+		(at 6 -7.5)
+		(size 0.8 1.4)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "d6c0ac43-5a44-4ced-adc6-9b5b41c0fa6d")
+	)
 	(embedded_fonts no)
-	(model "C:/Cad/Footprint/Hirose/3D/DM3D-SF.step"
+	(model "${KICAD10_3DMODEL_DIR}/Connector_Card.3dshapes/microSD_HC_Hirose_DM3D-SF.step"
 		(offset
-			(xyz 0 0 0)
+			(xyz 0.025 4.475 0)
 		)
 		(scale
 			(xyz 1 1 1)
