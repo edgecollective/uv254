@@ -9,7 +9,7 @@
 	(paper "A4")
 	(title_block
 		(title "UV-Detector")
-		(date "2026-11-08")
+		(date "2026-11-14")
 		(rev "${VERSION}")
 		(company "Edge Collective")
 		(comment 1 "https://github.com/edgecollective/uv254")
@@ -100,7 +100,7 @@
 			(outputdirectory "gerber/")
 		)
 	)
-	(property "VERSION" "v0.4")
+	(property "VERSION" "v0.5")
 	(footprint "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 		(layer "F.Cu")
 		(uuid "02ae55d1-fd8b-4550-9c81-f561b4d4e96c")
@@ -6667,7 +6667,7 @@
 			(justify left bottom)
 		)
 	)
-	(gr_text "2V5"
+	(gr_text "1V8"
 		(at 3.4 12.5 0)
 		(layer "F.SilkS")
 		(uuid "e12a339e-7ed6-4f06-ae5e-cf55c437794e")
@@ -6751,7 +6751,7 @@
 			(justify left bottom)
 		)
 	)
-	(gr_text "2V5"
+	(gr_text "1V8"
 		(at 13.8 28.5 90)
 		(layer "F.SilkS")
 		(uuid "7794378b-88ca-49a6-9601-0e74a3b0b65b")
@@ -6823,7 +6823,7 @@
 			(justify left bottom)
 		)
 	)
-	(gr_text "uv-detect-0.4"
+	(gr_text "uv-detect-${VERSION}"
 		(at 33.8 33.6 90)
 		(layer "F.SilkS")
 		(uuid "04b0318d-7a08-48a0-9834-1335861a935d")
@@ -6835,7 +6835,7 @@
 			(justify left bottom)
 		)
 	)
-	(gr_text "uva-detect-v0.4"
+	(gr_text "uva-detect-${VERSION}"
 		(at 27.6 12.4 0)
 		(layer "B.SilkS")
 		(uuid "519dc90d-3153-46ee-9eeb-52e9aa9e9920")

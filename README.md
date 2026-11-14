@@ -7,7 +7,7 @@ boards, each its own KiCad project:
 |---|---|---|---|
 | **UV-Control** | [`hardware/uv-control`](hardware/uv-control) | nRF52840 controller (from Rook v0.4), ADS1115 ADC, color TFT, microSD, buttons | v0.4 (in progress: restarted from Rook v0.4) |
 | **UV-Emitter** | [`hardware/uv-emitter`](hardware/uv-emitter) | Inolux IN-C35PPCTGU0 UV-C LED and its driver | v0.4 (released 2026-11-08) |
-| **UV-Detector** | [`hardware/uv-detector`](hardware/uv-detector) | SD008-2171-112 photodiode with an op-amp front end | v0.4 (released 2026-11-08) |
+| **UV-Detector** | [`hardware/uv-detector`](hardware/uv-detector) | SD008-2171-112 photodiode with an op-amp front end | v0.5 (in progress: 3.3 V, 1.8 V reference, 7-pin connector); v0.4 released 2026-11-08 |
 
 | [UV-Control](hardware/uv-control) | [UV-Emitter](hardware/uv-emitter) | [UV-Detector](hardware/uv-detector) |
 |:---:|:---:|:---:|

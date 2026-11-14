@@ -6,7 +6,7 @@
 	(paper "A4")
 	(title_block
 		(title "UV-Detector")
-		(date "2026-11-08")
+		(date "2026-11-14")
 		(rev "${VERSION}")
 		(company "Edge Collective")
 		(comment 1 "https://github.com/edgecollective/uv254")

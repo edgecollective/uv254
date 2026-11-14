@@ -1,7 +1,14 @@
 # UV-Detector
 
-Photodiode board: an SD008-2171-112 photodiode with an op-amp front end and a
-voltage reference.
+Photodiode board: an SD008-2171-112 photodiode with an OPA4340 op-amp front
+end. From v0.5 it runs from 3.3 V, with an MCP1501-18 1.8 V reference.
+
+The cable connector is a 7-pin JST PH (J2), with a 0.1" header (J1) in
+parallel:
+
+| Pin | 1 | 2 | 3 | 4 | 5 | 6 | 7 |
+|---|---|---|---|---|---|---|---|
+| Signal | 3V3 | 1V8 (reference out) | light-tight (`LEAK`) | rect (`RECT`) | detect (`DTCT`) | GND | GND |
 
 Open `uv-detector.kicad_pro` in KiCad 10. Custom parts come from
 [`lib/`](../../lib).
@@ -48,6 +55,7 @@ Re-run it after changing the board; see
 | v0.2_A | 2026-06-26 | branched from v0.2; sent to Josh | tag `uv-detector/v0.2_A` | — |
 | v0.2_B | 2026-10 | follows v0.2_A | tag `uv-detector/v0.2_B` | — |
 | **v0.4** | 2026-11-08 | **gerbers released**; derived from v0.2_B | tag `uv-detector/v0.4` | [`fab/v0.4`](fab/v0.4) |
+| v0.5 | — | in progress on `main` | `main` | — |
 
 Notes:
 
@@ -58,3 +66,8 @@ Notes:
   `uv-detector.kicad_pcb` or `.kicad_sch` directly at that tag.
 - **v0.4** was called "v0.3" in `uv-water`. It was renumbered because v0.3 was
   already used by the 2024 JLCPCB order.
+- **v0.5** (in progress) moves to the system-wide 3.3 V supply: the op-amp runs
+  from 3.3 V instead of 5 V, and an MCP1501-18 (1.8 V, buffered) replaces the
+  LM4040 2.5 V shunt reference and its feed resistor. The connectors grow from
+  6 to 7 pins, the extra pin being a second GND. Signal swing above the
+  reference drops from 2.5 V to 1.5 V, so the gain values may need adjusting.
