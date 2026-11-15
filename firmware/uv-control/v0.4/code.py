@@ -30,12 +30,12 @@ from fourwire import FourWire
 TFT_SCK, TFT_MOSI, TFT_CS = board.P1_13, board.P0_10, board.P1_11
 TFT_DC, TFT_RST, TFT_BL = board.P0_06, board.P0_08, board.P1_15
 I2C_SDA, I2C_SCL = board.P0_17, board.P0_20
-LED_ENABLE = board.P0_22   # emitter: HIGH forces the LED off, LOW lets LED_DRIVE set it
+LED_DISABLE = board.P0_22   # emitter: HIGH forces the LED off, LOW lets LED_DRIVE set it
 LED_DRIVE = board.P0_24    # emitter current setpoint: HIGH (3.3 V) gives about 26 mA
 BOOST_EN = board.P1_00     # U1 (LMR62014) enable: HIGH turns the 8 V LED supply on
 BUTTONS = (board.P0_11, board.P1_04, board.P1_06)   # A, B, C to GND
 V8_SENSE = board.P0_31     # 8 V LED supply through a 20k/10k divider
-DET_2V5 = board.P0_02      # the detector's 2.5 V reference
+DET_1V8 = board.P0_02      # the detector's 1.8 V reference
 
 SENSE_OHMS = 24.9          # emitter current-sense resistor (R2 on the emitter)
 SETTLE_S = 0.05            # wait after switching the LED before reading
@@ -49,7 +49,7 @@ def output(pin, value):
 
 
 # LED off before anything else
-led_enable = output(LED_ENABLE, True)
+led_disable = output(LED_DISABLE, True)
 led_drive = output(LED_DRIVE, False)
 boost_en = output(BOOST_EN, True)
 led_is_on = False
@@ -58,7 +58,7 @@ led_is_on = False
 def set_led(on):
     global led_is_on
     led_drive.value = on
-    led_enable.value = not on
+    led_disable.value = not on
     led_is_on = on
 
 
@@ -93,7 +93,7 @@ CHANNELS = (
     ("LED sense", AnalogIn(ads, ads1x15.Pin.A3)),
 )
 v8 = analogio.AnalogIn(V8_SENSE)
-v2v5 = analogio.AnalogIn(DET_2V5)
+v1v8 = analogio.AnalogIn(DET_1V8)
 
 
 def read_all():
@@ -169,7 +169,7 @@ while True:
     volts = read_all()
     for row, (name, _), v in zip(rows, CHANNELS, volts):
         row.text = "%-11s %7.4f V" % (name, v)
-    status.text = "LED %s  8V %.2f V  2V5 %.3f V" % (
-        "ON " if led_is_on else "off", internal_volts(v8, 3.0), internal_volts(v2v5))
+    status.text = "LED %s  8V %.2f V  1V8 %.3f V" % (
+        "ON " if led_is_on else "off", internal_volts(v8, 3.0), internal_volts(v1v8))
     print("%.2f,%s,%d" % (time.monotonic(), ",".join("%.5f" % v for v in volts), led_is_on))
     time.sleep(0.2)
