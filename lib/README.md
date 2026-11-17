@@ -25,6 +25,7 @@ are in [CONTRIBUTING.md](../CONTRIBUTING.md#libraries).
 | `nice_nano_cleanest` | uv-control: Pro Micro nRF52840 (SuperMini / nice!nano), 26 pads incl. B+/B-; from Rook v0.4 |
 | `st7789_154in_240x240` | uv-control: 1.54 in ST7789 display header; from Rook v0.4 |
 | `st7789_tft_2in_320x240` | 2.0 in ST7789 display header (same pin order); from Rook's library |
+| `ssd1306_a` | 0.96 in SSD1306 I2C OLED: 1x04 socket, pins 1 3V3, 2 GND, 3 SCL, 4 SDA (the square pad is pin 4), module outline on Dwgs.User; from Rook v0.4 |
 | `DM3D-SF_outline` | uv-control: Hirose DM3D-SF microSD socket; from Rook v0.4 |
 | `SSW_1825232-1` | uv-control: TE 1825232-1 slide switch (display backlight); from Rook v0.4 |
 | `SW_Tactile_12x12_B3F-40xx` | uv-control (B1-B3): 12x12 mm tactile switch, Omron B3F-40xx pattern (fits generic 4-pin 12x12); 3D model includes a cap |
