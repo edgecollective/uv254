@@ -15,6 +15,12 @@ boards, each its own KiCad project:
 
 Each board's README has its schematic, PCB layout and 3D views.
 
+**Bill of materials:** [`hardware/BOM.md`](hardware/BOM.md) lists the parts for
+one set of boards and the cables between them, with manufacturer part numbers.
+The same list is on the [project web page](https://edgecollective.io/uv254/bom/),
+which scales it to several sets and downloads it as a CSV for Digi-Key's or
+Mouser's BOM upload.
+
 UV-Emitter was called *UV-LED-source* in earlier revisions. Background notes
 are at <https://edgecollective.io/notes/uvf/>.
 
@@ -22,6 +28,7 @@ are at <https://edgecollective.io/notes/uvf/>.
 
 ```
 hardware/
+  BOM.md, bom.csv             parts for one set of boards and cables, with part numbers
   uv-control/                 one KiCad project per board
     uv-control.kicad_pro      open this in KiCad
     uv-control.kicad_sch
@@ -36,8 +43,11 @@ lib/                          shared project library (custom parts only)
   uv254.kicad_sym
   uv254.pretty/
 firmware/uv-control/          CircuitPython scripts for the control board
+docs/                         project web page (GitHub Pages): edgecollective.io/uv254
+  bom/index.html              the bill of materials page, made by scripts/make-bom.py
 scripts/build-fab.sh          builds gerbers, drill, BOM, PDF, positions
 scripts/render-images.sh      renders schematic, layout and 3D images for the READMEs
+scripts/make-bom.py           builds BOM.md, bom.csv and the BOM web page from the schematics
 .github/workflows/kicad.yml   ERC/DRC on every push; fab package on release tags
 ```
 
@@ -93,6 +103,27 @@ sudo apt install inkscape imagemagick poppler-utils
 ```
 
 It has only been tested on Linux.
+
+## Updating the bill of materials
+
+`hardware/BOM.md`, `hardware/bom.csv` and the web page `docs/bom/index.html`
+are made by `scripts/make-bom.py` from the three schematics. After adding,
+removing or changing parts, run it from the top of the repository and commit
+what changed:
+
+```sh
+scripts/make-bom.py
+```
+
+The schematics don't carry part numbers, so the script keeps its own table of
+them (`PARTS`, near the top). If a schematic has a part the script doesn't
+know, it stops and names it: add a line for it to `PARTS` and to `part_for()`.
+Files only change when the parts do, so re-running leaves git clean otherwise.
+It needs `kicad-cli` on your `PATH`.
+
+The web page is served by GitHub Pages from the `docs/` folder on `main`, at
+<https://edgecollective.io/uv254/>, the address printed on the detector and
+emitter boards. It updates a minute or so after a push.
 
 ## Versions and releases
 

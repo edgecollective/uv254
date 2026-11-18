@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>uv254</title>
+<meta name="description" content="Open hardware for the uv254 UV water-quality sensor: emitter, detector and control boards.">
+<style>
+:root {
+  --bg: #ffffff; --fg: #1c1d21; --muted: #5d6169; --line: #dfe1e6; --card: #f7f8fa;
+  --accent: #5a3ec8; --accent-soft: #efeafe;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #131417; --fg: #e7e8eb; --muted: #a3a7af; --line: #2c2f35; --card: #1b1d21;
+    --accent: #a993ff; --accent-soft: #241f3a;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #131417; --fg: #e7e8eb; --muted: #a3a7af; --line: #2c2f35; --card: #1b1d21;
+  --accent: #a993ff; --accent-soft: #241f3a;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--fg);
+  font: 16px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+main { max-width: 1000px; margin: 0 auto; padding: 40px 16px 72px; }
+a { color: var(--accent); }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+h1 { font-size: 36px; line-height: 1.15; margin: 0 0 12px; letter-spacing: -0.015em; }
+h2 { font-size: 20px; margin: 40px 0 12px; }
+p { max-width: 68ch; margin: 0 0 12px; }
+.lede { font-size: 18px; color: var(--muted); }
+.boards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-top: 28px; }
+.board { display: block; text-decoration: none; color: inherit; background: var(--card);
+  border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+.board:hover { border-color: var(--accent); }
+.board img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: contain; background: #ffffff; }
+.board div { padding: 12px 14px 14px; }
+.board h3 { margin: 0 0 4px; font-size: 17px; color: var(--accent); }
+.board p { margin: 0; font-size: 14px; color: var(--muted); }
+ul.links { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+ul.links a { font-weight: 600; }
+ul.links span { color: var(--muted); }
+footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+</style>
+</head>
+<body>
+<main>
+<h1>uv254</h1>
+<p class="lede">Open hardware for the uv254 UV water-quality sensor, by
+<a href="https://edgecollective.io/">Edge Collective</a>. It is three boards:
+a UV-C LED, a UV-C photodiode, and a controller that drives one and reads the other.</p>
+
+<div class="boards">
+  <a class="board" href="https://github.com/edgecollective/uv254/tree/main/hardware/uv-control">
+    <img src="https://raw.githubusercontent.com/edgecollective/uv254/main/hardware/uv-control/docs/uv-control-3d-front.png" alt="UV-Control board, 3D render" loading="lazy">
+    <div><h3>UV-Control</h3><p>nRF52840 controller, ADS1115 ADC, colour display, microSD, buttons</p></div>
+  </a>
+  <a class="board" href="https://github.com/edgecollective/uv254/tree/main/hardware/uv-emitter">
+    <img src="https://raw.githubusercontent.com/edgecollective/uv254/main/hardware/uv-emitter/docs/uv-emitter-3d-front.png" alt="UV-Emitter board, 3D render" loading="lazy">
+    <div><h3>UV-Emitter</h3><p>Inolux IN-C35PPCTGU0 UV-C LED and its driver</p></div>
+  </a>
+  <a class="board" href="https://github.com/edgecollective/uv254/tree/main/hardware/uv-detector">
+    <img src="https://raw.githubusercontent.com/edgecollective/uv254/main/hardware/uv-detector/docs/uv-detector-3d-front.png" alt="UV-Detector board, 3D render" loading="lazy">
+    <div><h3>UV-Detector</h3><p>SD008-2171-112 UV-C photodiode with an op-amp front end</p></div>
+  </a>
+</div>
+
+<h2>More</h2>
+<ul class="links">
+  <li><a href="bom/">Bill of materials</a><span>: parts for one set of boards and cables, with part numbers and a CSV download</span></li>
+  <li><a href="https://github.com/edgecollective/uv254">Design files on GitHub</a><span>: KiCad projects, schematics, layouts, firmware and releases</span></li>
+  <li><a href="https://edgecollective.io/notes/uvf/">Background notes</a></li>
+</ul>
+
+<footer>
+<p>Hardware under CERN-OHL-S-2.0, firmware under MIT.</p>
+</footer>
+</main>
+</body>
+</html>

@@ -1,0 +1,40 @@
+Qty per set,Manufacturer,MPN,Description,Used on,Source,Notes
+13,Yageo,RC0805FR-0710KL,10 kΩ 1% 0805,detector R1 R2 R3 R5 R7 R9 R11; emitter R5; control R9 R17 R20 R22 R24,Digi-Key,
+5,Yageo,RC0805FR-074K7L,4.7 kΩ 1% 0805,control R1 R2 R6 R7 R8,Digi-Key,
+1,Yageo,RC0805FR-074K99L,4.99 kΩ 1% 0805,detector R4,Digi-Key,
+3,Yageo,RC0805FR-075K49L,5.49 kΩ 1% 0805,control R5 R14 R15,Digi-Key,
+3,Yageo,RC0805FR-071KL,1 kΩ 1% 0805,detector R13 R14; emitter R1,Digi-Key,
+1,Yageo,RC0805FR-0724K9L,24.9 kΩ 1% 0805,emitter R4,Digi-Key,
+1,Yageo,RC0805FR-0724R9L,24.9 Ω 1% 0805,emitter R2,Digi-Key,LED current sense
+2,Yageo,RC0805FR-0743K2L,43.2 kΩ 1% 0805,detector R10 R12,Digi-Key,
+4,Yageo,RC0805FR-07100KL,100 kΩ 1% 0805,detector R6; emitter R3; control R4 R12,Digi-Key,
+1,Yageo,RC0805FR-071ML,1 MΩ 1% 0805,detector R8,Digi-Key,
+1,Samsung,CL21C100JBANNNC,10 pF 50 V C0G 0805,detector C2,Digi-Key,
+1,Samsung,CL21C101JBANNNC,100 pF 50 V C0G 0805,detector C7,Digi-Key,
+10,Samsung,CL21B104KBCNNNC,100 nF 50 V X7R 0805,detector C5; emitter CX1; control C8 C9 C10 C11 C12 C13 C14 C16,Digi-Key,
+1,Samsung,CL21B334KBFNNNE,330 nF 50 V X7R 0805,control C7,Digi-Key,long factory lead time; Murata GRM219R71H334KA88D is an alternate
+4,Samsung,CL21B105KAFNNNE,1 µF 25 V X7R 0805,detector C1 C3 C4; emitter CX2,Digi-Key,CX2 is on +12V: keep it 25 V or more
+1,Samsung,CL21B225KAFNFNE,2.2 µF 25 V X7R 0805,detector C6,Digi-Key,
+1,Samsung,CL21A106KOQNNNE,10 µF 16 V X5R 0805,control C15,Digi-Key,
+1,Advanced Photonix,008-2171-112,"UV-C photodiode, 220-280 nm, TO-46 can (datasheet name SD008-2171-112)",detector D2,Digi-Key,about $45; TO-46 has the same pin circle as the TO-18 footprint
+1,Inolux,IN-C35PPCTGU0,"UV-C LED, 255 nm, 3535",emitter D1,Digi-Key,about $20
+2,Texas Instruments,OPA4340UA,"Quad rail-to-rail op-amp, SOIC-14",detector U1; emitter U1,Digi-Key,
+1,Microchip,MCP1501T-18E/CHY,"1.8 V 0.1% voltage reference, SOT-23-6",detector U4,Digi-Key,
+1,Diodes Inc,BAT54S-7-F,"Dual Schottky diode, series, SOT-23",detector D1,Digi-Key,
+1,onsemi,MMBT3904LT1G,"NPN transistor, SOT-23",emitter Q1,Digi-Key,
+2,onsemi,2N7002LT1G,"N-channel MOSFET 60 V, SOT-23",emitter Q2; control Q1,Digi-Key,
+2,Diodes Inc,1N4148W-7-F,"Switching diode, SOD-123",control D1 D2,Digi-Key,
+1,Texas Instruments,ADS1115IDGSR,"16-bit 4-channel I2C ADC, VSSOP-10",control U3,Digi-Key,
+1,Texas Instruments,TLC555IDR,"CMOS 555 timer, SOIC-8",control U4,Digi-Key,
+2,JST,B7B-PH-K-S(LF)(SN),"JST PH 7-pin header, vertical",detector J2; control J1,Digi-Key,
+2,JST,B6B-PH-K-S(LF)(SN),"JST PH 6-pin header, vertical",emitter J2; control J2,Digi-Key,
+1,Sullins,PRPC040SAAN-RC,"0.1 in male header, 1x40, break to length",control J3 J5 J6 J7,Digi-Key,one strip covers every 0.1 in header in a set
+3,Omron,B3F-4055,"Tactile switch 12x12 mm, 7.3 mm, projected plunger",control B1 B2 B3,Digi-Key,takes Omron B32 key caps
+1,Omron,B3F-1020,"Tactile switch 6x6 mm, 5 mm",control RESET1,Digi-Key,
+1,Hirose,DM3D-SF,microSD socket,control J10,Digi-Key,
+1,,,"Pro Micro nRF52840 module (nice!nano v2, or a SuperMini clone)",control U2,nice!nano: Nice Keyboards; clones: AliExpress,same module as Rook v0.4; usually ships with headers
+1,,,"1.54 in 240x240 ST7789 IPS SPI module, 8 pins in the order GND VCC SCL SDA RES DC CS BLK",control U5,AliExpress and similar,check the pin order before buying
+2,JST,PHR-7,JST PH 7-pin cable housing,cables: control J1 to detector J2,Digi-Key,
+2,JST,PHR-6,JST PH 6-pin cable housing,cables: control J2 to emitter J2,Digi-Key,
+13,JST,ASPHSPH24K152,"JST PH pre-crimped lead, 6 in, 24 AWG, socket both ends",cables: 7 + 6 wires,Digi-Key,or crimp SPH-002T-P0.5S terminals onto your own wire
+1,Sullins,SPC02SYAN,0.1 in shunt (jumper),control: on J3,Digi-Key,
