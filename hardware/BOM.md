@@ -17,79 +17,80 @@ cut-tape prices usually drop at 10 pieces.
 
 The order list for one set is [`bom.csv`](bom.csv), by manufacturer part number, ready
 for Digi-Key's or Mouser's BOM upload. The [web page](https://edgecollective.io/uv254/bom/) has the same
-lists, scales the order to several sets and downloads it as CSV.
+lists, scales the order to several sets and downloads it as CSV. The Buy links
+search Digi-Key for each part number.
 
 ## UV-Detector v0.5
 
-| Refs | Qty | Part | Manufacturer, MPN | Notes |
-|---|---|---|---|---|
-| R1, R2, R3, R5, R7, R9, R11 | 7 | 10 kΩ 1% 0805 | Yageo RC0805FR-0710KL |  |
-| R4 | 1 | 4.99 kΩ 1% 0805 | Yageo RC0805FR-074K99L |  |
-| R13, R14 | 2 | 1 kΩ 1% 0805 | Yageo RC0805FR-071KL |  |
-| R10, R12 | 2 | 43.2 kΩ 1% 0805 | Yageo RC0805FR-0743K2L |  |
-| R6 | 1 | 100 kΩ 1% 0805 | Yageo RC0805FR-07100KL |  |
-| R8 | 1 | 1 MΩ 1% 0805 | Yageo RC0805FR-071ML |  |
-| C2 | 1 | 10 pF 50 V C0G 0805 | Samsung CL21C100JBANNNC |  |
-| C7 | 1 | 100 pF 50 V C0G 0805 | Samsung CL21C101JBANNNC |  |
-| C5 | 1 | 100 nF 50 V X7R 0805 | Samsung CL21B104KBCNNNC |  |
-| C1, C3, C4 | 3 | 1 µF 25 V X7R 0805 | Samsung CL21B105KAFNNNE |  |
-| C6 | 1 | 2.2 µF 25 V X7R 0805 | Samsung CL21B225KAFNFNE |  |
-| D2 | 1 | UV-C photodiode, 220-280 nm, TO-46 can (datasheet name SD008-2171-112) | Advanced Photonix 008-2171-112 | about $45; TO-46 has the same pin circle as the TO-18 footprint |
-| U1 | 1 | Quad rail-to-rail op-amp, SOIC-14 | Texas Instruments OPA4340UA |  |
-| U4 | 1 | 1.8 V 0.1% voltage reference, SOT-23-6 | Microchip MCP1501T-18E/CHY |  |
-| D1 | 1 | Dual Schottky diode, series, SOT-23 | Diodes Inc BAT54S-7-F |  |
-| J2 | 1 | JST PH 7-pin header, vertical | JST B7B-PH-K-S(LF)(SN) |  |
-| J1 | 0 | 0.1 in male header, J1 1x7 | Sullins PRPC040SAAN-RC | 0.1 in header in parallel with J2: optional; cut from the 1x40 strip |
+| Refs | Qty | Part | Manufacturer, MPN | Buy | Notes |
+|---|---|---|---|---|---|
+| R1, R2, R3, R5, R7, R9, R11 | 7 | 10 kΩ 1% 0805 | Yageo RC0805FR-0710KL | [Digi-Key](https://www.digikey.com/en/products/result?keywords=RC0805FR-0710KL) |  |
+| R4 | 1 | 4.99 kΩ 1% 0805 | Yageo RC0805FR-074K99L | [Digi-Key](https://www.digikey.com/en/products/result?keywords=RC0805FR-074K99L) |  |
+| R13, R14 | 2 | 1 kΩ 1% 0805 | Yageo RC0805FR-071KL | [Digi-Key](https://www.digikey.com/en/products/result?keywords=RC0805FR-071KL) |  |
+| R10, R12 | 2 | 43.2 kΩ 1% 0805 | Yageo RC0805FR-0743K2L | [Digi-Key](https://www.digikey.com/en/products/result?keywords=RC0805FR-0743K2L) |  |
+| R6 | 1 | 100 kΩ 1% 0805 | Yageo RC0805FR-07100KL | [Digi-Key](https://www.digikey.com/en/products/result?keywords=RC0805FR-07100KL) |  |
+| R8 | 1 | 1 MΩ 1% 0805 | Yageo RC0805FR-071ML | [Digi-Key](https://www.digikey.com/en/products/result?keywords=RC0805FR-071ML) |  |
+| C2 | 1 | 10 pF 50 V C0G 0805 | Samsung CL21C100JBANNNC | [Digi-Key](https://www.digikey.com/en/products/result?keywords=CL21C100JBANNNC) |  |
+| C7 | 1 | 100 pF 50 V C0G 0805 | Samsung CL21C101JBANNNC | [Digi-Key](https://www.digikey.com/en/products/result?keywords=CL21C101JBANNNC) |  |
+| C5 | 1 | 100 nF 50 V X7R 0805 | Samsung CL21B104KBCNNNC | [Digi-Key](https://www.digikey.com/en/products/result?keywords=CL21B104KBCNNNC) |  |
+| C1, C3, C4 | 3 | 1 µF 25 V X7R 0805 | Samsung CL21B105KAFNNNE | [Digi-Key](https://www.digikey.com/en/products/result?keywords=CL21B105KAFNNNE) |  |
+| C6 | 1 | 2.2 µF 25 V X7R 0805 | Samsung CL21B225KAFNFNE | [Digi-Key](https://www.digikey.com/en/products/result?keywords=CL21B225KAFNFNE) |  |
+| D2 | 1 | UV-C photodiode, 220-280 nm, TO-46 can (datasheet name SD008-2171-112) | Advanced Photonix 008-2171-112 | [Digi-Key](https://www.digikey.com/en/products/result?keywords=008-2171-112) | about $45; TO-46 has the same pin circle as the TO-18 footprint |
+| U1 | 1 | Quad rail-to-rail op-amp, SOIC-14 | Texas Instruments OPA4340UA | [Digi-Key](https://www.digikey.com/en/products/result?keywords=OPA4340UA) |  |
+| U4 | 1 | 1.8 V 0.1% voltage reference, SOT-23-6 | Microchip MCP1501T-18E/CHY | [Digi-Key](https://www.digikey.com/en/products/result?keywords=MCP1501T-18E%2FCHY) |  |
+| D1 | 1 | Dual Schottky diode, series, SOT-23 | Diodes Inc BAT54S-7-F | [Digi-Key](https://www.digikey.com/en/products/result?keywords=BAT54S-7-F) |  |
+| J2 | 1 | JST PH 7-pin header, vertical | JST B7B-PH-K-S(LF)(SN) | [Digi-Key](https://www.digikey.com/en/products/result?keywords=B7B-PH-K-S%28LF%29%28SN%29) |  |
+| J1 | 0 | 0.1 in male header, J1 1x7 | Sullins PRPC040SAAN-RC | [Digi-Key](https://www.digikey.com/en/products/result?keywords=PRPC040SAAN-RC) | 0.1 in header in parallel with J2: optional; cut from the 1x40 strip |
 
 H1-H4 are M3 mounting holes (no part).
 
 ## UV-Emitter v0.5
 
-| Refs | Qty | Part | Manufacturer, MPN | Notes |
-|---|---|---|---|---|
-| R5 | 1 | 10 kΩ 1% 0805 | Yageo RC0805FR-0710KL |  |
-| R1 | 1 | 1 kΩ 1% 0805 | Yageo RC0805FR-071KL |  |
-| R4 | 1 | 24.9 kΩ 1% 0805 | Yageo RC0805FR-0724K9L |  |
-| R2 | 1 | 24.9 Ω 1% 0805 | Yageo RC0805FR-0724R9L | LED current sense |
-| R3 | 1 | 100 kΩ 1% 0805 | Yageo RC0805FR-07100KL |  |
-| CX1 | 1 | 100 nF 50 V X7R 0805 | Samsung CL21B104KBCNNNC |  |
-| CX2 | 1 | 1 µF 25 V X7R 0805 | Samsung CL21B105KAFNNNE | CX2 is on +12V: keep it 25 V or more |
-| D1 | 1 | UV-C LED, 255 nm, 3535 | Inolux IN-C35PPCTGU0 | about $20 |
-| U1 | 1 | Quad rail-to-rail op-amp, SOIC-14 | Texas Instruments OPA4340UA |  |
-| Q1 | 1 | NPN transistor, SOT-23 | onsemi MMBT3904LT1G |  |
-| Q2 | 1 | N-channel MOSFET 60 V, SOT-23 | onsemi 2N7002LT1G |  |
-| J2 | 1 | JST PH 6-pin header, vertical | JST B6B-PH-K-S(LF)(SN) |  |
-| J1 | 0 | 0.1 in female socket, 1x6 | Sullins PPTC061LFBN-RC | 0.1 in socket in parallel with J2: optional |
+| Refs | Qty | Part | Manufacturer, MPN | Buy | Notes |
+|---|---|---|---|---|---|
+| R5 | 1 | 10 kΩ 1% 0805 | Yageo RC0805FR-0710KL | [Digi-Key](https://www.digikey.com/en/products/result?keywords=RC0805FR-0710KL) |  |
+| R1 | 1 | 1 kΩ 1% 0805 | Yageo RC0805FR-071KL | [Digi-Key](https://www.digikey.com/en/products/result?keywords=RC0805FR-071KL) |  |
+| R4 | 1 | 24.9 kΩ 1% 0805 | Yageo RC0805FR-0724K9L | [Digi-Key](https://www.digikey.com/en/products/result?keywords=RC0805FR-0724K9L) |  |
+| R2 | 1 | 24.9 Ω 1% 0805 | Yageo RC0805FR-0724R9L | [Digi-Key](https://www.digikey.com/en/products/result?keywords=RC0805FR-0724R9L) | LED current sense |
+| R3 | 1 | 100 kΩ 1% 0805 | Yageo RC0805FR-07100KL | [Digi-Key](https://www.digikey.com/en/products/result?keywords=RC0805FR-07100KL) |  |
+| CX1 | 1 | 100 nF 50 V X7R 0805 | Samsung CL21B104KBCNNNC | [Digi-Key](https://www.digikey.com/en/products/result?keywords=CL21B104KBCNNNC) |  |
+| CX2 | 1 | 1 µF 25 V X7R 0805 | Samsung CL21B105KAFNNNE | [Digi-Key](https://www.digikey.com/en/products/result?keywords=CL21B105KAFNNNE) | CX2 is on +12V: keep it 25 V or more |
+| D1 | 1 | UV-C LED, 255 nm, 3535 | Inolux IN-C35PPCTGU0 | [Digi-Key](https://www.digikey.com/en/products/result?keywords=IN-C35PPCTGU0) | about $20 |
+| U1 | 1 | Quad rail-to-rail op-amp, SOIC-14 | Texas Instruments OPA4340UA | [Digi-Key](https://www.digikey.com/en/products/result?keywords=OPA4340UA) |  |
+| Q1 | 1 | NPN transistor, SOT-23 | onsemi MMBT3904LT1G | [Digi-Key](https://www.digikey.com/en/products/result?keywords=MMBT3904LT1G) |  |
+| Q2 | 1 | N-channel MOSFET 60 V, SOT-23 | onsemi 2N7002LT1G | [Digi-Key](https://www.digikey.com/en/products/result?keywords=2N7002LT1G) |  |
+| J2 | 1 | JST PH 6-pin header, vertical | JST B6B-PH-K-S(LF)(SN) | [Digi-Key](https://www.digikey.com/en/products/result?keywords=B6B-PH-K-S%28LF%29%28SN%29) |  |
+| J1 | 0 | 0.1 in female socket, 1x6 | Sullins PPTC061LFBN-RC | [Digi-Key](https://www.digikey.com/en/products/result?keywords=PPTC061LFBN-RC) | 0.1 in socket in parallel with J2: optional |
 
 H1-H4 are M3 mounting holes (no part). The LED runs from +12V on J2 pin 4.
 
 ## UV-Control v0.4
 
-| Refs | Qty | Part | Manufacturer, MPN | Notes |
-|---|---|---|---|---|
-| R9, R17, R20, R22, R24 | 5 | 10 kΩ 1% 0805 | Yageo RC0805FR-0710KL |  |
-| R11 | 0 | 10 kΩ 1% 0805 | Yageo RC0805FR-0710KL | ALERT pull-up: not fitted |
-| R13 | 0 | 10 kΩ 1% 0805 | Yageo RC0805FR-0710KL | backlight pull-up: not fitted |
-| R1, R2, R6, R7, R8 | 5 | 4.7 kΩ 1% 0805 | Yageo RC0805FR-074K7L |  |
-| R5, R14, R15 | 3 | 5.49 kΩ 1% 0805 | Yageo RC0805FR-075K49L |  |
-| R4, R12 | 2 | 100 kΩ 1% 0805 | Yageo RC0805FR-07100KL |  |
-| C8, C9, C10, C11, C12, C13, C14, C16 | 8 | 100 nF 50 V X7R 0805 | Samsung CL21B104KBCNNNC |  |
-| C7 | 1 | 330 nF 50 V X7R 0805 | Samsung CL21B334KBFNNNE | long factory lead time; Murata GRM219R71H334KA88D is an alternate |
-| C15 | 1 | 10 µF 16 V X5R 0805 | Samsung CL21A106KOQNNNE |  |
-| Q1 | 1 | N-channel MOSFET 60 V, SOT-23 | onsemi 2N7002LT1G |  |
-| D1, D2 | 2 | Switching diode, SOD-123 | Diodes Inc 1N4148W-7-F |  |
-| U3 | 1 | 16-bit 4-channel I2C ADC, VSSOP-10 | Texas Instruments ADS1115IDGSR |  |
-| U4 | 1 | CMOS 555 timer, SOIC-8 | Texas Instruments TLC555IDR |  |
-| J1 | 1 | JST PH 7-pin header, vertical | JST B7B-PH-K-S(LF)(SN) |  |
-| J2 | 1 | JST PH 6-pin header, vertical | JST B6B-PH-K-S(LF)(SN) |  |
-| J3 | 1 | 0.1 in male header, J3 1x3 | Sullins PRPC040SAAN-RC | LED drive select, with a shunt; cut from the 1x40 strip |
-| J5, J6, J7 | 3 | 0.1 in male header, J5 1x4, J6 1x5, J7 1x4 | Sullins PRPC040SAAN-RC | cut from the 1x40 strip |
-| B1, B2, B3 | 3 | Tactile switch 12x12 mm, 7.3 mm, projected plunger | Omron B3F-4055 | takes Omron B32 key caps |
-| RESET1 | 1 | Tactile switch 6x6 mm, 5 mm | Omron B3F-1020 |  |
-| J10 | 1 | microSD socket | Hirose DM3D-SF |  |
-| U2 | 1 | Pro Micro nRF52840 module (nice!nano v2, or a SuperMini clone) | nice!nano: Nice Keyboards; clones: AliExpress | same module as Rook v0.4; usually ships with headers |
-| U5 | 1 | 1.54 in 240x240 ST7789 IPS SPI module, 8 pins in the order GND VCC SCL SDA RES DC CS BLK | AliExpress and similar | check the pin order before buying |
-| J4 | 0 | SSD1306 I2C OLED module, 4-pin (VCC GND SCL SDA) | AliExpress and similar | optional OLED header: not fitted |
+| Refs | Qty | Part | Manufacturer, MPN | Buy | Notes |
+|---|---|---|---|---|---|
+| R9, R17, R20, R22, R24 | 5 | 10 kΩ 1% 0805 | Yageo RC0805FR-0710KL | [Digi-Key](https://www.digikey.com/en/products/result?keywords=RC0805FR-0710KL) |  |
+| R11 | 0 | 10 kΩ 1% 0805 | Yageo RC0805FR-0710KL | [Digi-Key](https://www.digikey.com/en/products/result?keywords=RC0805FR-0710KL) | ALERT pull-up: not fitted |
+| R13 | 0 | 10 kΩ 1% 0805 | Yageo RC0805FR-0710KL | [Digi-Key](https://www.digikey.com/en/products/result?keywords=RC0805FR-0710KL) | backlight pull-up: not fitted |
+| R1, R2, R6, R7, R8 | 5 | 4.7 kΩ 1% 0805 | Yageo RC0805FR-074K7L | [Digi-Key](https://www.digikey.com/en/products/result?keywords=RC0805FR-074K7L) |  |
+| R5, R14, R15 | 3 | 5.49 kΩ 1% 0805 | Yageo RC0805FR-075K49L | [Digi-Key](https://www.digikey.com/en/products/result?keywords=RC0805FR-075K49L) |  |
+| R4, R12 | 2 | 100 kΩ 1% 0805 | Yageo RC0805FR-07100KL | [Digi-Key](https://www.digikey.com/en/products/result?keywords=RC0805FR-07100KL) |  |
+| C8, C9, C10, C11, C12, C13, C14, C16 | 8 | 100 nF 50 V X7R 0805 | Samsung CL21B104KBCNNNC | [Digi-Key](https://www.digikey.com/en/products/result?keywords=CL21B104KBCNNNC) |  |
+| C7 | 1 | 330 nF 50 V X7R 0805 | Samsung CL21B334KBFNNNE | [Digi-Key](https://www.digikey.com/en/products/result?keywords=CL21B334KBFNNNE) | long factory lead time; Murata GRM219R71H334KA88D is an alternate |
+| C15 | 1 | 10 µF 16 V X5R 0805 | Samsung CL21A106KOQNNNE | [Digi-Key](https://www.digikey.com/en/products/result?keywords=CL21A106KOQNNNE) |  |
+| Q1 | 1 | N-channel MOSFET 60 V, SOT-23 | onsemi 2N7002LT1G | [Digi-Key](https://www.digikey.com/en/products/result?keywords=2N7002LT1G) |  |
+| D1, D2 | 2 | Switching diode, SOD-123 | Diodes Inc 1N4148W-7-F | [Digi-Key](https://www.digikey.com/en/products/result?keywords=1N4148W-7-F) |  |
+| U3 | 1 | 16-bit 4-channel I2C ADC, VSSOP-10 | Texas Instruments ADS1115IDGSR | [Digi-Key](https://www.digikey.com/en/products/result?keywords=ADS1115IDGSR) |  |
+| U4 | 1 | CMOS 555 timer, SOIC-8 | Texas Instruments TLC555IDR | [Digi-Key](https://www.digikey.com/en/products/result?keywords=TLC555IDR) |  |
+| J1 | 1 | JST PH 7-pin header, vertical | JST B7B-PH-K-S(LF)(SN) | [Digi-Key](https://www.digikey.com/en/products/result?keywords=B7B-PH-K-S%28LF%29%28SN%29) |  |
+| J2 | 1 | JST PH 6-pin header, vertical | JST B6B-PH-K-S(LF)(SN) | [Digi-Key](https://www.digikey.com/en/products/result?keywords=B6B-PH-K-S%28LF%29%28SN%29) |  |
+| J3 | 1 | 0.1 in male header, J3 1x3 | Sullins PRPC040SAAN-RC | [Digi-Key](https://www.digikey.com/en/products/result?keywords=PRPC040SAAN-RC) | LED drive select, with a shunt; cut from the 1x40 strip |
+| J5, J6, J7 | 3 | 0.1 in male header, J5 1x4, J6 1x5, J7 1x4 | Sullins PRPC040SAAN-RC | [Digi-Key](https://www.digikey.com/en/products/result?keywords=PRPC040SAAN-RC) | cut from the 1x40 strip |
+| B1, B2, B3 | 3 | Tactile switch 12x12 mm, 7.3 mm, projected plunger | Omron B3F-4055 | [Digi-Key](https://www.digikey.com/en/products/result?keywords=B3F-4055) | takes Omron B32 key caps |
+| RESET1 | 1 | Tactile switch 6x6 mm, 5 mm | Omron B3F-1020 | [Digi-Key](https://www.digikey.com/en/products/result?keywords=B3F-1020) |  |
+| J10 | 1 | microSD socket | Hirose DM3D-SF | [Digi-Key](https://www.digikey.com/en/products/result?keywords=DM3D-SF) |  |
+| U2 | 1 | Pro Micro nRF52840 module (nice!nano v2, or a SuperMini clone) | nice!nano: Nice Keyboards; clones: AliExpress |  | same module as Rook v0.4; usually ships with headers |
+| U5 | 1 | 1.54 in 240x240 ST7789 IPS SPI module, 8 pins in the order GND VCC SCL SDA RES DC CS BLK | AliExpress and similar |  | check the pin order before buying |
+| J4 | 0 | SSD1306 I2C OLED module, 4-pin (VCC GND SCL SDA) | AliExpress and similar |  | optional OLED header: not fitted |
 
 JP1 (solder jumper) and H1-H4 (mounting holes) have no part. J3 takes one shunt (Sullins SPC02SYAN); use J3 or JP1, never both. The display and the Pro Micro can be soldered straight to the board or plugged into 0.1 in sockets.
 
@@ -100,12 +101,13 @@ reversed, pin 1 to pin 6, and those don't work here):
 
 | Cable | Ends | Parts |
 |---|---|---|
-| Control J1 to detector J2 | 7-pin JST PH | 2 JST PHR-7 housings, 7 leads |
-| Control J2 to emitter J2 | 6-pin JST PH | 2 JST PHR-6 housings, 6 leads |
+| Control J1 to detector J2 | 7-pin JST PH | 2 JST [PHR-7](https://www.digikey.com/en/products/result?keywords=PHR-7) housings, 7 leads |
+| Control J2 to emitter J2 | 6-pin JST PH | 2 JST [PHR-6](https://www.digikey.com/en/products/result?keywords=PHR-6) housings, 6 leads |
 
-The leads are JST ASPHSPH24K152 (6 in, crimped at both ends, pushed into
-the housings), 13 in all. Or crimp JST SPH-002T-P0.5S terminals onto 24-28 AWG
-wire.
+The leads are JST [ASPHSPH24K152](https://www.digikey.com/en/products/result?keywords=ASPHSPH24K152) (6 in, crimped at both
+ends, pushed into the housings), 13 in all. Or crimp JST
+[SPH-002T-P0.5S](https://www.digikey.com/en/products/result?keywords=SPH-002T-P0.5S) terminals onto 24-28 AWG wire.
+All four links go to Digi-Key.
 
 ## Not in the design yet
 

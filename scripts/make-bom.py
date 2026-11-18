@@ -113,6 +113,11 @@ BOARD_NOTE = {
 }
 
 
+def dk_url(mpn):
+    """Digi-Key search for an exact MPN (it opens the product page when there's one match)."""
+    return 'https://www.digikey.com/en/products/result?keywords=' + urllib.parse.quote(mpn, safe='')
+
+
 def part_for(ref, value, fp):
     """Map one schematic part to a PARTS id (None: no part to buy)."""
     v = value.replace(' ', '').lower()
@@ -239,17 +244,18 @@ Quantity 0 means the part has a footprint but isn't fitted, or is optional.
 All resistors and capacitors are 0805. Order a few spares of the small parts:
 cut-tape prices usually drop at 10 pieces.'''
 
-CABLES = '''Two cables, wired **pin 1 to pin 1** (ready-made JST PH cables are often
+CABLES = f'''Two cables, wired **pin 1 to pin 1** (ready-made JST PH cables are often
 reversed, pin 1 to pin 6, and those don't work here):
 
 | Cable | Ends | Parts |
 |---|---|---|
-| Control J1 to detector J2 | 7-pin JST PH | 2 JST PHR-7 housings, 7 leads |
-| Control J2 to emitter J2 | 6-pin JST PH | 2 JST PHR-6 housings, 6 leads |
+| Control J1 to detector J2 | 7-pin JST PH | 2 JST [PHR-7]({dk_url('PHR-7')}) housings, 7 leads |
+| Control J2 to emitter J2 | 6-pin JST PH | 2 JST [PHR-6]({dk_url('PHR-6')}) housings, 6 leads |
 
-The leads are JST ASPHSPH24K152 (6 in, crimped at both ends, pushed into
-the housings), 13 in all. Or crimp JST SPH-002T-P0.5S terminals onto 24-28 AWG
-wire.'''
+The leads are JST [ASPHSPH24K152]({dk_url('ASPHSPH24K152')}) (6 in, crimped at both
+ends, pushed into the housings), 13 in all. Or crimp JST
+[SPH-002T-P0.5S]({dk_url('SPH-002T-P0.5S')}) terminals onto 24-28 AWG wire.
+All four links go to Digi-Key.'''
 
 TODO = '''The control board has no source for **V_LED** (the emitter's +12V, J2 pin 4)
 until the boost for the UV LED is added, so its parts aren't listed. Until then,
@@ -261,6 +267,7 @@ def md_inline(s):
     """The little markdown used in the prose blocks, as HTML."""
     s = html.escape(s, quote=False)
     s = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', s)
+    s = re.sub(r'\[([^\]]+)\]\(([^)\s]+)\)', r'<a href="\2">\1</a>', s)
     return re.sub(r'`(.+?)`', r'<code>\1</code>', s)
 
 
@@ -284,12 +291,15 @@ def make_md(boards, order, date, versions):
            '# Bill of materials', '', INTRO.format(date=date, versions=versions), '',
            'The order list for one set is [`bom.csv`](bom.csv), by manufacturer part number, ready',
            "for Digi-Key's or Mouser's BOM upload. The [web page](" + PAGE_URL + ') has the same',
-           'lists, scales the order to several sets and downloads it as CSV.', '']
+           'lists, scales the order to several sets and downloads it as CSV. The Buy links',
+           'search Digi-Key for each part number.', '']
     for bd in boards:
-        out += [f"## {bd['title']}", '', '| Refs | Qty | Part | Manufacturer, MPN | Notes |', '|---|---|---|---|---|']
+        out += [f"## {bd['title']}", '', '| Refs | Qty | Part | Manufacturer, MPN | Buy | Notes |',
+                '|---|---|---|---|---|---|']
         for refs, q, part, desc, mfr, mpn, where, notes in board_groups(bd):
             mm = f'{mfr} {mpn}'.strip() or where
-            out.append(f"| {', '.join(refs)} | {q} | {desc} | {mm} | {notes} |")
+            buy = f'[Digi-Key]({dk_url(mpn)})' if mpn else ''
+            out.append(f"| {', '.join(refs)} | {q} | {desc} | {mm} | {buy} | {notes} |")
         out += ['', BOARD_NOTE[bd['id']], '']
     out += ['## Cables', '', CABLES, '', '## Not in the design yet', '', TODO, '']
     return '\n'.join(out)
@@ -333,7 +343,7 @@ h2 { font-size: 20px; margin: 44px 0 10px; scroll-margin-top: 72px; }
 p { max-width: 75ch; margin: 0 0 12px; }
 .lede { color: var(--muted); }
 code, .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 13px; }
-a.mono { white-space: nowrap; }
+span.mono, td.buy { white-space: nowrap; }
 .bar { position: sticky; top: 0; z-index: 2; background: var(--bg); border-bottom: 1px solid var(--line);
   display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center; padding: 10px 0; margin: 18px 0 8px; }
 .bar label { display: flex; align-items: center; gap: 8px; font-weight: 600; }
@@ -346,7 +356,7 @@ nav { display: flex; flex-wrap: wrap; gap: 6px; }
 nav a { text-decoration: none; color: var(--fg); background: var(--chip); padding: 3px 10px; border-radius: 999px; font-size: 14px; }
 nav a:hover { background: var(--accent-soft); }
 .scroll { overflow-x: auto; border: 1px solid var(--line); border-radius: 8px; margin: 12px 0; }
-table { border-collapse: collapse; width: 100%; min-width: 940px; font-size: 14px; }
+table { border-collapse: collapse; width: 100%; min-width: 1000px; font-size: 14px; }
 th, td { text-align: left; vertical-align: top; padding: 7px 10px; border-bottom: 1px solid var(--line); }
 th { background: var(--head); font-weight: 600; white-space: nowrap; }
 tbody tr:last-child td { border-bottom: 0; }
@@ -381,11 +391,11 @@ From the KiCad schematics on @@date@@. The boards are still in progress, so chec
 <section id="order">
 <h2>Order list</h2>
 <p>Everything for <strong id="setsLabel">one set</strong>, by manufacturer part number: @@nlines@@ lines.
-Part numbers link to a Digi-Key search; the CSV loads into Digi-Key's or Mouser's BOM upload.
+The Buy links search Digi-Key for each part number; the CSV loads into Digi-Key's or Mouser's BOM upload.
 The part numbers are suggestions: any equivalent passive works (same value and package, same or higher voltage, same dielectric).
 The Pro Micro module and the display aren't sold by Digi-Key or Mouser.</p>
 <div class="scroll"><table>
-<thead><tr><th>Qty</th><th>Manufacturer</th><th>MPN</th><th>Description</th><th>Used on</th><th>Notes</th></tr></thead>
+<thead><tr><th>Qty</th><th>Manufacturer</th><th>MPN</th><th>Buy</th><th>Description</th><th>Used on</th><th>Notes</th></tr></thead>
 <tbody>
 @@order_rows@@
 </tbody></table></div>
@@ -456,11 +466,12 @@ def e(s):
     return html.escape(s, quote=True)
 
 
-def mpn_link(mpn):
-    if not mpn:
-        return ''
-    url = 'https://www.digikey.com/en/products/result?keywords=' + urllib.parse.quote(mpn, safe='')
-    return f'<a class="mono" href="{e(url)}">{e(mpn)}</a>'
+def mpn_html(mpn):
+    return f'<span class="mono">{e(mpn)}</span>' if mpn else ''
+
+
+def buy_html(mpn):
+    return f'<a href="{e(dk_url(mpn))}">Digi-Key</a>' if mpn else ''
 
 
 def make_html(boards, order, date, versions):
@@ -470,7 +481,8 @@ def make_html(boards, order, date, versions):
     for (part, q, used), r in zip(order, data):
         desc, mfr, mpn, where, note = PARTS[part]
         order_rows.append(f'<tr><td class="q" data-q="{q}">{q}</td><td>{e(mfr or where)}</td>'
-                          f'<td>{mpn_link(mpn)}</td><td class="desc">{e(desc)}</td><td class="used">{e(used)}</td>'
+                          f'<td>{mpn_html(mpn)}</td><td class="buy">{buy_html(mpn)}</td>'
+                          f'<td class="desc">{e(desc)}</td><td class="used">{e(used)}</td>'
                           f'<td class="notes">{e(note)}</td></tr>')
         order_data.append([int(r[0])] + r[1:])
     nav, sections = [], []
@@ -478,15 +490,16 @@ def make_html(boards, order, date, versions):
         nav.append(f'\n    <a href="#{bd["id"]}">{e(bd["title"])}</a>')
         trs = []
         for refs, q, part, desc, mfr, mpn, where, notes in board_groups(bd):
-            mm = (f'{e(mfr)} {mpn_link(mpn)}' if mpn else e(where)).strip()
+            mm = (f'{e(mfr)} {mpn_html(mpn)}' if mpn else e(where)).strip()
             cls = ' class="off"' if q == 0 else ''
             trs.append(f'<tr{cls}><td class="refs mono">{e(", ".join(refs))}</td><td class="q">{q}</td>'
-                       f'<td class="desc">{e(desc)}</td><td>{mm}</td><td class="notes">{e(notes)}</td></tr>')
+                       f'<td class="desc">{e(desc)}</td><td>{mm}</td><td class="buy">{buy_html(mpn)}</td>'
+                       f'<td class="notes">{e(notes)}</td></tr>')
         sections.append(f'''
 <section id="{bd["id"]}">
 <h2>{e(bd["title"])}</h2>
 <div class="scroll"><table>
-<thead><tr><th>Refs</th><th>Qty</th><th>Part</th><th>Manufacturer, MPN</th><th>Notes</th></tr></thead>
+<thead><tr><th>Refs</th><th>Qty</th><th>Part</th><th>Manufacturer, MPN</th><th>Buy</th><th>Notes</th></tr></thead>
 <tbody>
 {chr(10).join(trs)}
 </tbody></table></div>
