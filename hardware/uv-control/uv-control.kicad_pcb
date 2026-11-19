@@ -108,9 +108,9 @@
 		(descr "Through hole straight socket strip, 1x04, 2.54mm pitch, single row (from Kicad 4.0.7), script generated")
 		(tags "Through hole socket strip THT 1x04 2.54mm single row")
 		(property "Reference" "J4"
-			(at 0 -2.77 90)
+			(at 0.11 10.85 0)
 			(layer "F.SilkS")
-			(uuid "0d9c73ff-8226-4403-98fd-de72aca5a5a3")
+			(uuid "81078968-05ee-4d1b-8ea4-04ace358a8fc")
 			(effects
 				(font
 					(size 1 1)
@@ -121,7 +121,7 @@
 		(property "Value" "OLED (optional)"
 			(at 0 10.39 90)
 			(layer "F.Fab")
-			(uuid "fcbf6949-e781-44d4-aed9-29e2b6e39801")
+			(uuid "5058dae8-d757-4243-90ca-590475e336b5")
 			(effects
 				(font
 					(size 1 1)
@@ -133,7 +133,7 @@
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "3811c8db-0776-4b8b-9e75-f42cc9ac4735")
+			(uuid "b2b37c07-34fc-4617-9701-4f1048d7d7c3")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -145,7 +145,7 @@
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "a83c2a07-c843-4e0c-89d6-73c11e5e373d")
+			(uuid "f441e7e9-9df3-43c7-b2b2-6f3282124a2a")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -460,7 +460,7 @@
 		(descr "2.0 in 240x320 ST7789 IPS TFT module, Golden Morning GMT020-02-8P (sold as XIITIA), 37.25 x 62 mm, on a 1x8 2.54 mm header. Pins 1 BL, 2 CS, 3 DC, 4 RST, 5 SDA, 6 SCL, 7 VCC, 8 GND, the same order as st7789_154in_240x240 (the module marks GND with its square pad). Module outline, corner holes (about 2.5 mm) and active area on Dwgs.User; courtyard is the whole module. Header offset and holes measured from photos: check with calipers.")
 		(tags "ST7789 TFT LCD 2.0in 240x320 GMT020 display module 1x08 2.54mm")
 		(property "Reference" "U5"
-			(at -1 20.4 90)
+			(at 0.25 20.4 180)
 			(layer "F.SilkS")
 			(uuid "c262ea29-32e9-4186-9633-3b7a59c00bf3")
 			(effects
@@ -727,17 +727,6 @@
 				)
 			)
 		)
-		(fp_text user "active area"
-			(at 25.3 8.89 0)
-			(layer "Dwgs.User")
-			(uuid "04c5f973-3aa1-4953-98d4-b00fbe29a77e")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
 		(fp_text user "${REFERENCE}"
 			(at 0 8.89 90)
 			(layer "F.Fab")
@@ -857,7 +846,7 @@
 		(descr "SW_THT_Tactile_Omron_B3F-40xx, 12x12 mm, Through hole switch from the B3F Family manufactured by Omron,  https://www.omron.com/ecb/products/pdf/en-b3f.pdf")
 		(tags "tactile switch THT button push B3F-4000 B3F-4050 B3F-4005 B3F-4055  ")
 		(property "Reference" "B3"
-			(at 6.25 -5.8 0)
+			(at 6.25 2.5 0)
 			(layer "F.SilkS")
 			(uuid "e8873000-fbec-4fd7-abe1-89385ee7e53a")
 			(effects
@@ -1128,9 +1117,9 @@
 		(descr "SW_THT_Tactile_Omron_B3F-40xx, 12x12 mm, Through hole switch from the B3F Family manufactured by Omron,  https://www.omron.com/ecb/products/pdf/en-b3f.pdf")
 		(tags "tactile switch THT button push B3F-4000 B3F-4050 B3F-4005 B3F-4055  ")
 		(property "Reference" "B1"
-			(at 6.25 -5.8 0)
+			(at 6.25 2.5 0)
 			(layer "F.SilkS")
-			(uuid "5b146cb2-91c1-4634-8d45-0b5a5155734b")
+			(uuid "70b4c345-610b-4710-b239-2328c0f3f63a")
 			(effects
 				(font
 					(size 1 1)
@@ -1141,7 +1130,7 @@
 		(property "Value" "SW_Push"
 			(at 6.25 10.8 0)
 			(layer "F.Fab")
-			(uuid "ba6dd7ff-3665-4a23-be32-8b3a041f1713")
+			(uuid "6b67790a-73f2-4e88-b5a4-ac45d2366ee7")
 			(effects
 				(font
 					(size 1 1)
@@ -1154,7 +1143,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "3be41092-5ef3-438e-95b7-c552fb8d70e6")
+			(uuid "1ac9afb5-8208-437b-9bc5-1bcaf3244bf2")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1167,7 +1156,7 @@
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "f241fff8-adad-4ad0-81a3-e9d62425d6d9")
+			(uuid "307cccbd-74ad-4d52-8bed-0674445b3ddf")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1509,7 +1498,7 @@
 		(descr "SW_THT_Tactile_Omron_B3F-40xx, 12x12 mm, Through hole switch from the B3F Family manufactured by Omron,  https://www.omron.com/ecb/products/pdf/en-b3f.pdf")
 		(tags "tactile switch THT button push B3F-4000 B3F-4050 B3F-4005 B3F-4055  ")
 		(property "Reference" "B2"
-			(at 6.25 -5.8 0)
+			(at 6.25 2.6 0)
 			(layer "F.SilkS")
 			(uuid "b40ab7af-fa07-42d1-ac06-8240ce42fe97")
 			(effects
@@ -2918,7 +2907,7 @@
 	(footprint "uv254:nice_nano_cleanest"
 		(layer "B.Cu")
 		(uuid "0ef54739-1e36-40a6-a411-e2ef47124d17")
-		(at 42.7 21.505 90)
+		(at 41.82 21.505 90)
 		(property "Reference" "U2"
 			(at -0.5 16.2 90)
 			(layer "B.SilkS")
@@ -3734,7 +3723,7 @@
 		(descr "Resistor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "resistor")
 		(property "Reference" "R13"
-			(at 0 1.65 0)
+			(at 0 2.1 0)
 			(layer "B.SilkS")
 			(uuid "08077f3e-0982-4fd9-a0b2-5bbe7a5dd496")
 			(effects
@@ -7190,7 +7179,7 @@
 		(descr "Micro SD")
 		(tags "Micro SD")
 		(property "Reference" "J10"
-			(at 7.1 2 90)
+			(at -0.25 13 180)
 			(layer "B.SilkS")
 			(uuid "7a0febe8-8dd6-495c-be14-7e8cbba427ff")
 			(effects
@@ -9361,11 +9350,11 @@
 	(footprint "Resistor_SMD:R_0805_2012Metric"
 		(layer "B.Cu")
 		(uuid "776c63bf-b615-4e9a-b5bc-2dd03d297b8e")
-		(at 84.0125 12.8425)
+		(at 84.1 17.5875 90)
 		(descr "Resistor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "resistor")
 		(property "Reference" "R1"
-			(at 0 2.3 90)
+			(at -2.745 0 0)
 			(layer "B.SilkS")
 			(uuid "be28bef1-1255-423d-8dcc-1c1551233686")
 			(effects
@@ -9377,7 +9366,7 @@
 			)
 		)
 		(property "Value" "4.7k"
-			(at 0 -1.65 0)
+			(at 0 -1.65 90)
 			(layer "B.Fab")
 			(uuid "a10b7a82-6429-4571-ac2e-b2e76fea0cae")
 			(effects
@@ -9389,7 +9378,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 0)
+			(at 0 0 90)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "cd0ab416-1f2a-4364-a52c-88142aa6414c")
@@ -9401,7 +9390,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 0 0 0)
+			(at 0 0 90)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "837f1f5d-7b30-477d-b676-c064b2ddad3b")
@@ -9467,7 +9456,7 @@
 			(uuid "2afa645a-5133-4d5b-b19c-e9799d830714")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 0)
+			(at 0 0 90)
 			(layer "B.Fab")
 			(uuid "0f96dea8-5894-40ff-b889-948bb76e6651")
 			(effects
@@ -9479,7 +9468,7 @@
 			)
 		)
 		(pad "1" smd roundrect
-			(at -0.9125 0)
+			(at -0.9125 0 90)
 			(size 1.025 1.4)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(roundrect_rratio 0.243902)
@@ -9488,7 +9477,7 @@
 			(uuid "14860be3-3e51-45d4-8fb6-df25c91cda84")
 		)
 		(pad "2" smd roundrect
-			(at 0.9125 0)
+			(at 0.9125 0 90)
 			(size 1.025 1.4)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(roundrect_rratio 0.243902)
@@ -9516,7 +9505,7 @@
 		(descr "SOT, 3 Pin (JEDEC TO-236 Var AB https://www.jedec.org/document_search?search_api_views_fulltext=TO-236)")
 		(tags "SOT TO_SOT_SMD")
 		(property "Reference" "Q1"
-			(at 0 2.4 0)
+			(at 0 2.95 0)
 			(layer "B.SilkS")
 			(uuid "7169018a-501d-46f7-be2a-9917d07040a2")
 			(effects
@@ -9887,11 +9876,11 @@
 	(footprint "Resistor_SMD:R_0805_2012Metric"
 		(layer "B.Cu")
 		(uuid "88dcf789-134a-4b8b-bb7f-8beb71e6ddca")
-		(at 79.9 12.7425)
+		(at 81.6 17.62 90)
 		(descr "Resistor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "resistor")
 		(property "Reference" "R2"
-			(at 0 -2.3 90)
+			(at -2.7125 0.1 0)
 			(layer "B.SilkS")
 			(uuid "6a98414f-147b-4215-9193-30c08f443346")
 			(effects
@@ -9903,7 +9892,7 @@
 			)
 		)
 		(property "Value" "4.7k"
-			(at 0 -1.65 0)
+			(at 0 -1.65 90)
 			(layer "B.Fab")
 			(uuid "223cb181-6c33-4a7d-8e16-837bd17ac17d")
 			(effects
@@ -9915,7 +9904,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 0)
+			(at 0 0 90)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "8bfc6a4d-e2ef-4379-81e4-479b824511a5")
@@ -9927,7 +9916,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 0 0 0)
+			(at 0 0 90)
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "ec6a5ad1-4351-40af-be03-c888fb65b03f")
@@ -9993,7 +9982,7 @@
 			(uuid "41cef0c6-3432-444c-83e7-8af28923ca84")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 0)
+			(at 0 0 90)
 			(layer "B.Fab")
 			(uuid "de336c99-8b8b-4e8c-adf1-065c98a40787")
 			(effects
@@ -10005,7 +9994,7 @@
 			)
 		)
 		(pad "1" smd roundrect
-			(at -0.9125 0)
+			(at -0.9125 0 90)
 			(size 1.025 1.4)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(roundrect_rratio 0.243902)
@@ -10014,7 +10003,7 @@
 			(uuid "935b5017-d740-4497-a4ee-a9cfaece55af")
 		)
 		(pad "2" smd roundrect
-			(at 0.9125 0)
+			(at 0.9125 0 90)
 			(size 1.025 1.4)
 			(layers "B.Cu" "B.Mask" "B.Paste")
 			(roundrect_rratio 0.243902)
@@ -11573,7 +11562,7 @@
 		(descr "Resistor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "resistor")
 		(property "Reference" "R12"
-			(at 0 1.65 90)
+			(at -2.9125 0 180)
 			(layer "B.SilkS")
 			(uuid "f749e524-5e63-4375-b84f-3e6d1b6f9b44")
 			(effects
@@ -12738,6 +12727,50 @@
 		(at 19.4 34.65 0)
 		(layer "F.SilkS")
 		(uuid "3cea2627-f246-46fe-b807-d4907863f79f")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(gr_text "3V3"
+		(at 76.4 13 90)
+		(layer "F.SilkS")
+		(uuid "fd42e0c2-1d0d-4967-b53f-afa3a5b79b83")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(gr_text "GND"
+		(at 79.1 13 90)
+		(layer "F.SilkS")
+		(uuid "7799077e-f46a-42de-8d30-120681743003")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(gr_text "SCL"
+		(at 81.7 12.9 90)
+		(layer "F.SilkS")
+		(uuid "7d7f3165-50cb-4729-bcc2-887e61bff430")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(gr_text "SDA"
+		(at 84.2 12.9 90)
+		(layer "F.SilkS")
+		(uuid "bb7416ba-e9ec-4611-af30-ed1dd4df4d20")
 		(effects
 			(font
 				(size 1 1)
