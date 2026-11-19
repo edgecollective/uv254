@@ -76,6 +76,8 @@ PARTS = OrderedDict([
                 'same module as Rook v0.4; usually ships with headers')),
     ('TFT',    ('1.54 in 240x240 ST7789 IPS SPI module, 8 pins in the order GND VCC SCL SDA RES DC CS BLK',
                 '', '', 'AliExpress and similar', 'check the pin order before buying')),
+    ('TFT2',   ('2.0 in 240x320 ST7789 IPS SPI module (GMT020-02-8P), 8 pins in the order GND VCC SCL SDA RST DC CS BL',
+                '', '', 'Amazon (XIITIA, 2 per pack)', 'a 1.54 in 240x240 module with the same pin order fits the same holes')),
     ('OLED',   ('SSD1306 I2C OLED module, 4-pin (VCC GND SCL SDA)', '', '', 'AliExpress and similar', '')),
     # cables and loose parts (not in any schematic)
     ('PHR7',   ('JST PH 7-pin cable housing', 'JST', 'PHR-7', '', '')),
@@ -84,6 +86,11 @@ PARTS = OrderedDict([
                 'or crimp SPH-002T-P0.5S terminals onto your own wire')),
     ('SHUNT',  ('0.1 in shunt (jumper)', 'Sullins', 'SPC02SYAN', '', '')),
 ])
+
+# Buy links for parts that aren't on Digi-Key (the rest link to a Digi-Key search for the MPN)
+BUY = {
+    'TFT2': ('Amazon', 'https://www.amazon.com/XIITIA-Display-240x320-Interface-Arduino/dp/B0DFWLD38D'),
+}
 
 # Per set, not in any schematic: (part, qty, what it's for)
 EXTRAS = [
@@ -118,6 +125,13 @@ def dk_url(mpn):
     return 'https://www.digikey.com/en/products/result?keywords=' + urllib.parse.quote(mpn, safe='')
 
 
+def buy_link(part, mpn):
+    """(label, url) for the Buy column, or None."""
+    if part in BUY:
+        return BUY[part]
+    return ('Digi-Key', dk_url(mpn)) if mpn else None
+
+
 def part_for(ref, value, fp):
     """Map one schematic part to a PARTS id (None: no part to buy)."""
     v = value.replace(' ', '').lower()
@@ -132,7 +146,8 @@ def part_for(ref, value, fp):
                 '2.2uf': 'C_2u2', '10u': 'C_10u', '10uf': 'C_10u'}.get(v)
     for key, part in [('JST_PH_B7B', 'PH7'), ('JST_PH_B6B', 'PH6'), ('PinHeader', 'HDR'),
                       ('PinSocket_1x06', 'SOCK6'), ('Tactile_12x12', 'SW12'), ('SW_PUSH_6mm', 'SW6'),
-                      ('DM3D', 'USD'), ('ssd1306', 'OLED'), ('nice_nano', 'MCU'), ('st7789', 'TFT')]:
+                      ('DM3D', 'USD'), ('ssd1306', 'OLED'), ('nice_nano', 'MCU'), ('st7789_200in', 'TFT2'),
+                      ('st7789', 'TFT')]:
         if key in fp:
             return part
     return {'sd008-2171-112': 'PD', 'uvled': 'LED', 'opa4340ua': 'OPA', 'mcp1501-18xch': 'VREF',
@@ -226,7 +241,7 @@ def csv_text(order):
     w.writerow(['Qty per set', 'Manufacturer', 'MPN', 'Description', 'Used on', 'Source', 'Notes'])
     for part, q, used in order:
         desc, mfr, mpn, where, note = PARTS[part]
-        w.writerow([q, mfr, mpn, desc, used, where or 'Digi-Key', note])
+        w.writerow([q, mfr, mpn, desc, used, BUY[part][1] if part in BUY else where or 'Digi-Key', note])
     return buf.getvalue()
 
 
@@ -298,7 +313,8 @@ def make_md(boards, order, date, versions):
                 '|---|---|---|---|---|---|']
         for refs, q, part, desc, mfr, mpn, where, notes in board_groups(bd):
             mm = f'{mfr} {mpn}'.strip() or where
-            buy = f'[Digi-Key]({dk_url(mpn)})' if mpn else ''
+            link = buy_link(part, mpn)
+            buy = f'[{link[0]}]({link[1]})' if link else ''
             out.append(f"| {', '.join(refs)} | {q} | {desc} | {mm} | {buy} | {notes} |")
         out += ['', BOARD_NOTE[bd['id']], '']
     out += ['## Cables', '', CABLES, '', '## Not in the design yet', '', TODO, '']
@@ -470,8 +486,9 @@ def mpn_html(mpn):
     return f'<span class="mono">{e(mpn)}</span>' if mpn else ''
 
 
-def buy_html(mpn):
-    return f'<a href="{e(dk_url(mpn))}">Digi-Key</a>' if mpn else ''
+def buy_html(part, mpn):
+    link = buy_link(part, mpn)
+    return f'<a href="{e(link[1])}">{e(link[0])}</a>' if link else ''
 
 
 def make_html(boards, order, date, versions):
@@ -481,7 +498,7 @@ def make_html(boards, order, date, versions):
     for (part, q, used), r in zip(order, data):
         desc, mfr, mpn, where, note = PARTS[part]
         order_rows.append(f'<tr><td class="q" data-q="{q}">{q}</td><td>{e(mfr or where)}</td>'
-                          f'<td>{mpn_html(mpn)}</td><td class="buy">{buy_html(mpn)}</td>'
+                          f'<td>{mpn_html(mpn)}</td><td class="buy">{buy_html(part, mpn)}</td>'
                           f'<td class="desc">{e(desc)}</td><td class="used">{e(used)}</td>'
                           f'<td class="notes">{e(note)}</td></tr>')
         order_data.append([int(r[0])] + r[1:])
@@ -493,7 +510,7 @@ def make_html(boards, order, date, versions):
             mm = (f'{e(mfr)} {mpn_html(mpn)}' if mpn else e(where)).strip()
             cls = ' class="off"' if q == 0 else ''
             trs.append(f'<tr{cls}><td class="refs mono">{e(", ".join(refs))}</td><td class="q">{q}</td>'
-                       f'<td class="desc">{e(desc)}</td><td>{mm}</td><td class="buy">{buy_html(mpn)}</td>'
+                       f'<td class="desc">{e(desc)}</td><td>{mm}</td><td class="buy">{buy_html(part, mpn)}</td>'
                        f'<td class="notes">{e(notes)}</td></tr>')
         sections.append(f'''
 <section id="{bd["id"]}">

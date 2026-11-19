@@ -33,7 +33,7 @@ Qty per set,Manufacturer,MPN,Description,Used on,Source,Notes
 1,Omron,B3F-1020,"Tactile switch 6x6 mm, 5 mm",control RESET1,Digi-Key,
 1,Hirose,DM3D-SF,microSD socket,control J10,Digi-Key,
 1,,,"Pro Micro nRF52840 module (nice!nano v2, or a SuperMini clone)",control U2,nice!nano: Nice Keyboards; clones: AliExpress,same module as Rook v0.4; usually ships with headers
-1,,,"1.54 in 240x240 ST7789 IPS SPI module, 8 pins in the order GND VCC SCL SDA RES DC CS BLK",control U5,AliExpress and similar,check the pin order before buying
+1,,,"2.0 in 240x320 ST7789 IPS SPI module (GMT020-02-8P), 8 pins in the order GND VCC SCL SDA RST DC CS BL",control U5,https://www.amazon.com/XIITIA-Display-240x320-Interface-Arduino/dp/B0DFWLD38D,a 1.54 in 240x240 module with the same pin order fits the same holes
 2,JST,PHR-7,JST PH 7-pin cable housing,cables: control J1 to detector J2,Digi-Key,
 2,JST,PHR-6,JST PH 6-pin cable housing,cables: control J2 to emitter J2,Digi-Key,
 13,JST,ASPHSPH24K152,"JST PH pre-crimped lead, 6 in, 24 AWG, socket both ends",cables: 7 + 6 wires,Digi-Key,or crimp SPH-002T-P0.5S terminals onto your own wire

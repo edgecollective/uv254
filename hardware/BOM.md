@@ -2,7 +2,7 @@
 # Bill of materials
 
 Parts for one set: a detector, an emitter and a control board, plus the two
-cables between them. Taken from the schematics on 2026-11-18:
+cables between them. Taken from the schematics on 2026-11-19:
 UV-Detector v0.5, UV-Emitter v0.5, UV-Control v0.4, all still in progress, so re-check it against the schematics before
 ordering.
 
@@ -89,7 +89,7 @@ H1-H4 are M3 mounting holes (no part). The LED runs from +12V on J2 pin 4.
 | RESET1 | 1 | Tactile switch 6x6 mm, 5 mm | Omron B3F-1020 | [Digi-Key](https://www.digikey.com/en/products/result?keywords=B3F-1020) |  |
 | J10 | 1 | microSD socket | Hirose DM3D-SF | [Digi-Key](https://www.digikey.com/en/products/result?keywords=DM3D-SF) |  |
 | U2 | 1 | Pro Micro nRF52840 module (nice!nano v2, or a SuperMini clone) | nice!nano: Nice Keyboards; clones: AliExpress |  | same module as Rook v0.4; usually ships with headers |
-| U5 | 1 | 1.54 in 240x240 ST7789 IPS SPI module, 8 pins in the order GND VCC SCL SDA RES DC CS BLK | AliExpress and similar |  | check the pin order before buying |
+| U5 | 1 | 2.0 in 240x320 ST7789 IPS SPI module (GMT020-02-8P), 8 pins in the order GND VCC SCL SDA RST DC CS BL | Amazon (XIITIA, 2 per pack) | [Amazon](https://www.amazon.com/XIITIA-Display-240x320-Interface-Arduino/dp/B0DFWLD38D) | a 1.54 in 240x240 module with the same pin order fits the same holes |
 | J4 | 0 | SSD1306 I2C OLED module, 4-pin (VCC GND SCL SDA) | AliExpress and similar |  | optional OLED header: not fitted |
 
 JP1 (solder jumper) and H1-H4 (mounting holes) have no part. J3 takes one shunt (Sullins SPC02SYAN); use J3 or JP1, never both. The display and the Pro Micro can be soldered straight to the board or plugged into 0.1 in sockets.

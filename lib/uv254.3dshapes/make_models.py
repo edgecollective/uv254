@@ -7,6 +7,8 @@ on the top of the board the part is mounted on.
 
   pip install cadquery          (once, ideally in a virtualenv)
   python make_models.py         (writes the .step files next to this script)
+  python make_models.py ST7789_2.0in_GMT020_on_header.step
+                                (writes just that one)
   python make_models.py --button-top 13
                                 (12x12 buttons: cap top 13 mm above the board)
   python make_models.py --above-screen 3
@@ -41,26 +43,63 @@ def save(assy, name):
     print('wrote', path)
 
 
-# ------------------------------------------------------------------ 1.54 in ST7789 display (MRD module)
-# Footprint uv254:st7789_154in_240x240: header pads at x = -1, y = 0 (pin 1, BL) .. 17.78 (pin 8, GND).
-# The module lies with its header edge along the left, glass extending to +x, display facing up,
-# mounted on the supplied 1x8 header (plastic spacer between the two boards).
+# ------------------------------------------------------------------ ST7789 display modules
+# Both display footprints put the 1x8 header along y: pin 1 (BL) at y = 0 .. pin 8 (GND) at y = 17.78,
+# at x = xh. The module lies with its header edge along the left, glass extending to +x, display
+# facing up, mounted on the supplied 1x8 header (plastic spacer between the two boards). The
+# footprints draw the same outline, holes and active area on Dwgs.User: keep them in step.
+#
+# 1.54 in, 240 x 240 (MRD module). Footprint uv254:st7789_154in_240x240.
 D = dict(
+    name='ST7789_1.54in',
+    xh=-1.0,           # header pin row x in the footprint
     W=32.0,            # module width, along the header           (vendor drawing)
     L=43.5,            # module length, across the header         (vendor drawing)
     hdr_edge=1.8,      # header pin row to the module's near edge  ESTIMATE
     pcb_t=1.6,         # module PCB thickness                      ESTIMATE
     spacer=2.5,        # header plastic between the boards         (standard header)
     hole_d=2.2,        # corner holes                              ESTIMATE
-    hole_inset=2.25,   # hole centres from both edges              ESTIMATE
+    hole_inset_l=2.25, # hole centres from the short edges         ESTIMATE
+    hole_inset_w=2.25, # hole centres from the long edges          ESTIMATE
     glass_from=4.0,    # module edge (header side) to glass        ESTIMATE
     glass_w=31.5,      # glass, along the header                   ESTIMATE
     glass_l=33.7,      # glass, across the header (without ledge)  ESTIMATE
     ledge_l=1.7,       # FPC bonding ledge after the glass         ESTIMATE
+    fpc_w=14.0,        # FPC, along the header                     ESTIMATE
+    fpc_l=1.2,         # FPC beyond the ledge                      ESTIMATE
     lcd_t=2.6,         # LCD + backlight + tape above the module PCB  ESTIMATE
-    active=27.72,      # active area, square                       (240 x 240 px at 0.1155 mm)
+    active_w=27.72,    # active area along the header              (240 px at 0.1155 mm)
+    active_l=27.72,    # active area across the header             (240 px at 0.1155 mm)
     active_from=1.5,   # glass edge (header side) to active area   ESTIMATE
     board_t=1.6,       # the control board, for the header pins below it
+)
+
+# 2.0 in, 240 x 320 (Golden Morning GMT020-02-8P, sold as XIITIA on Amazon). Footprint
+# uv254:st7789_200in_240x320. Outline and active area from the vendor's spec table
+# (goldenmorninglcd.com, GMT020-02: "37.25 x 62.00 mm", "active area 30.60 x 40.80 mm");
+# the rest measured off product photos, scaled by the 2.54 mm header pitch (about +-0.3 mm).
+D2 = dict(
+    name='ST7789_2.0in_GMT020',
+    xh=0.0,
+    W=37.25,           # module width, along the header           (vendor)
+    L=62.0,            # module length, across the header         (vendor)
+    hdr_edge=2.4,      # header pin row to the module's near edge  ESTIMATE (photo); row centred
+    pcb_t=1.6,         #                                           ESTIMATE
+    spacer=2.5,        #                                           (standard header)
+    hole_d=2.5,        #                                           ESTIMATE (photo)
+    hole_inset_l=1.6,  # from the short edges                      ESTIMATE (photo)
+    hole_inset_w=4.0,  # from the long edges                       ESTIMATE (photo)
+    glass_from=4.9,    #                                           ESTIMATE (photo)
+    glass_w=35.8,      #                                           ESTIMATE (photo; 2.0 in panels are 35.8)
+    glass_l=45.0,      #                                           ESTIMATE (photo)
+    ledge_l=3.8,       #                                           ESTIMATE (photo)
+    fpc_w=23.0,        #                                           ESTIMATE (photo)
+    fpc_l=3.9,         #                                           ESTIMATE (photo)
+    lcd_t=2.8,         #                                           ESTIMATE (similar panels: 2.65-3.85)
+    active_w=30.6,     # 240 px at 0.1275 mm                       (vendor)
+    active_l=40.8,     # 320 px at 0.1275 mm                       (vendor)
+    active_from=2.4,   # centred in the black mask                 ESTIMATE (photo)
+    board_t=1.6,
 )
 
 
@@ -69,32 +108,40 @@ def screen_top(p=D):
     return p['spacer'] + p['pcb_t'] + p['lcd_t']
 
 
-def display(p=D):
-    xh = -1.0                                   # header pin row
-    ymid = 8.89                                 # header centre
+def outline(p):
+    """Module outline, hole centres and active area in footprint coordinates (y down)."""
+    xh, ymid = p['xh'], 8.89                    # header pin row, header centre
     x0, x1 = xh - p['hdr_edge'], xh - p['hdr_edge'] + p['L']
     y0, y1 = ymid - p['W'] / 2, ymid + p['W'] / 2
+    holes = [(hx, hy) for hx in (x0 + p['hole_inset_l'], x1 - p['hole_inset_l'])
+             for hy in (y0 + p['hole_inset_w'], y1 - p['hole_inset_w'])]
+    ax0 = x0 + p['glass_from'] + p['active_from']
+    active = (ax0, ax0 + p['active_l'], ymid - p['active_w'] / 2, ymid + p['active_w'] / 2)
+    return (x0, x1, y0, y1), holes, active
+
+
+def display(p=D):
+    xh, ymid = p['xh'], 8.89
+    (x0, x1, y0, y1), holes, (ax0, ax1, ay0, ay1) = outline(p)
     zb = p['spacer']                            # underside of the module PCB
     zt = zb + p['pcb_t']                        # top of the module PCB
     pcb = box(x0, x1, y0, y1, zb, zt)
-    for hx in (x0 + p['hole_inset'], x1 - p['hole_inset']):
-        for hy in (y0 + p['hole_inset'], y1 - p['hole_inset']):
-            pcb = pcb.cut(cq.Workplane('XY').circle(p['hole_d'] / 2).extrude(10).translate((hx, -hy, -1)))
+    for hx, hy in holes:
+        pcb = pcb.cut(cq.Workplane('XY').circle(p['hole_d'] / 2).extrude(10).translate((hx, -hy, -1)))
     gx0 = x0 + p['glass_from']
-    glass = box(gx0, gx0 + p['glass_l'], ymid - p['glass_w'] / 2, ymid + p['glass_w'] / 2, zt, zt + p['lcd_t'])
-    ledge = box(gx0 + p['glass_l'], gx0 + p['glass_l'] + p['ledge_l'], ymid - p['glass_w'] / 2,
-                ymid + p['glass_w'] / 2, zt, zt + p['lcd_t'] - 0.7)
-    fpc = box(gx0 + p['glass_l'] + p['ledge_l'], gx0 + p['glass_l'] + p['ledge_l'] + 1.2, ymid - 7, ymid + 7,
-              zt, zt + 0.3)
-    ax0 = gx0 + p['active_from']
-    active = box(ax0, ax0 + p['active'], ymid - p['active'] / 2, ymid + p['active'] / 2,
-                 zt + p['lcd_t'], zt + p['lcd_t'] + 0.05)
+    gx1 = gx0 + p['glass_l']
+    gy0, gy1 = ymid - p['glass_w'] / 2, ymid + p['glass_w'] / 2
+    glass = box(gx0, gx1, gy0, gy1, zt, zt + p['lcd_t'])
+    ledge = box(gx1, gx1 + p['ledge_l'], gy0, gy1, zt, zt + p['lcd_t'] - 0.7)
+    fx0 = gx1 + p['ledge_l']
+    fpc = box(fx0, fx0 + p['fpc_l'], ymid - p['fpc_w'] / 2, ymid + p['fpc_w'] / 2, zt, zt + 0.3)
+    active = box(ax0, ax1, ay0, ay1, zt + p['lcd_t'], zt + p['lcd_t'] + 0.05)
     spacer = box(xh - 1.27, xh + 1.27, -1.27, 17.78 + 1.27, 0, p['spacer'])
     pins = None
     for k in range(8):
         pin = box(xh - 0.32, xh + 0.32, k * 2.54 - 0.32, k * 2.54 + 0.32, -p['board_t'] - 1.5, zt + 1.0)
         pins = pin if pins is None else pins.union(pin)
-    a = cq.Assembly(name='ST7789_1.54in')
+    a = cq.Assembly(name=p['name'])
     a.add(pcb, name='pcb', color=BLUE)
     a.add(glass, name='glass', color=BLACK)
     a.add(ledge, name='ledge', color=GLASS)
@@ -194,15 +241,26 @@ if __name__ == '__main__':
     g.add_argument('--button-top', type=float, default=S['button_top'],
                    help='12x12 buttons: height of the cap top above the board, mm (default %(default)s)')
     g.add_argument('--above-screen', type=float,
-                   help='12x12 buttons: height of the cap top above the display glass, mm')
+                   help='12x12 buttons: height of the cap top above the 1.54 in display glass, mm')
+    ap.add_argument('files', nargs='*', metavar='FILE.step',
+                    help='write only these models (default: all of them)')
     args = ap.parse_args()
     S['button_top'] = screen_top() + args.above_screen if args.above_screen is not None else args.button_top
-    save(display(), 'ST7789_1.54in_MRD_on_header.step')
-    save(switch12(), 'SW_Tactile_12x12.step')
-    save(promicro(), 'ProMicro_nRF52840_on_header.step')
-    cap = cap12()
-    save(cap, 'Cap_12x12_square.step')
-    bb = cap.toCompound().BoundingBox()
+    models = {
+        'ST7789_1.54in_MRD_on_header.step': lambda: display(D),
+        'ST7789_2.0in_GMT020_on_header.step': lambda: display(D2),
+        'SW_Tactile_12x12.step': switch12,
+        'ProMicro_nRF52840_on_header.step': promicro,
+        'Cap_12x12_square.step': cap12,
+    }
+    unknown = [f for f in args.files if f not in models]
+    if unknown:
+        raise SystemExit('unknown model(s): ' + ', '.join(unknown) + '\nknown: ' + ', '.join(models))
+    for name, make in models.items():
+        if not args.files or name in args.files:
+            save(make(), name)
+    bb = cap12().toCompound().BoundingBox()
+    for label, p in (('1.54 in', D), ('2.0 in', D2)):
+        print(f'{label} display glass top: {screen_top(p):.2f} mm above the board')
     st = screen_top()
-    print(f'display glass top: {st:.2f} mm above the board')
-    print(f'12x12 button top:  {bb.zmax:.2f} mm above the board ({bb.zmax - st:+.2f} mm relative to the glass)')
+    print(f'12x12 button top:  {bb.zmax:.2f} mm above the board ({bb.zmax - st:+.2f} mm relative to the 1.54 in glass)')

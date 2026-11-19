@@ -13,7 +13,7 @@ are in [CONTRIBUTING.md](../CONTRIBUTING.md#libraries).
 | `ssd1306` | uv-control (A2) | `uv254:ssd1306_b` |
 | `SD008-2171-112` | uv-detector (D2) | `Package_TO_SOT_THT:TO-18-3` |
 | `nice_nano_clean` | uv-control (U2), from Rook v0.4 | `uv254:nice_nano_cleanest` |
-| `st7789` | uv-control (U5), from Rook v0.4 | `uv254:st7789_154in_240x240` |
+| `st7789` | uv-control (U5), from Rook v0.4 | `uv254:st7789_154in_240x240` (U5 uses `st7789_200in_240x320`) |
 
 ## Footprints (`uv254.pretty`)
 
@@ -23,8 +23,9 @@ are in [CONTRIBUTING.md](../CONTRIBUTING.md#libraries).
 | `ssd1306_b` | uv-control: 4-pin socket strip for the OLED module |
 | `LED_IN-C35PPCTGU0` | uv-emitter: Inolux IN-C35PPCTGU0 UV-C LED |
 | `nice_nano_cleanest` | uv-control: Pro Micro nRF52840 (SuperMini / nice!nano), 26 pads incl. B+/B-; from Rook v0.4 |
-| `st7789_154in_240x240` | uv-control: 1.54 in ST7789 display header; from Rook v0.4 |
-| `st7789_tft_2in_320x240` | 2.0 in ST7789 display header (same pin order); from Rook's library |
+| `st7789_154in_240x240` | 1.54 in ST7789 display header; from Rook v0.4 (uv-control used it until U5 became the 2.0 in) |
+| `st7789_200in_240x320` | uv-control (U5): 2.0 in 240x320 ST7789 module, Golden Morning GMT020-02-8P (37.25 x 62 mm, sold as XIITIA), on a 1x8 header in the same pin order as the 1.54 in one. Module outline, corner holes and active area on Dwgs.User; the courtyard is the whole module |
+| `st7789_tft_2in_320x240` | 2.0 in ST7789 display header (same pin order), outline 38 x 64 mm; from Rook's library, not the GMT020 module |
 | `ssd1306_a` | 0.96 in SSD1306 I2C OLED: 1x04 socket, pins 1 3V3, 2 GND, 3 SCL, 4 SDA (the square pad is pin 4), module outline on Dwgs.User; from Rook v0.4 |
 | `DM3D-SF_outline` | uv-control: Hirose DM3D-SF microSD socket; from Rook v0.4 |
 | `SSW_1825232-1` | uv-control: TE 1825232-1 slide switch (display backlight); from Rook v0.4 |
@@ -52,12 +53,13 @@ example `git show uv-control/v0.1_A:hardware/uv-control/lucc.kicad_sym`.
 
 Simple box models for checking heights and designing the front panel, generated
 by [`uv254.3dshapes/make_models.py`](uv254.3dshapes/make_models.py) (CadQuery:
-`pip install cadquery`, then `python make_models.py`). Values marked ESTIMATE in
+`pip install cadquery`, then `python make_models.py`, or name one model to write just that). Values marked ESTIMATE in
 the script come from vendor drawings; measure the parts and regenerate.
 
 | Model | Used by |
 |---|---|
 | `ST7789_1.54in_MRD_on_header.step` | `st7789_154in_240x240`: the 32 x 43.5 mm MRD 1.54 in module on its 1x8 header (2.5 mm spacer) |
+| `ST7789_2.0in_GMT020_on_header.step` | `st7789_200in_240x320`: the 37.25 x 62 mm GMT020-02-8P module on its 1x8 header (2.5 mm spacer). Outline and active area from the vendor; header offset, holes and glass measured off photos |
 | `SW_Tactile_12x12.step` | `SW_Tactile_12x12_B3F-40xx`: 12 x 12 x 7.3 mm switch |
 | `Cap_12x12_square.step` | `SW_Tactile_12x12_B3F-40xx`: placeholder square cap. Its top is set as an absolute height above the board (`--button-top 13`) or relative to the display glass (`--above-screen 3`); the script prints both heights |
 | `ProMicro_nRF52840_on_header.step` | `nice_nano_cleanest`: Pro Micro board, pins, USB-C and nRF52840 on a 2.54 mm header (2.5 mm spacer; set `P['spacer']` for a socket) |
