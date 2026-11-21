@@ -15,6 +15,11 @@ boards, each its own KiCad project:
 
 Each board's README has its schematic, PCB layout and 3D views.
 
+**Open work:** [`hardware/uv-control/TODO.md`](hardware/uv-control/TODO.md) is
+the to-do list for the control board (v0.4 layout in progress). If you're a
+person or an agent picking up the work, read it and
+[CONTRIBUTING.md](CONTRIBUTING.md) first.
+
 **Bill of materials:** [`hardware/BOM.md`](hardware/BOM.md) lists the parts for
 one set of boards and the cables between them, with manufacturer part numbers.
 The same list is on the [project web page](https://edgecollective.io/uv254/bom/),
@@ -33,6 +38,7 @@ hardware/
     uv-control.kicad_pro      open this in KiCad
     uv-control.kicad_sch
     uv-control.kicad_pcb
+    TODO.md                   open work on that board (uv-control has one)
     sym-lib-table             -> lib/uv254.kicad_sym
     fp-lib-table              -> lib/uv254.pretty
     docs/                     schematic PDF and the images in the board's README

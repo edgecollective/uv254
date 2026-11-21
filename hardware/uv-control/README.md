@@ -3,9 +3,13 @@
 Controller board. **v0.4 is in progress on `main`, restarted from Rook v0.4**
 (Edge Collective's validated Pro Micro nRF52840 board): its Pro Micro, ST7789
 display, buttons and microSD, plus an ADS1115 ADC, JST connectors to the emitter
-and detector, and test points. The boost for the UV LED is still to be added. See
-[`v0.4-design.md`](v0.4-design.md) for the pin map and what's left to do. The
+and detector, test headers, and a TPS61041 boost that makes the UV LED's 12 V.
+See [`v0.4-design.md`](v0.4-design.md) for the pin map. The
 first v0.4 draft is in [`reference/v0.4-draft`](reference/v0.4-draft).
+
+**Open work: [`TODO.md`](TODO.md)** lists what's left before ordering, with
+part references, coordinates and how to check each item. Start there if you're
+picking up this board (people and agents alike).
 
 v0.1 (fabricated in 2024) used an Adafruit ItsyBitsy nRF52840 Express, an
 SSD1306 OLED display, push buttons and a 555-based boost circuit.
@@ -55,7 +59,7 @@ Re-run it after changing the board; see
 | v0.1 | 2024-07-29 | gerbers released; ordered from JLCPCB on 2024-08-19 | tag `uv-control/v0.1` | [`fab/v0.1`](fab/v0.1) |
 | v0.1_A | 2026-06-26 | branched from v0.1; sent to Josh | tag `uv-control/v0.1_A` | — |
 | v0.1_A+ | 2026-10 | edits made after v0.1_A was sent; never fabricated; superseded by v0.4 | commit `db4232b` | — |
-| **v0.4** | 2026-11 | **in progress on `main`**: first-draft schematic; layout not started | `main` | — |
+| **v0.4** | 2026-11 | **in progress on `main`**: schematic done, layout routed, review fixes open (see [`TODO.md`](TODO.md)) | `main` | — |
 
 Notes:
 
