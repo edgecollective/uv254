@@ -6,8 +6,8 @@ firmware), as of the [latest commit](https://github.com/edgecollective/uv254/com
 Unzip it and keep the folders together.
 [![Latest commit](https://img.shields.io/github/last-commit/edgecollective/uv254/main)](https://github.com/edgecollective/uv254/commits/main)
 
-**Snapshot, 2026-11-23** (commit [`d40e8e4`](https://github.com/edgecollective/uv254/commit/d40e8e4f3301a8d8190b229d6b9092615a6cdc2e)):
-**[⬇ download this version (zip)](https://github.com/edgecollective/uv254/archive/d40e8e4f3301a8d8190b229d6b9092615a6cdc2e.zip)**.
+**Snapshot, 2026-11-23** (commit [`fc0b74b`](https://github.com/edgecollective/uv254/commit/fc0b74b1b5240cd4699c409350e3271b8b084912)):
+**[⬇ download this version (zip)](https://github.com/edgecollective/uv254/archive/fc0b74b1b5240cd4699c409350e3271b8b084912.zip)**.
 Unlike the link above, it stays the same when more commits are pushed.
 
 Open hardware for the **uv254** UV water-quality sensor. The device is three
