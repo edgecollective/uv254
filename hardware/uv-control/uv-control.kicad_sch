@@ -5543,7 +5543,7 @@
 					(justify left)
 				)
 			)
-			(property "Footprint" "Module:Adafruit_Feather"
+			(property "Footprint" "uv254:Adafruit_Feather_on_socket"
 				(at 2.54 -34.29 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -6726,6 +6726,14 @@
 		(uuid "2431af5a-e723-483a-a6df-f3df4c24ed5a")
 	)
 	(no_connect
+		(at 59.69 60.96)
+		(uuid "2b565c4c-0136-49f7-90e0-f463512fe6f5")
+	)
+	(no_connect
+		(at 34.29 50.8)
+		(uuid "55cd4162-eaf5-4b8b-8703-ac5252d9013c")
+	)
+	(no_connect
 		(at 365.76 111.76)
 		(uuid "94210401-a372-4fbd-8bcc-a070a7a2c31a")
 	)
@@ -7297,6 +7305,16 @@
 	)
 	(wire
 		(pts
+			(xy 44.45 25.4) (xy 30.48 25.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7ddeb1c1-ec9a-4550-8d2a-e3869386529e")
+	)
+	(wire
+		(pts
 			(xy 109.22 38.1) (xy 109.22 46.99)
 		)
 		(stroke
@@ -7794,6 +7812,16 @@
 			(type default)
 		)
 		(uuid "db20eac8-360e-46a4-9603-6a2af4faf867")
+	)
+	(wire
+		(pts
+			(xy 30.48 25.4) (xy 30.48 24.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e029e728-15ac-4e41-989c-51ba68228acd")
 	)
 	(wire
 		(pts
@@ -8503,6 +8531,30 @@
 			)
 		)
 	)
+	(global_label "SD_CS"
+		(shape input)
+		(at 34.29 68.58 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "2e0a9104-c36c-4c75-8bd0-1c0bd7059dff")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 34.29 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
 	(global_label "3V3"
 		(shape input)
 		(at 316.23 50.8 180)
@@ -9188,6 +9240,30 @@
 		(uuid "75039b2e-f8c7-4a99-af43-555234f8d7c9")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 34.29 35.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "ADS_ALERT"
+		(shape input)
+		(at 34.29 71.12 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "767c6a9d-0374-4f49-9b40-f7499f6f45f8")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 34.29 71.12 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11209,6 +11285,84 @@
 		)
 	)
 	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 30.48 24.13 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "27997884-ebcf-4a89-8ad1-dfb55f519853")
+		(property "Reference" "#FLG01"
+			(at 30.48 22.225 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 30.48 19.05 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 30.48 24.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 30.48 24.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 30.48 24.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "24b802b6-2800-4ac7-82e4-620719419cf9")
+		)
+		(instances
+			(project "uv-control"
+				(path "/851f5012-c9ae-45fe-a88f-b12b28049edf"
+					(reference "#FLG01")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector_Generic:Conn_01x05")
 		(at 172.72 204.47 0)
 		(unit 1)
@@ -12568,7 +12722,7 @@
 				)
 			)
 		)
-		(property "Description" "Adafruit Feather: nRF52840 or ESP32-S3 (M4 as fallback). Pin map in v0.4-design.md."
+		(property "Description" "Adafruit Feather (any board with the standard Feather pinout). Pins are named by their silkscreen labels; on the nRF52840, ESP32-S3 and M4 Feathers these are also the Arduino pin numbers. 3V3 is the Feather's regulator output."
 			(at 46.99 55.88 0)
 			(hide yes)
 			(show_name no)
@@ -17871,62 +18025,6 @@
 					(reference "C1")
 					(unit 1)
 				)
-			)
-		)
-	)
-	(no_connect
-		(at 59.69 60.96)
-		(uuid "2b565c4c-0136-49f7-90e0-f463512fe6f5")
-	)
-	(no_connect
-		(at 34.29 50.8)
-		(uuid "55cd4162-eaf5-4b8b-8703-ac5252d9013c")
-	)
-	(global_label "SD_CS"
-		(shape input)
-		(at 34.29 68.58 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "2e0a9104-c36c-4c75-8bd0-1c0bd7059dff")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 34.29 68.58 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-	)
-	(global_label "ADS_ALERT"
-		(shape input)
-		(at 34.29 71.12 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "767c6a9d-0374-4f49-9b40-f7499f6f45f8")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 34.29 71.12 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
 			)
 		)
 	)
