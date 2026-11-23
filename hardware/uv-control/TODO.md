@@ -51,11 +51,12 @@ These are what most items below protect.
   - In the PCB editor run *Tools > Update PCB from Schematic*, with "Replace footprints with those specified in the schematic" and "Delete footprints with no symbols" ticked. U2 becomes `uv254:Adafruit_Feather_on_socket` at the Pro Micro's old position, SW1 and J12 are added, and J9/J11 are deleted.
   - Delete the old tracks to U2's pads and the BAT tracks (back, x 52.4; front, y 8.1 and y 40.4). They keep their old nets and DRC will flag them.
   - Re-place U2 on the back, on female headers like the Pro Micro.
+    - To hold the Feather with standoffs, use the footprint `uv254:Adafruit_Feather_on_socket_WithMountingHoles` instead: it adds the Feather's four mounting holes (2.7 mm, M2.5) with copper keep-outs. The screw heads end up on the front, so keep front parts clear of the holes too.
     - The Feather is 22.9 x 50.8 mm (the Pro Micro was 18 x 33), longer than the board is tall (45.55 mm).
     - Its USB connector is at the RST end of the long header (pad 1). Face that end to a board edge so a cable can reach it.
     - On standard 8.5 mm sockets the Feather's underside is 11.04 mm from the board and its tallest parts about 18 mm. Back-side parts under it must be lower than 11 mm, and the enclosure needs the depth; the 3D view shows it.
   - Place SW1, the power switch, at a board edge with its actuator over the edge (it's a right-angle slide switch). Its pad 2 is the common (PWR_EN), pad 1 goes to GND (off) and pad 3 is open (on). Check which slider position joins pads 1-2 before marking ON/OFF on the silkscreen.
-  - Place J12 (2-pin JST PH: 1 PWR_EN, 2 GND) where a cable to a panel-mount switch in the enclosure can reach it.
+  - Place J12 (2-pin 0.1 in header: 1 PWR_EN, 2 GND) where a cable to a panel-mount switch in the enclosure can reach it.
   - J8 becomes the Adafruit 5644 boost breakout. In the schematic select J8 and use *Change Symbol* with `uv254:adafruit_tps61040_boost`: its pins sit where the 4-pin connector's did, so the wiring is kept. *Update PCB* then gives J8 the footprint `uv254:Adafruit_TPS61040_Boost_5644`, with pads exactly where J8's are now. Leave the breakout's 10.16 x 15.24 mm clear beside them; it lies 2.54 mm above the board on its header.
   - Re-route. The long header carries A0-A5 and SPI; the short header carries I2C and the display and LED control pins (5-13).
   - Coordinates in the items below were taken before this change. Re-check any near U2.
@@ -73,8 +74,9 @@ These are what most items below protect.
 - [ ] **BOM: add the new parts.** `scripts/make-bom.py` stops on parts it doesn't know:
   - boost: U6 TPS61041QDBVRQ1, D3 MBR0530, L1 15 µH 1008, C1 10 µF/25 V, C2 22 µF/10 V, C3 4.7 pF, R10 1.40M, R16 160k
   - SW1, the power switch: C&K OS102011MA1QN1 (footprint `Button_Switch_THT:SW_Slide_SPDT_Angled_CK_OS102011MA1Q`)
-  - J12, 2-pin JST PH header for the panel switch, plus its mating housing and crimps. The panel switch itself (e.g. a rocker) is the owner's choice; prefer gold-plated contacts, since it only carries the EN pull-up's microamps.
+  - J12, 2-pin 0.1 in header for the panel switch's wires (or a mating socket/housing). The panel switch itself (e.g. a rocker) is the owner's choice; prefer gold-plated contacts, since it only carries the EN pull-up's microamps.
   - J8: the Adafruit 5644 boost breakout (it comes with its header), if it's fitted instead of U6 and its parts. Adafruit's breakout uses a 10 µH 1008 inductor (MPL2520S100MWT) with the 400 mA TPS61040, a useful reference when choosing L1.
+  - If U2 uses the mounting-hole footprint: 4 M2.5 x 11 mm standoffs (11 mm matches the socket plus header stack) with M2.5 screws, or nuts for male-female standoffs.
   - U2, now an Adafruit Feather (footprint `uv254:Adafruit_Feather_on_socket`; `part_for()` matched the Pro Micro by its `nice_nano` footprint). Also list the female headers it plugs into (16-pin and 12-pin, 0.1 in).
 
   Add them to `PARTS` and `part_for()`, run `scripts/make-bom.py`, and commit
@@ -127,6 +129,7 @@ These are what most items below protect.
 
 - [x] Schematic: U2 is an Adafruit Feather (`uv254:feather`, pin map in `v0.4-design.md`). J9/J11 (battery) are removed, since the Feather has its own charger and jack, and so is the PWR_FLAG on 3V3 (the Feather's 3V pin drives it). The BAT cut in the back ground goes with them once the PCB is updated.
 - [x] Symbol, footprint and 3D model for Adafruit's 5644 boost breakout, for J8 (`uv254:adafruit_tps61040_boost`, `uv254:Adafruit_TPS61040_Boost_5644`).
+- [x] Footprint variant with the Feather's mounting holes: `uv254:Adafruit_Feather_on_socket_WithMountingHoles`.
 - [x] U2's footprint is `uv254:Adafruit_Feather_on_socket`, with Adafruit's nRF52840 Feather model (MIT) on 8.5 mm sockets.
 - [x] Power switch SW1 added: it pulls the Feather's EN pin to GND (net `PWR_EN`) to turn the whole board off. J12, in parallel, takes a panel-mount switch (e.g. a rocker).
 - [x] `v0.4-design.md` updated for the boost, the test headers, the Feather and the power switch.

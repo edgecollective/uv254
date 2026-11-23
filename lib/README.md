@@ -34,6 +34,7 @@ are in [CONTRIBUTING.md](../CONTRIBUTING.md#libraries).
 | `SW_Tactile_12x12_B3F-40xx` | uv-control (B1-B3): 12x12 mm tactile switch, Omron B3F-40xx pattern (fits generic 4-pin 12x12); 3D model includes a cap |
 | `Adafruit_TPS61040_Boost_5644` | uv-control (J8): the Adafruit 5644 breakout (10.16 x 15.24 mm) on a 1x04 header, lying over the board (2.54 mm spacer) with its body to the +x side. Pads in the same places as `PinHeader_1x04_P2.54mm_Vertical` (pin 1 G at the origin, along +y). Dimensions from Adafruit's Eagle file ([Adafruit-TPS61040-PCB](https://github.com/adafruit/Adafruit-TPS61040-PCB)); its mounting hole is on Dwgs.User |
 | `Adafruit_Feather_on_socket` | uv-control (U2): KiCad's `Module:Adafruit_Feather` pads and outline, with a 3D model of the Feather plugged into 8.5 mm female sockets (its underside 11.04 mm from the board) |
+| `Adafruit_Feather_on_socket_WithMountingHoles` | The same, plus the Feather's four mounting holes (positions as in KiCad's `Module:Adafruit_Feather_WithMountingHoles`), drilled 2.7 mm for M2.5 standoffs, each with a 6 mm copper keep-out (tracks, vias, fill) on both sides for the standoff and the screw head. M2.5 x 11 mm standoffs match the 8.5 mm socket plus the 2.5 mm header spacer |
 
 ## Where these came from
 

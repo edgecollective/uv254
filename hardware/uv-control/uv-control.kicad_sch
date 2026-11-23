@@ -12601,7 +12601,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "uv254:Adafruit_Feather_on_socket"
+		(property "Footprint" "uv254:Adafruit_Feather_on_socket_WithMountingHoles"
 			(at 49.53 90.17 0)
 			(hide yes)
 			(show_name no)
