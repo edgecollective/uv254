@@ -6742,14 +6742,6 @@
 		(uuid "bceda7fa-6396-4671-a057-d923733ec209")
 	)
 	(no_connect
-		(at 34.29 68.58)
-		(uuid "c73fae78-9683-406e-87d5-655873b31576")
-	)
-	(no_connect
-		(at 34.29 71.12)
-		(uuid "d9bad7de-5110-4719-a6a9-e4030ba54628")
-	)
-	(no_connect
 		(at 59.69 58.42)
 		(uuid "f294e775-7ffa-4d64-8a47-e06a154da9cb")
 	)
@@ -8247,7 +8239,7 @@
 			)
 		)
 	)
-	(global_label "TFT_DC"
+	(global_label "BL_OFF"
 		(shape input)
 		(at 34.29 48.26 180)
 		(fields_autoplaced yes)
@@ -8391,7 +8383,7 @@
 			)
 		)
 	)
-	(global_label "ADS_ALERT"
+	(global_label "BUTTON_C"
 		(shape input)
 		(at 59.69 55.88 0)
 		(fields_autoplaced yes)
@@ -8775,7 +8767,7 @@
 			)
 		)
 	)
-	(global_label "EMIT_LED_DISABLE"
+	(global_label "TFT_DC"
 		(shape input)
 		(at 34.29 43.18 180)
 		(fields_autoplaced yes)
@@ -9183,7 +9175,7 @@
 			)
 		)
 	)
-	(global_label "TFT_CS"
+	(global_label "BUTTON_A"
 		(shape input)
 		(at 34.29 35.56 180)
 		(fields_autoplaced yes)
@@ -9399,7 +9391,7 @@
 			)
 		)
 	)
-	(global_label "BUTTON_A"
+	(global_label "EMIT_LED_DISABLE"
 		(shape input)
 		(at 59.69 50.8 0)
 		(fields_autoplaced yes)
@@ -9495,7 +9487,7 @@
 			)
 		)
 	)
-	(global_label "BUTTON_B"
+	(global_label "MICRO_PULSE"
 		(shape input)
 		(at 59.69 53.34 0)
 		(fields_autoplaced yes)
@@ -9639,7 +9631,7 @@
 			)
 		)
 	)
-	(global_label "BL_OFF"
+	(global_label "BUTTON_B"
 		(shape input)
 		(at 34.29 38.1 180)
 		(fields_autoplaced yes)
@@ -9783,7 +9775,7 @@
 			)
 		)
 	)
-	(global_label "MICRO_PULSE"
+	(global_label "TFT_CS"
 		(shape input)
 		(at 34.29 45.72 180)
 		(fields_autoplaced yes)
@@ -9828,30 +9820,6 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
-			)
-		)
-	)
-	(global_label "BUTTON_C"
-		(shape input)
-		(at 59.69 60.96 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "a9d28174-3801-4b0e-b096-e2107e32c973")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 59.69 60.96 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
 			)
 		)
 	)
@@ -10335,7 +10303,7 @@
 			)
 		)
 	)
-	(global_label "SD_CS"
+	(global_label "TFT_RST"
 		(shape input)
 		(at 34.29 40.64 180)
 		(fields_autoplaced yes)
@@ -10516,30 +10484,6 @@
 		(uuid "eed94777-1a6d-47a5-a3c2-e9b709e29066")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 176.1453 50.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-	)
-	(global_label "TFT_RST"
-		(shape input)
-		(at 34.29 50.8 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "f2a8cb44-2aff-4254-a3dd-cd8b28531c66")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 34.29 50.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13675,7 +13619,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Inductor_SMD:L_1008_2520Metric"
+		(property "Footprint" "Inductor_SMD:L_1210_3225Metric"
 			(at 308.61 186.69 0)
 			(hide yes)
 			(show_name no)
@@ -17927,6 +17871,62 @@
 					(reference "C1")
 					(unit 1)
 				)
+			)
+		)
+	)
+	(no_connect
+		(at 59.69 60.96)
+		(uuid "2b565c4c-0136-49f7-90e0-f463512fe6f5")
+	)
+	(no_connect
+		(at 34.29 50.8)
+		(uuid "55cd4162-eaf5-4b8b-8703-ac5252d9013c")
+	)
+	(global_label "SD_CS"
+		(shape input)
+		(at 34.29 68.58 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "2e0a9104-c36c-4c75-8bd0-1c0bd7059dff")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 34.29 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "ADS_ALERT"
+		(shape input)
+		(at 34.29 71.12 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "767c6a9d-0374-4f49-9b40-f7499f6f45f8")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 34.29 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 			)
 		)
 	)

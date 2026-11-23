@@ -58,6 +58,7 @@ These are what most items below protect.
   - Place SW1, the power switch, at a board edge with its actuator over the edge (it's a right-angle slide switch). Its pad 2 is the common (PWR_EN), pad 1 goes to GND (off) and pad 3 is open (on). Check which slider position joins pads 1-2 before marking ON/OFF on the silkscreen.
   - Place J12 (2-pin 0.1 in header: 1 PWR_EN, 2 GND) where a cable to a panel-mount switch in the enclosure can reach it.
   - J8 becomes the Adafruit 5644 boost breakout. In the schematic select J8 and use *Change Symbol* with `uv254:adafruit_tps61040_boost`: its pins sit where the 4-pin connector's did, so the wiring is kept. *Update PCB* then gives J8 the footprint `uv254:Adafruit_TPS61040_Boost_5644`, with pads exactly where J8's are now. Leave the breakout's 10.16 x 15.24 mm clear beside them; it lies 2.54 mm above the board on its header.
+    - The footprint now has the breakout's mounting hole (2.7 mm, M2.5, with a 6 mm copper keep-out on both sides). On the board, J8 still has the earlier copy without it: select J8 and run *Update Footprints from Library*, then move any tracks out of the keep-out. The screw head is on the other side of the board, so keep parts there clear too.
   - Re-route. The long header carries A0-A5 and SPI; the short header carries I2C and the display and LED control pins (5-13).
   - Coordinates in the items below were taken before this change. Re-check any near U2.
   - Done when `kicad-cli pcb drc --schematic-parity` shows 0 parity issues and 0 unconnected items.
@@ -75,7 +76,7 @@ These are what most items below protect.
   - boost: U6 TPS61041QDBVRQ1, D3 MBR0530, L1 15 µH 1008, C1 10 µF/25 V, C2 22 µF/10 V, C3 4.7 pF, R10 1.40M, R16 160k
   - SW1, the power switch: C&K OS102011MA1QN1 (footprint `Button_Switch_THT:SW_Slide_SPDT_Angled_CK_OS102011MA1Q`)
   - J12, 2-pin 0.1 in header for the panel switch's wires (or a mating socket/housing). The panel switch itself (e.g. a rocker) is the owner's choice; prefer gold-plated contacts, since it only carries the EN pull-up's microamps.
-  - J8: the Adafruit 5644 boost breakout (it comes with its header), if it's fitted instead of U6 and its parts. Adafruit's breakout uses a 10 µH 1008 inductor (MPL2520S100MWT) with the 400 mA TPS61040, a useful reference when choosing L1.
+  - J8: the Adafruit 5644 boost breakout (it comes with its header), if it's fitted instead of U6 and its parts, plus an M2.5 screw, nut and 2.5 mm spacer for its mounting hole. Adafruit's breakout uses a 10 µH 1008 inductor (MPL2520S100MWT) with the 400 mA TPS61040, a useful reference when choosing L1.
   - If U2 uses the mounting-hole footprint: 4 M2.5 x 11 mm standoffs (11 mm matches the socket plus header stack) with M2.5 screws, or nuts for male-female standoffs.
   - U2, now an Adafruit Feather (footprint `uv254:Adafruit_Feather_on_socket`; `part_for()` matched the Pro Micro by its `nice_nano` footprint). Also list the female headers it plugs into (16-pin and 12-pin, 0.1 in).
 
@@ -96,7 +97,7 @@ These are what most items below protect.
 ## Owner to decide
 
 - [ ] **J4 (optional SSD1306 OLED header) sits under the display.** Its courtyard overlapping U5 is the remaining DRC error. Move it out, put it on the back, or drop it.
-- [ ] **Display support.**
+- [ ] **Display support.** A footprint with the holes now exists: `uv254:st7789_200in_240x320_WithMountingHoles` (2.7 mm, M2.5, 6 mm copper keep-outs). With U5 at (118, 36) rotated 180 the holes land at about (118.8, 12.5), (118.8, 41.7), (60.0, 12.5) and (60.0, 41.7), all clear on the board as of 2026-11-23. To use it, set U5's footprint to the variant and update the PCB; it takes 4 M2.5 screws and nuts with 2.5 mm spacers. Measure the module first (below).
   - The 62 mm GMT020 module is held only by its 8-pin header at the button end. Its far end floats 2.5 mm above the board.
   - Its corner holes (on Dwgs.User in the footprint) are at about (54.45, 7.06), (54.45, 36.31), (113.25, 7.06) and (113.25, 36.31). Traces pass through both far-end spots.
   - The footprint and 3D model dimensions are photo estimates (±0.3 mm). Caliper-check a module first, then update `D2` in `lib/uv254.3dshapes/make_models.py` and `lib/uv254.pretty/st7789_200in_240x320.kicad_mod`.
@@ -111,7 +112,7 @@ These are what most items below protect.
 
 ## Other open items
 
-- [ ] **Firmware:** write the Arduino firmware for the Feather, using the pin map in [`v0.4-design.md`](v0.4-design.md#feather-pins).
+- [ ] **Firmware:** write the Arduino firmware for the Feather, using the pin map in [`v0.4-design.md`](v0.4-design.md#feather-pins) (re-assigned 2026-11-23 to suit the layout: buttons on 5, 6 and A2; display RST/DC/CS/BL_OFF on 9-12; SD_CS on RX; ADS_ALERT on TX; LED drive on A1 and disable on A0).
   - On the ESP32-S3, drive `PIN_I2C_POWER` high in `setup()`.
   - The CircuitPython `firmware/uv-control/v0.4/code.py` is out of date (first-draft pins, Pro Micro).
 - [ ] **Schematic:** ERC has no errors. Remaining warnings:
@@ -126,6 +127,8 @@ These are what most items below protect.
 ## Done
 
 2026-11-23:
+
+- [x] Feather pins re-assigned to suit the layout (schematic labels and the board's U2 pad nets; board-schematic parity 0). Spare: A3, A4, 13.
 
 - [x] Schematic: U2 is an Adafruit Feather (`uv254:feather`, pin map in `v0.4-design.md`). J9/J11 (battery) are removed, since the Feather has its own charger and jack, and so is the PWR_FLAG on 3V3 (the Feather's 3V pin drives it). The BAT cut in the back ground goes with them once the PCB is updated.
 - [x] Symbol, footprint and 3D model for Adafruit's 5644 boost breakout, for J8 (`uv254:adafruit_tps61040_boost`, `uv254:Adafruit_TPS61040_Boost_5644`).

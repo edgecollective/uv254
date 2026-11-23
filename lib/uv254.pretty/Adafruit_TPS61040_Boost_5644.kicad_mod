@@ -3,12 +3,12 @@
 	(generator "pcbnew")
 	(generator_version "10.0")
 	(layer "F.Cu")
-	(descr "Adafruit 12V bias voltage boost converter breakout, TPS61040 (product 5644, https://www.adafruit.com/product/5644), on a 1x04 2.54 mm header: pins 1 G, 2 12V, 3 In, 4 En, as on its silkscreen. The 10.16 x 15.24 mm board lies over this one on the header (2.54 mm spacer), its body to the +x side; its 2.5 mm mounting hole is on Dwgs.User. Dimensions from Adafruit's Eagle board file (github.com/adafruit/Adafruit-TPS61040-PCB). 3D: Adafruit's model (Adafruit_CAD_Parts, MIT) on KiCad's PinHeader_1x04 model")
+	(descr "Adafruit 12V bias voltage boost converter breakout, TPS61040 (product 5644, https://www.adafruit.com/product/5644), on a 1x04 2.54 mm header: pins 1 G, 2 12V, 3 In, 4 En, as on its silkscreen. The 10.16 x 15.24 mm board lies over this one on the header (2.54 mm spacer), its body to the +x side. Its mounting hole is drilled here 2.7 mm (M2.5 clearance) with a 6 mm copper keep-out (tracks, vias, fill) on both sides, for an M2.5 screw and a 2.5 mm spacer under the breakout. Dimensions from Adafruit's Eagle board file (github.com/adafruit/Adafruit-TPS61040-PCB). 3D: Adafruit's model (Adafruit_CAD_Parts, MIT) on KiCad's PinHeader_1x04 model")
 	(tags "Adafruit 5644 TPS61040 boost 12V breakout module header")
 	(property "Reference" "REF**"
 		(at 5.08 -2.6 0)
 		(layer "F.SilkS")
-		(uuid "98fc8c3c-b02c-442b-bc70-f583a150ee8c")
+		(uuid "883f82f6-acf4-4526-8cc3-7c36ee0f72e0")
 		(effects
 			(font
 				(size 1 1)
@@ -19,7 +19,7 @@
 	(property "Value" "Adafruit_5644"
 		(at 5.08 10.2 0)
 		(layer "F.Fab")
-		(uuid "2c857d61-e093-495f-8af1-89aa6bebc0a7")
+		(uuid "5db69446-eb2e-412a-9634-e25d8835e9a2")
 		(effects
 			(font
 				(size 1 1)
@@ -31,7 +31,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "04cbe076-479c-4874-bfba-1e0a8518a2c4")
+		(uuid "ff103665-5e86-4c2f-9791-ae0b6bb51c6b")
 		(effects
 			(font
 				(size 1 1)
@@ -43,7 +43,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "df484dae-56da-423b-8058-fda4efa06a92")
+		(uuid "10a348d4-e71a-481b-bdbd-648221292be7")
 		(effects
 			(font
 				(size 1 1)
@@ -60,7 +60,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "52cf6ec0-b95a-4b0b-9283-04ebf6425cbe")
+		(uuid "e20f1024-e7bb-4746-83fc-a42f6cd372d6")
 	)
 	(fp_line
 		(start 12.7 -1.27)
@@ -70,7 +70,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "a515fb35-51cc-4513-ab56-89e4f133e27e")
+		(uuid "a2e3cafa-2c58-452a-9873-4f3ac6210b21")
 	)
 	(fp_line
 		(start 12.7 8.89)
@@ -80,7 +80,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "ce5ead92-685f-4f5d-ba0f-ea10bfb7748c")
+		(uuid "ced6903d-1dc6-47d5-b153-8c5a4fe0ada7")
 	)
 	(fp_line
 		(start -2.54 8.89)
@@ -90,7 +90,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "e6de1ec3-910e-4c2d-a0fd-b98c8519ca32")
+		(uuid "01c764e2-24ca-4483-b99f-73578cf4ba75")
 	)
 	(fp_line
 		(start -2.66 -1.39)
@@ -100,7 +100,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "e232f722-8dbf-4935-b102-3cb81b0c2abb")
+		(uuid "15f890d0-31de-4469-b34e-7755fa356758")
 	)
 	(fp_line
 		(start 12.82 -1.39)
@@ -110,7 +110,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "befab9aa-d7fc-4f9c-8674-79401a82c308")
+		(uuid "2a9c7822-b53f-4319-a345-3e241fba087d")
 	)
 	(fp_line
 		(start 12.82 9.01)
@@ -120,7 +120,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "dbaaa7a1-60ec-4a52-94a7-f8c700a0efb0")
+		(uuid "27762dd2-c052-44fa-8dc3-ecabb5d50fc2")
 	)
 	(fp_line
 		(start -2.66 9.01)
@@ -130,7 +130,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "b904cb7c-a89f-4e7b-98fe-c502a66eab62")
+		(uuid "7908395c-dbce-4cfa-a25f-c83ba4fd61ad")
 	)
 	(fp_line
 		(start -1.8 -1.0)
@@ -140,7 +140,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "fda536c0-942c-4b5d-bd20-f62f430ea482")
+		(uuid "fc8c200e-c446-459b-843a-808c319d403e")
 	)
 	(fp_line
 		(start -2.79 -1.52)
@@ -150,7 +150,7 @@
 			(type solid)
 		)
 		(layer "F.CrtYd")
-		(uuid "44001ac2-b793-4fd8-a185-b7a101caedb1")
+		(uuid "6085700d-480e-409b-9356-40d7f6a8542e")
 	)
 	(fp_line
 		(start 12.95 -1.52)
@@ -160,7 +160,7 @@
 			(type solid)
 		)
 		(layer "F.CrtYd")
-		(uuid "899408ac-5a6e-474c-a977-e8e43440eaf7")
+		(uuid "4c90ee60-4b7f-41b0-ae14-d4ecb786bd93")
 	)
 	(fp_line
 		(start 12.95 9.14)
@@ -170,7 +170,7 @@
 			(type solid)
 		)
 		(layer "F.CrtYd")
-		(uuid "c825c0e0-fe37-4d1d-9296-17b1572bd173")
+		(uuid "b251d846-a603-4b0b-aab3-3a5238fb5471")
 	)
 	(fp_line
 		(start -2.79 9.14)
@@ -180,36 +180,24 @@
 			(type solid)
 		)
 		(layer "F.CrtYd")
-		(uuid "5313d0fe-d0e1-4c96-bc83-0959c4bf1a56")
+		(uuid "1b99b378-e482-4b81-a247-23a9c43c8809")
 	)
 	(fp_circle
 		(center 10.16 3.81)
-		(end 11.41 3.81)
+		(end 12.66 3.81)
 		(stroke
 			(width 0.1)
 			(type solid)
 		)
 		(fill no)
-		(layer "Dwgs.User")
-		(uuid "5c13a6e0-19a2-4a24-8f40-78b06b6d2c62")
-	)
-	(fp_text user "mounting hole (2.5 mm)"
-		(at 10.16 6.0 0)
-		(unlocked yes)
-		(layer "Dwgs.User")
-		(uuid "87f4f745-d8f5-457c-94a0-1bdad5853091")
-		(effects
-			(font
-				(size 0.6 0.6)
-				(thickness 0.09)
-			)
-		)
+		(layer "F.Fab")
+		(uuid "b5868edd-d598-4500-b962-7c5a47db8522")
 	)
 	(fp_text user "G"
 		(at 1.3 0 0)
 		(unlocked yes)
 		(layer "F.SilkS")
-		(uuid "5285235a-7dc3-47fc-a76a-9da58ef051a5")
+		(uuid "fe4f66d4-cd70-46da-9aff-6fa96bfc6187")
 		(effects
 			(font
 				(size 0.8 0.8)
@@ -222,7 +210,7 @@
 		(at 1.3 2.54 0)
 		(unlocked yes)
 		(layer "F.SilkS")
-		(uuid "fec9188a-3682-4b7f-ac5b-0658582e6787")
+		(uuid "46a52924-fdf4-457a-87d5-a5159b8fa078")
 		(effects
 			(font
 				(size 0.8 0.8)
@@ -235,7 +223,7 @@
 		(at 1.3 5.08 0)
 		(unlocked yes)
 		(layer "F.SilkS")
-		(uuid "a477cbc8-c249-434c-aa34-15ca7a49132d")
+		(uuid "608112a1-bd2b-455d-952c-e34cb64636d3")
 		(effects
 			(font
 				(size 0.8 0.8)
@@ -248,7 +236,7 @@
 		(at 1.3 7.62 0)
 		(unlocked yes)
 		(layer "F.SilkS")
-		(uuid "269c84a7-887a-4ae9-bf2f-a5014280eb1f")
+		(uuid "d4a90475-b29c-44de-a29c-af3cdac9d859")
 		(effects
 			(font
 				(size 0.8 0.8)
@@ -261,7 +249,7 @@
 		(at 7.0 3.81 0)
 		(unlocked yes)
 		(layer "F.Fab")
-		(uuid "5a310820-7a64-4306-a835-a314e00c441c")
+		(uuid "07af7369-e6cd-4b1d-9ad8-4de9b048a0ef")
 		(effects
 			(font
 				(size 1 1)
@@ -275,7 +263,7 @@
 		(drill 1)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
-		(uuid "8db4f3ef-c642-40d9-992e-60e43840b96d")
+		(uuid "bb7b1cf7-4e2a-41c7-9b83-012c0e63f71f")
 	)
 	(pad "2" thru_hole oval
 		(at 0 2.54)
@@ -283,7 +271,7 @@
 		(drill 1)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
-		(uuid "9ddb81cd-5817-4abe-8665-df2dcd5312cd")
+		(uuid "5e44a62d-2bb4-4dce-adb2-b7f5b4afe73f")
 	)
 	(pad "3" thru_hole oval
 		(at 0 5.08)
@@ -291,7 +279,7 @@
 		(drill 1)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
-		(uuid "f2facba3-62d0-4f0f-9d63-10cf51c80e37")
+		(uuid "0ede3baa-51de-478b-9ff2-8bc6230586fc")
 	)
 	(pad "4" thru_hole oval
 		(at 0 7.62)
@@ -299,7 +287,45 @@
 		(drill 1)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
-		(uuid "fc80b0f2-2729-4e94-9707-2a3e3c79665a")
+		(uuid "f4da4b54-e124-4a5d-856c-6107bb4fc261")
+	)
+	(pad "" np_thru_hole circle
+		(at 10.16 3.81)
+		(size 2.7 2.7)
+		(drill 2.7)
+		(layers "*.Cu" "*.Mask")
+		(uuid "d87151de-7a79-4902-9c15-635cd033f100")
+	)
+	(zone
+		(layers "F.Cu" "B.Cu")
+		(uuid "aa97cc52-57e6-4734-8faf-d76432ea29a9")
+		(name "standoff keep-out")
+		(hatch full 0.508)
+		(connect_pads
+			(clearance 0)
+		)
+		(min_thickness 0.254)
+		(keepout
+			(tracks not_allowed)
+			(vias not_allowed)
+			(pads allowed)
+			(copperpour not_allowed)
+			(footprints allowed)
+		)
+		(placement
+			(enabled no)
+			(sheetname "")
+		)
+		(fill
+			(thermal_gap 0.508)
+			(thermal_bridge_width 0.508)
+			(island_removal_mode 0)
+		)
+		(polygon
+			(pts
+				(xy 13.16 3.81) (xy 13.058 4.586) (xy 12.758 5.31) (xy 12.281 5.931) (xy 11.66 6.408) (xy 10.936 6.708) (xy 10.16 6.81) (xy 9.384 6.708) (xy 8.66 6.408) (xy 8.039 5.931) (xy 7.562 5.31) (xy 7.262 4.586) (xy 7.16 3.81) (xy 7.262 3.034) (xy 7.562 2.31) (xy 8.039 1.689) (xy 8.66 1.212) (xy 9.384 0.912) (xy 10.16 0.81) (xy 10.936 0.912) (xy 11.66 1.212) (xy 12.281 1.689) (xy 12.758 2.31) (xy 13.058 3.034)
+			)
+		)
 	)
 	(embedded_fonts no)
 	(model "${KIPRJMOD}/../../lib/uv254.3dshapes/Adafruit_TPS61040_Boost_5644.step"
