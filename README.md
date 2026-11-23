@@ -2,7 +2,13 @@
 
 **[⬇ Download the latest files (zip)](https://github.com/edgecollective/uv254/archive/refs/heads/main.zip)**:
 everything on `main` (all three KiCad boards, the shared parts library and the
-firmware), as of the latest commit. Unzip it and keep the folders together.
+firmware), as of the [latest commit](https://github.com/edgecollective/uv254/commit/main).
+Unzip it and keep the folders together.
+[![Latest commit](https://img.shields.io/github/last-commit/edgecollective/uv254/main)](https://github.com/edgecollective/uv254/commits/main)
+
+**Snapshot, 2026-11-23** (commit [`d40e8e4`](https://github.com/edgecollective/uv254/commit/d40e8e4f3301a8d8190b229d6b9092615a6cdc2e)):
+**[⬇ download this version (zip)](https://github.com/edgecollective/uv254/archive/d40e8e4f3301a8d8190b229d6b9092615a6cdc2e.zip)**.
+Unlike the link above, it stays the same when more commits are pushed.
 
 Open hardware for the **uv254** UV water-quality sensor. The device is three
 boards, each its own KiCad project:
