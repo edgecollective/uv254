@@ -2,17 +2,19 @@
 # Bill of materials
 
 Parts for one set: a detector, an emitter and a control board, plus the two
-cables between them. Taken from the schematics on 2026-11-19:
-UV-Detector v0.5, UV-Emitter v0.5, UV-Control v0.4, all still in progress, so re-check it against the schematics before
-ordering.
+cables between them. Taken from the schematics on 2026-11-23:
+UV-Detector v0.5, UV-Emitter v0.5, UV-Control v0.4. UV-Control v0.4 is released (tag `uv-control/v0.4`); the detector and
+emitter v0.5 are still in progress, so re-check those against their schematics
+before ordering.
 
 The part numbers are suggestions; the schematics don't carry them yet. Any
 equivalent passive works (same value and package, same or higher voltage and the
-same dielectric, C0G where given). The Pro Micro module and the display aren't
-sold by Digi-Key or Mouser.
+same dielectric, C0G where given). The Feather and the 5644 boost breakout link
+to Adafruit, and the display to Amazon.
 
 Quantity 0 means the part has a footprint but isn't fitted, or is optional.
-All resistors and capacitors are 0805. Order a few spares of the small parts:
+All resistors and capacitors are 0805, except one 0603 resistor (100 kΩ) on the
+control board. Order a few spares of the small parts:
 cut-tape prices usually drop at 10 pieces.
 
 The order list for one set is [`bom.csv`](bom.csv), by manufacturer part number, ready
@@ -74,25 +76,38 @@ H1-H4 are M3 mounting holes (no part). The LED runs from +12V on J2 pin 4.
 | R1, R2, R6, R7, R8 | 5 | 4.7 kΩ 1% 0805 | Yageo RC0805FR-074K7L | [Digi-Key](https://www.digikey.com/en/products/result?keywords=RC0805FR-074K7L) |  |
 | R5, R14, R15 | 3 | 5.49 kΩ 1% 0805 | Yageo RC0805FR-075K49L | [Digi-Key](https://www.digikey.com/en/products/result?keywords=RC0805FR-075K49L) |  |
 | R4, R12 | 2 | 100 kΩ 1% 0805 | Yageo RC0805FR-07100KL | [Digi-Key](https://www.digikey.com/en/products/result?keywords=RC0805FR-07100KL) |  |
+| R16 | 1 | 160 kΩ 1% 0805 | Yageo RC0805FR-07160KL | [Digi-Key](https://www.digikey.com/en/products/result?keywords=RC0805FR-07160KL) | boost feedback |
+| R10 | 1 | 1.40 MΩ 1% 0805 | Yageo RC0805FR-071M4L | [Digi-Key](https://www.digikey.com/en/products/result?keywords=RC0805FR-071M4L) | boost feedback |
+| R3 | 1 | 100 kΩ 1% 0603 | Yageo RC0603FR-07100KL | [Digi-Key](https://www.digikey.com/en/products/result?keywords=RC0603FR-07100KL) |  |
+| C3 | 1 | 4.7 pF 50 V C0G 0805 | Samsung CL21C4R7CBANNNC | [Digi-Key](https://www.digikey.com/en/products/result?keywords=CL21C4R7CBANNNC) | boost feed-forward |
 | C8, C9, C10, C11, C12, C13, C14, C16 | 8 | 100 nF 50 V X7R 0805 | Samsung CL21B104KBCNNNC | [Digi-Key](https://www.digikey.com/en/products/result?keywords=CL21B104KBCNNNC) |  |
 | C7 | 1 | 330 nF 50 V X7R 0805 | Samsung CL21B334KBFNNNE | [Digi-Key](https://www.digikey.com/en/products/result?keywords=CL21B334KBFNNNE) | long factory lead time; Murata GRM219R71H334KA88D is an alternate |
 | C15 | 1 | 10 µF 16 V X5R 0805 | Samsung CL21A106KOQNNNE | [Digi-Key](https://www.digikey.com/en/products/result?keywords=CL21A106KOQNNNE) |  |
+| C1 | 1 | 10 µF 25 V X5R 0805 | Samsung CL21A106KAYNNNE | [Digi-Key](https://www.digikey.com/en/products/result?keywords=CL21A106KAYNNNE) | boost output, on 12 V: keep it 25 V |
+| C2 | 1 | 22 µF 10 V X5R 0805 | Murata GRM21BR61A226ME44L | [Digi-Key](https://www.digikey.com/en/products/result?keywords=GRM21BR61A226ME44L) | boost input |
+| L1 | 1 | 15 µH shielded power inductor, 1210 (3.2 x 2.5 mm), about 0.6 A saturation | Murata LQH32PN150MN0L | [Digi-Key](https://www.digikey.com/en/products/result?keywords=LQH32PN150MN0L) | needs at least 0.35 A saturation current |
 | Q1 | 1 | N-channel MOSFET 60 V, SOT-23 | onsemi 2N7002LT1G | [Digi-Key](https://www.digikey.com/en/products/result?keywords=2N7002LT1G) |  |
 | D1, D2 | 2 | Switching diode, SOD-123 | Diodes Inc 1N4148W-7-F | [Digi-Key](https://www.digikey.com/en/products/result?keywords=1N4148W-7-F) |  |
+| D3 | 1 | Schottky diode 30 V 0.5 A, SOD-123 | onsemi MBR0530T1G | [Digi-Key](https://www.digikey.com/en/products/result?keywords=MBR0530T1G) | boost diode |
+| U6 | 1 | Boost converter, 250 mA switch, SOT-23-5 (12 V for the UV LED) | Texas Instruments TPS61041QDBVRQ1 | [Digi-Key](https://www.digikey.com/en/products/result?keywords=TPS61041QDBVRQ1) | TPS61041DBVR, or TPS61040DBVR (400 mA, more output current), fit the same pads |
 | U3 | 1 | 16-bit 4-channel I2C ADC, VSSOP-10 | Texas Instruments ADS1115IDGSR | [Digi-Key](https://www.digikey.com/en/products/result?keywords=ADS1115IDGSR) |  |
 | U4 | 1 | CMOS 555 timer, SOIC-8 | Texas Instruments TLC555IDR | [Digi-Key](https://www.digikey.com/en/products/result?keywords=TLC555IDR) |  |
 | J1 | 1 | JST PH 7-pin header, vertical | JST B7B-PH-K-S(LF)(SN) | [Digi-Key](https://www.digikey.com/en/products/result?keywords=B7B-PH-K-S%28LF%29%28SN%29) |  |
 | J2 | 1 | JST PH 6-pin header, vertical | JST B6B-PH-K-S(LF)(SN) | [Digi-Key](https://www.digikey.com/en/products/result?keywords=B6B-PH-K-S%28LF%29%28SN%29) |  |
+| J9 | 1 | JST PH 2-pin header, vertical | JST B2B-PH-K-S(LF)(SN) | [Digi-Key](https://www.digikey.com/en/products/result?keywords=B2B-PH-K-S%28LF%29%28SN%29) | battery, in parallel with the Feather's own JST jack |
 | J3 | 1 | 0.1 in male header, J3 1x3 | Sullins PRPC040SAAN-RC | [Digi-Key](https://www.digikey.com/en/products/result?keywords=PRPC040SAAN-RC) | LED drive select, with a shunt; cut from the 1x40 strip |
-| J5, J6, J7 | 3 | 0.1 in male header, J5 1x4, J6 1x5, J7 1x4 | Sullins PRPC040SAAN-RC | [Digi-Key](https://www.digikey.com/en/products/result?keywords=PRPC040SAAN-RC) | cut from the 1x40 strip |
+| J5, J6, J7 | 3 | 0.1 in male header, J5 1x5, J6 1x5, J7 1x2 | Sullins PRPC040SAAN-RC | [Digi-Key](https://www.digikey.com/en/products/result?keywords=PRPC040SAAN-RC) | cut from the 1x40 strip |
+| J12 | 1 | 0.1 in male header, J12 1x2 | Sullins PRPC040SAAN-RC | [Digi-Key](https://www.digikey.com/en/products/result?keywords=PRPC040SAAN-RC) | header for a panel-mount power switch, in parallel with SW1; cut from the 1x40 strip |
+| SW1 | 1 | Slide switch SPDT, right angle | C&K OS102011MA1QN1 | [Digi-Key](https://www.digikey.com/en/products/result?keywords=OS102011MA1QN1) | power switch |
 | B1, B2, B3 | 3 | Tactile switch 12x12 mm, 7.3 mm, projected plunger | Omron B3F-4055 | [Digi-Key](https://www.digikey.com/en/products/result?keywords=B3F-4055) | takes Omron B32 key caps |
 | RESET1 | 1 | Tactile switch 6x6 mm, 5 mm | Omron B3F-1020 | [Digi-Key](https://www.digikey.com/en/products/result?keywords=B3F-1020) |  |
 | J10 | 1 | microSD socket | Hirose DM3D-SF | [Digi-Key](https://www.digikey.com/en/products/result?keywords=DM3D-SF) |  |
-| U2 | 1 | Pro Micro nRF52840 module (nice!nano v2, or a SuperMini clone) | nice!nano: Nice Keyboards; clones: AliExpress |  | same module as Rook v0.4; usually ships with headers |
+| U2 | 1 | Adafruit Feather nRF52840 Express (or the ESP32-S3 Feather, 5323, or Feather M4 Express, 3857) | Adafruit 4062 | [Adafruit](https://www.adafruit.com/product/4062) | ships with male headers; plugs into the two Feather sockets |
+| J8 | 0 | Adafruit 12 V bias voltage boost breakout, TPS61040 | Adafruit 5644 | [Adafruit](https://www.adafruit.com/product/5644) | alternative to the on-board boost (U6 and its parts): not fitted by default |
 | U5 | 1 | 2.0 in 240x320 ST7789 IPS SPI module (GMT020-02-8P), 8 pins in the order GND VCC SCL SDA RST DC CS BL | Amazon (XIITIA, 2 per pack) | [Amazon](https://www.amazon.com/XIITIA-Display-240x320-Interface-Arduino/dp/B0DFWLD38D) | a 1.54 in 240x240 module with the same pin order fits the same holes |
 | J4 | 0 | SSD1306 I2C OLED module, 4-pin (VCC GND SCL SDA) | AliExpress and similar |  | optional OLED header: not fitted |
 
-JP1 (solder jumper) and H1-H4 (mounting holes) have no part. J3 takes one shunt (Sullins SPC02SYAN); use J3 or JP1, never both. The display and the Pro Micro can be soldered straight to the board or plugged into 0.1 in sockets.
+JP1 (solder jumper) and H1-H4 (mounting holes) have no part. J3 takes one shunt (Sullins SPC02SYAN); use J3 or JP1, never both. The Feather (U2) plugs into two 8.5 mm female sockets (16 and 12 pin). Fit either the on-board boost (U6 with L1, D3, C1-C3, R3, R10, R16) or Adafruit's 5644 breakout at J8, not both. The display can be soldered straight to the board or plugged into a 0.1 in socket.
 
 ## Cables
 

@@ -8,7 +8,11 @@ Qty per set,Manufacturer,MPN,Description,Used on,Source,Notes
 1,Yageo,RC0805FR-0724R9L,24.9 Ω 1% 0805,emitter R2,Digi-Key,LED current sense
 2,Yageo,RC0805FR-0743K2L,43.2 kΩ 1% 0805,detector R10 R12,Digi-Key,
 4,Yageo,RC0805FR-07100KL,100 kΩ 1% 0805,detector R6; emitter R3; control R4 R12,Digi-Key,
+1,Yageo,RC0805FR-07160KL,160 kΩ 1% 0805,control R16,Digi-Key,boost feedback
 1,Yageo,RC0805FR-071ML,1 MΩ 1% 0805,detector R8,Digi-Key,
+1,Yageo,RC0805FR-071M4L,1.40 MΩ 1% 0805,control R10,Digi-Key,boost feedback
+1,Yageo,RC0603FR-07100KL,100 kΩ 1% 0603,control R3,Digi-Key,
+1,Samsung,CL21C4R7CBANNNC,4.7 pF 50 V C0G 0805,control C3,Digi-Key,boost feed-forward
 1,Samsung,CL21C100JBANNNC,10 pF 50 V C0G 0805,detector C2,Digi-Key,
 1,Samsung,CL21C101JBANNNC,100 pF 50 V C0G 0805,detector C7,Digi-Key,
 10,Samsung,CL21B104KBCNNNC,100 nF 50 V X7R 0805,detector C5; emitter CX1; control C8 C9 C10 C11 C12 C13 C14 C16,Digi-Key,
@@ -16,6 +20,9 @@ Qty per set,Manufacturer,MPN,Description,Used on,Source,Notes
 4,Samsung,CL21B105KAFNNNE,1 µF 25 V X7R 0805,detector C1 C3 C4; emitter CX2,Digi-Key,CX2 is on +12V: keep it 25 V or more
 1,Samsung,CL21B225KAFNFNE,2.2 µF 25 V X7R 0805,detector C6,Digi-Key,
 1,Samsung,CL21A106KOQNNNE,10 µF 16 V X5R 0805,control C15,Digi-Key,
+1,Samsung,CL21A106KAYNNNE,10 µF 25 V X5R 0805,control C1,Digi-Key,"boost output, on 12 V: keep it 25 V"
+1,Murata,GRM21BR61A226ME44L,22 µF 10 V X5R 0805,control C2,Digi-Key,boost input
+1,Murata,LQH32PN150MN0L,"15 µH shielded power inductor, 1210 (3.2 x 2.5 mm), about 0.6 A saturation",control L1,Digi-Key,needs at least 0.35 A saturation current
 1,Advanced Photonix,008-2171-112,"UV-C photodiode, 220-280 nm, TO-46 can (datasheet name SD008-2171-112)",detector D2,Digi-Key,about $45; TO-46 has the same pin circle as the TO-18 footprint
 1,Inolux,IN-C35PPCTGU0,"UV-C LED, 255 nm, 3535",emitter D1,Digi-Key,about $20
 2,Texas Instruments,OPA4340UA,"Quad rail-to-rail op-amp, SOIC-14",detector U1; emitter U1,Digi-Key,
@@ -24,15 +31,21 @@ Qty per set,Manufacturer,MPN,Description,Used on,Source,Notes
 1,onsemi,MMBT3904LT1G,"NPN transistor, SOT-23",emitter Q1,Digi-Key,
 2,onsemi,2N7002LT1G,"N-channel MOSFET 60 V, SOT-23",emitter Q2; control Q1,Digi-Key,
 2,Diodes Inc,1N4148W-7-F,"Switching diode, SOD-123",control D1 D2,Digi-Key,
+1,onsemi,MBR0530T1G,"Schottky diode 30 V 0.5 A, SOD-123",control D3,Digi-Key,boost diode
+1,Texas Instruments,TPS61041QDBVRQ1,"Boost converter, 250 mA switch, SOT-23-5 (12 V for the UV LED)",control U6,Digi-Key,"TPS61041DBVR, or TPS61040DBVR (400 mA, more output current), fit the same pads"
 1,Texas Instruments,ADS1115IDGSR,"16-bit 4-channel I2C ADC, VSSOP-10",control U3,Digi-Key,
 1,Texas Instruments,TLC555IDR,"CMOS 555 timer, SOIC-8",control U4,Digi-Key,
 2,JST,B7B-PH-K-S(LF)(SN),"JST PH 7-pin header, vertical",detector J2; control J1,Digi-Key,
 2,JST,B6B-PH-K-S(LF)(SN),"JST PH 6-pin header, vertical",emitter J2; control J2,Digi-Key,
-1,Sullins,PRPC040SAAN-RC,"0.1 in male header, 1x40, break to length",control J3 J5 J6 J7,Digi-Key,one strip covers every 0.1 in header in a set
+1,JST,B2B-PH-K-S(LF)(SN),"JST PH 2-pin header, vertical",control J9,Digi-Key,
+1,Sullins,PRPC040SAAN-RC,"0.1 in male header, 1x40, break to length",control J3 J5 J6 J7 J12,Digi-Key,one strip covers every 0.1 in header in a set
+1,Sullins,PPTC161LFBN-RC,"0.1 in female socket, 1x16, 8.5 mm",control: U2 (Feather) socket,Digi-Key,for the Feather
+1,Sullins,PPTC121LFBN-RC,"0.1 in female socket, 1x12, 8.5 mm",control: U2 (Feather) socket,Digi-Key,for the Feather
+1,C&K,OS102011MA1QN1,"Slide switch SPDT, right angle",control SW1,Digi-Key,power switch
 3,Omron,B3F-4055,"Tactile switch 12x12 mm, 7.3 mm, projected plunger",control B1 B2 B3,Digi-Key,takes Omron B32 key caps
 1,Omron,B3F-1020,"Tactile switch 6x6 mm, 5 mm",control RESET1,Digi-Key,
 1,Hirose,DM3D-SF,microSD socket,control J10,Digi-Key,
-1,,,"Pro Micro nRF52840 module (nice!nano v2, or a SuperMini clone)",control U2,nice!nano: Nice Keyboards; clones: AliExpress,same module as Rook v0.4; usually ships with headers
+1,Adafruit,4062,"Adafruit Feather nRF52840 Express (or the ESP32-S3 Feather, 5323, or Feather M4 Express, 3857)",control U2,https://www.adafruit.com/product/4062,ships with male headers; plugs into the two Feather sockets
 1,,,"2.0 in 240x320 ST7789 IPS SPI module (GMT020-02-8P), 8 pins in the order GND VCC SCL SDA RST DC CS BL",control U5,https://www.amazon.com/XIITIA-Display-240x320-Interface-Arduino/dp/B0DFWLD38D,a 1.54 in 240x240 module with the same pin order fits the same holes
 2,JST,PHR-7,JST PH 7-pin cable housing,cables: control J1 to detector J2,Digi-Key,
 2,JST,PHR-6,JST PH 6-pin cable housing,cables: control J2 to emitter J2,Digi-Key,

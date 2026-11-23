@@ -37,8 +37,12 @@ PARTS = OrderedDict([
     ('R_24r9', ('24.9 Ω 1% 0805', 'Yageo', 'RC0805FR-0724R9L', '', 'LED current sense')),
     ('R_43k2', ('43.2 kΩ 1% 0805', 'Yageo', 'RC0805FR-0743K2L', '', '')),
     ('R_100k', ('100 kΩ 1% 0805', 'Yageo', 'RC0805FR-07100KL', '', '')),
+    ('R_160k', ('160 kΩ 1% 0805', 'Yageo', 'RC0805FR-07160KL', '', 'boost feedback')),
     ('R_1M',   ('1 MΩ 1% 0805', 'Yageo', 'RC0805FR-071ML', '', '')),
+    ('R_1M4',  ('1.40 MΩ 1% 0805', 'Yageo', 'RC0805FR-071M4L', '', 'boost feedback')),
+    ('R_100k_0603', ('100 kΩ 1% 0603', 'Yageo', 'RC0603FR-07100KL', '', '')),
     # capacitors: 0805
+    ('C_4p7',  ('4.7 pF 50 V C0G 0805', 'Samsung', 'CL21C4R7CBANNNC', '', 'boost feed-forward')),
     ('C_10p',  ('10 pF 50 V C0G 0805', 'Samsung', 'CL21C100JBANNNC', '', '')),
     ('C_100p', ('100 pF 50 V C0G 0805', 'Samsung', 'CL21C101JBANNNC', '', '')),
     ('C_100n', ('100 nF 50 V X7R 0805', 'Samsung', 'CL21B104KBCNNNC', '', '')),
@@ -48,6 +52,10 @@ PARTS = OrderedDict([
                 'CX2 is on +12V: keep it 25 V or more')),
     ('C_2u2',  ('2.2 µF 25 V X7R 0805', 'Samsung', 'CL21B225KAFNFNE', '', '')),
     ('C_10u',  ('10 µF 16 V X5R 0805', 'Samsung', 'CL21A106KOQNNNE', '', '')),
+    ('C_10u25', ('10 µF 25 V X5R 0805', 'Samsung', 'CL21A106KAYNNNE', '', 'boost output, on 12 V: keep it 25 V')),
+    ('C_22u',  ('22 µF 10 V X5R 0805', 'Murata', 'GRM21BR61A226ME44L', '', 'boost input')),
+    ('L_15u',  ('15 µH shielded power inductor, 1210 (3.2 x 2.5 mm), about 0.6 A saturation', 'Murata',
+                'LQH32PN150MN0L', '', 'needs at least 0.35 A saturation current')),
     # semiconductors
     ('PD',     ('UV-C photodiode, 220-280 nm, TO-46 can (datasheet name SD008-2171-112)',
                 'Advanced Photonix', '008-2171-112', '',
@@ -59,21 +67,29 @@ PARTS = OrderedDict([
     ('3904',   ('NPN transistor, SOT-23', 'onsemi', 'MMBT3904LT1G', '', '')),
     ('7002',   ('N-channel MOSFET 60 V, SOT-23', 'onsemi', '2N7002LT1G', '', '')),
     ('4148',   ('Switching diode, SOD-123', 'Diodes Inc', '1N4148W-7-F', '', '')),
+    ('MBR0530', ('Schottky diode 30 V 0.5 A, SOD-123', 'onsemi', 'MBR0530T1G', '', 'boost diode')),
+    ('BOOST',  ('Boost converter, 250 mA switch, SOT-23-5 (12 V for the UV LED)', 'Texas Instruments',
+                'TPS61041QDBVRQ1', '', 'TPS61041DBVR, or TPS61040DBVR (400 mA, more output current), fit the same pads')),
     ('ADS',    ('16-bit 4-channel I2C ADC, VSSOP-10', 'Texas Instruments', 'ADS1115IDGSR', '', '')),
     ('555',    ('CMOS 555 timer, SOIC-8', 'Texas Instruments', 'TLC555IDR', '', '')),
     # connectors, switches, modules
     ('PH7',    ('JST PH 7-pin header, vertical', 'JST', 'B7B-PH-K-S(LF)(SN)', '', '')),
     ('PH6',    ('JST PH 6-pin header, vertical', 'JST', 'B6B-PH-K-S(LF)(SN)', '', '')),
+    ('PH2',    ('JST PH 2-pin header, vertical', 'JST', 'B2B-PH-K-S(LF)(SN)', '', '')),
     ('HDR',    ('0.1 in male header, 1x40, break to length', 'Sullins', 'PRPC040SAAN-RC', '',
                 'one strip covers every 0.1 in header in a set')),
     ('SOCK6',  ('0.1 in female socket, 1x6', 'Sullins', 'PPTC061LFBN-RC', '', '')),
+    ('SOCK16', ('0.1 in female socket, 1x16, 8.5 mm', 'Sullins', 'PPTC161LFBN-RC', '', 'for the Feather')),
+    ('SOCK12', ('0.1 in female socket, 1x12, 8.5 mm', 'Sullins', 'PPTC121LFBN-RC', '', 'for the Feather')),
+    ('SLIDE',  ('Slide switch SPDT, right angle', 'C&K', 'OS102011MA1QN1', '', 'power switch')),
     ('SW12',   ('Tactile switch 12x12 mm, 7.3 mm, projected plunger', 'Omron', 'B3F-4055', '',
                 'takes Omron B32 key caps')),
     ('SW6',    ('Tactile switch 6x6 mm, 5 mm', 'Omron', 'B3F-1020', '', '')),
     ('USD',    ('microSD socket', 'Hirose', 'DM3D-SF', '', '')),
-    ('MCU',    ('Pro Micro nRF52840 module (nice!nano v2, or a SuperMini clone)', '', '',
-                'nice!nano: Nice Keyboards; clones: AliExpress',
-                'same module as Rook v0.4; usually ships with headers')),
+    ('FEATHER', ('Adafruit Feather nRF52840 Express (or the ESP32-S3 Feather, 5323, or Feather M4 Express, 3857)',
+                 'Adafruit', '4062', 'Adafruit', 'ships with male headers; plugs into the two Feather sockets')),
+    ('BOOST5644', ('Adafruit 12 V bias voltage boost breakout, TPS61040', 'Adafruit', '5644', 'Adafruit',
+                   'alternative to the on-board boost (U6 and its parts): not fitted by default')),
     ('TFT',    ('1.54 in 240x240 ST7789 IPS SPI module, 8 pins in the order GND VCC SCL SDA RES DC CS BLK',
                 '', '', 'AliExpress and similar', 'check the pin order before buying')),
     ('TFT2',   ('2.0 in 240x320 ST7789 IPS SPI module (GMT020-02-8P), 8 pins in the order GND VCC SCL SDA RST DC CS BL',
@@ -90,6 +106,8 @@ PARTS = OrderedDict([
 # Buy links for parts that aren't on Digi-Key (the rest link to a Digi-Key search for the MPN)
 BUY = {
     'TFT2': ('Amazon', 'https://www.amazon.com/XIITIA-Display-240x320-Interface-Arduino/dp/B0DFWLD38D'),
+    'FEATHER': ('Adafruit', 'https://www.adafruit.com/product/4062'),
+    'BOOST5644': ('Adafruit', 'https://www.adafruit.com/product/5644'),
 }
 
 # Per set, not in any schematic: (part, qty, what it's for)
@@ -98,6 +116,8 @@ EXTRAS = [
     ('PHR6', 2, 'cables: control J2 to emitter J2'),
     ('LEAD', 13, 'cables: 7 + 6 wires'),
     ('SHUNT', 1, 'control: on J3'),
+    ('SOCK16', 1, 'control: U2 (Feather) socket'),
+    ('SOCK12', 1, 'control: U2 (Feather) socket'),
 ]
 
 # Notes on particular references; OPTIONAL ones are left out of the order list
@@ -108,15 +128,19 @@ REFNOTE = {
     ('uv-control', 'J4'): 'optional OLED header: not fitted',
     ('uv-control', 'R11'): 'ALERT pull-up: not fitted',
     ('uv-control', 'R13'): 'backlight pull-up: not fitted',
+    ('uv-control', 'J9'): 'battery, in parallel with the Feather\'s own JST jack',
+    ('uv-control', 'J12'): 'header for a panel-mount power switch, in parallel with SW1',
 }
-OPTIONAL = {('uv-detector', 'J1'), ('uv-emitter', 'J1')}
+OPTIONAL = {('uv-detector', 'J1'), ('uv-emitter', 'J1'), ('uv-control', 'J8')}
 
 BOARD_NOTE = {
     'uv-detector': 'H1-H4 are M3 mounting holes (no part).',
     'uv-emitter': 'H1-H4 are M3 mounting holes (no part). The LED runs from +12V on J2 pin 4.',
     'uv-control': 'JP1 (solder jumper) and H1-H4 (mounting holes) have no part. J3 takes one '
-                  'shunt (Sullins SPC02SYAN); use J3 or JP1, never both. The display and the Pro '
-                  'Micro can be soldered straight to the board or plugged into 0.1 in sockets.',
+                  'shunt (Sullins SPC02SYAN); use J3 or JP1, never both. The Feather (U2) plugs into '
+                  'two 8.5 mm female sockets (16 and 12 pin). Fit either the on-board boost (U6 with L1, '
+                  'D3, C1-C3, R3, R10, R16) or Adafruit\'s 5644 breakout at J8, not both. The display can '
+                  'be soldered straight to the board or plugged into a 0.1 in socket.',
 }
 
 
@@ -137,22 +161,28 @@ def part_for(ref, value, fp):
     v = value.replace(' ', '').lower()
     pfx = re.match(r'[A-Z]+', ref).group(0)
     if pfx in ('R', 'RX'):
+        if v == '100k' and '0603' in fp:
+            return 'R_100k_0603'
         return {'10k': 'R_10k', '4.7k': 'R_4k7', '4.99k': 'R_4k99', '5.49k': 'R_5k49', '1k': 'R_1k',
                 '24.9k': 'R_24k9', '24.9': 'R_24r9', '43.2k': 'R_43k2', '100k': 'R_100k',
-                '1meg': 'R_1M'}.get(v)
+                '1meg': 'R_1M', '1.40m': 'R_1M4', '160k': 'R_160k'}.get(v)
     if pfx in ('C', 'CX'):
         return {'10pf': 'C_10p', '100pf': 'C_100p', '0.1uf': 'C_100n', '0.1u': 'C_100n',
                 '100n': 'C_100n', '100nf': 'C_100n', '330n': 'C_330n', '1uf': 'C_1u', '1u': 'C_1u',
-                '2.2uf': 'C_2u2', '10u': 'C_10u', '10uf': 'C_10u'}.get(v)
-    for key, part in [('JST_PH_B7B', 'PH7'), ('JST_PH_B6B', 'PH6'), ('PinHeader', 'HDR'),
+                '2.2uf': 'C_2u2', '10u': 'C_10u', '10uf': 'C_10u', '10uf/25v': 'C_10u25',
+                '22uf/10v': 'C_22u', '4.7pf': 'C_4p7'}.get(v)
+    for key, part in [('Adafruit_Feather', 'FEATHER'), ('Adafruit_TPS61040_Boost', 'BOOST5644'),
+                      ('SW_Slide_SPDT', 'SLIDE'), ('JST_PH_B2B', 'PH2'),
+                      ('JST_PH_B7B', 'PH7'), ('JST_PH_B6B', 'PH6'), ('PinHeader', 'HDR'),
                       ('PinSocket_1x06', 'SOCK6'), ('Tactile_12x12', 'SW12'), ('SW_PUSH_6mm', 'SW6'),
-                      ('DM3D', 'USD'), ('ssd1306', 'OLED'), ('nice_nano', 'MCU'), ('st7789_200in', 'TFT2'),
+                      ('DM3D', 'USD'), ('ssd1306', 'OLED'), ('st7789_200in', 'TFT2'),
                       ('st7789', 'TFT')]:
         if key in fp:
             return part
     return {'sd008-2171-112': 'PD', 'uvled': 'LED', 'opa4340ua': 'OPA', 'mcp1501-18xch': 'VREF',
             'bat54s': 'BAT54S', 'mmbt3904': '3904', '2n7002': '7002', '1n4148w': '4148',
-            'ads1115idgs': 'ADS', 'tlc555': '555', 'mountinghole': None}.get(v, '?')
+            'ads1115idgs': 'ADS', 'tlc555': '555', 'mbr0530': 'MBR0530', '15uh': 'L_15u',
+            'tps61041-q1(tps61041qdbvrq1)': 'BOOST', 'mountinghole': None}.get(v, '?')
 
 
 def natkey(ref):
@@ -247,16 +277,18 @@ def csv_text(order):
 
 INTRO = '''Parts for one set: a detector, an emitter and a control board, plus the two
 cables between them. Taken from the schematics on {date}:
-{versions}, all still in progress, so re-check it against the schematics before
-ordering.
+{versions}. UV-Control v0.4 is released (tag `uv-control/v0.4`); the detector and
+emitter v0.5 are still in progress, so re-check those against their schematics
+before ordering.
 
 The part numbers are suggestions; the schematics don't carry them yet. Any
 equivalent passive works (same value and package, same or higher voltage and the
-same dielectric, C0G where given). The Pro Micro module and the display aren't
-sold by Digi-Key or Mouser.
+same dielectric, C0G where given). The Feather and the 5644 boost breakout link
+to Adafruit, and the display to Amazon.
 
 Quantity 0 means the part has a footprint but isn't fitted, or is optional.
-All resistors and capacitors are 0805. Order a few spares of the small parts:
+All resistors and capacitors are 0805, except one 0603 resistor (100 kΩ) on the
+control board. Order a few spares of the small parts:
 cut-tape prices usually drop at 10 pieces.'''
 
 CABLES = f'''Two cables, wired **pin 1 to pin 1** (ready-made JST PH cables are often
@@ -392,7 +424,7 @@ footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--line);
 <p class="crumb"><a href="../">uv254</a> / bill of materials</p>
 <h1>Bill of materials</h1>
 <p class="lede">Parts for one set of uv254 boards (@@versions@@) and the two cables between them.
-From the KiCad schematics on @@date@@. The boards are still in progress, so check against the schematics before ordering.</p>
+From the KiCad schematics on @@date@@. UV-Control v0.4 is released; the detector and emitter v0.5 are still in progress, so check those against their schematics before ordering.</p>
 
 <div class="bar">
   <label for="sets">Sets <input id="sets" type="number" min="1" max="999" value="1" inputmode="numeric"></label>
@@ -409,7 +441,7 @@ From the KiCad schematics on @@date@@. The boards are still in progress, so chec
 <p>Everything for <strong id="setsLabel">one set</strong>, by manufacturer part number: @@nlines@@ lines.
 The Buy links search Digi-Key for each part number; the CSV loads into Digi-Key's or Mouser's BOM upload.
 The part numbers are suggestions: any equivalent passive works (same value and package, same or higher voltage, same dielectric).
-The Pro Micro module and the display aren't sold by Digi-Key or Mouser.</p>
+The Feather and the 5644 boost breakout link to Adafruit, and the display to Amazon.</p>
 <div class="scroll"><table>
 <thead><tr><th>Qty</th><th>Manufacturer</th><th>MPN</th><th>Buy</th><th>Description</th><th>Used on</th><th>Notes</th></tr></thead>
 <tbody>

@@ -6,8 +6,9 @@ firmware), as of the [latest commit](https://github.com/edgecollective/uv254/com
 Unzip it and keep the folders together.
 [![Latest commit](https://img.shields.io/github/last-commit/edgecollective/uv254/main)](https://github.com/edgecollective/uv254/commits/main)
 
-**Snapshot, 2026-11-23** (commit [`fc0b74b`](https://github.com/edgecollective/uv254/commit/fc0b74b1b5240cd4699c409350e3271b8b084912)):
-**[⬇ download this version (zip)](https://github.com/edgecollective/uv254/archive/fc0b74b1b5240cd4699c409350e3271b8b084912.zip)**.
+**Release: UV-Control v0.4** (2026-11-23):
+**[⬇ download this release (zip)](https://github.com/edgecollective/uv254/archive/refs/tags/uv-control/v0.4.zip)**,
+or the [release page](https://github.com/edgecollective/uv254/releases/tag/uv-control/v0.4) with the fab files.
 Unlike the link above, it stays the same when more commits are pushed.
 
 Open hardware for the **uv254** UV water-quality sensor. The device is three
@@ -15,7 +16,7 @@ boards, each its own KiCad project:
 
 | Board | Folder | What's on it | Current design |
 |---|---|---|---|
-| **UV-Control** | [`hardware/uv-control`](hardware/uv-control) | Adafruit Feather controller (nRF52840 or ESP32-S3), ADS1115 ADC, color TFT, microSD, buttons, 12 V LED boost | v0.4 (in progress) |
+| **UV-Control** | [`hardware/uv-control`](hardware/uv-control) | Adafruit Feather controller (nRF52840 or ESP32-S3), ADS1115 ADC, color TFT, microSD, buttons, 12 V LED boost | v0.4 (released 2026-11-23) |
 | **UV-Emitter** | [`hardware/uv-emitter`](hardware/uv-emitter) | Inolux IN-C35PPCTGU0 UV-C LED and its driver | v0.5 (in progress: 3.3 V, 12 V LED supply, MMBT3904 driver); v0.4 released 2026-11-08 |
 | **UV-Detector** | [`hardware/uv-detector`](hardware/uv-detector) | SD008-2171-112 photodiode with an op-amp front end | v0.5 (in progress: 3.3 V, 1.8 V reference, 7-pin connector); v0.4 released 2026-11-08 |
 
