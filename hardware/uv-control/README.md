@@ -1,7 +1,7 @@
 # UV-Control
 
-Controller board. **v0.4 was released on 2026-11-23** (tag `uv-control/v0.4`,
-fab files in [`fab/v0.4`](fab/v0.4)). It was restarted from Rook v0.4 (Edge
+Controller board. **v0.5 was released on 2026-11-23** (tag `uv-control/v0.5`,
+fab files in [`fab/v0.5`](fab/v0.5)), with the detector and emitter v0.5 it connects to. It was restarted from Rook v0.4 (Edge
 Collective's validated Pro Micro nRF52840 board) and keeps its ST7789 display,
 buttons and microSD, with an **Adafruit Feather** (nRF52840 or ESP32-S3, M4 as
 fallback) as the controller, an ADS1115 ADC, JST connectors to the emitter and
@@ -62,7 +62,8 @@ Re-run it after changing the board; see
 | v0.1 | 2024-07-29 | gerbers released; ordered from JLCPCB on 2024-08-19 | tag `uv-control/v0.1` | [`fab/v0.1`](fab/v0.1) |
 | v0.1_A | 2026-06-26 | branched from v0.1; sent to Josh | tag `uv-control/v0.1_A` | — |
 | v0.1_A+ | 2026-10 | edits made after v0.1_A was sent; never fabricated; superseded by v0.4 | commit `db4232b` | — |
-| **v0.4** | 2026-11-23 | **released**: Adafruit Feather controller, 2.0 in display, 12 V boost, power switch (open items in [`TODO.md`](TODO.md)) | tag `uv-control/v0.4` | [`fab/v0.4`](fab/v0.4) |
+| v0.4 | 2026-11-23 | tagged, then renumbered v0.5 before ordering (same design) | tag `uv-control/v0.4` | [`fab/v0.4`](fab/v0.4) |
+| **v0.5** | 2026-11-23 | **released**: Adafruit Feather controller, 2.0 in display, 12 V boost, power switch; for detector and emitter v0.5 (open items in [`TODO.md`](TODO.md)) | tag `uv-control/v0.5` | [`fab/v0.5`](fab/v0.5) |
 
 Notes:
 

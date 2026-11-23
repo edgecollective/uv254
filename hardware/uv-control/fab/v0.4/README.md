@@ -1,5 +1,7 @@
 # uv-control v0.4 — fabrication files
 
+**Superseded by [v0.5](../v0.5)**, the same design renumbered before ordering so the set's versions match: order from `fab/v0.5`.
+
 Released 2026-11-23. Built with `scripts/build-fab.sh` and kicad-cli 10.0.8.
 
 The matching design is the git tag **`uv-control/v0.4`**: `git checkout uv-control/v0.4` and

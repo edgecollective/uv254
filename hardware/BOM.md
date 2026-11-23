@@ -3,9 +3,8 @@
 
 Parts for one set: a detector, an emitter and a control board, plus the two
 cables between them. Taken from the schematics on 2026-11-23:
-UV-Detector v0.5, UV-Emitter v0.5, UV-Control v0.4. UV-Control v0.4 is released (tag `uv-control/v0.4`); the detector and
-emitter v0.5 are still in progress, so re-check those against their schematics
-before ordering.
+UV-Detector v0.5, UV-Emitter v0.5, UV-Control v0.5, released together on 2026-11-23 (tags `uv-detector/v0.5`,
+`uv-emitter/v0.5` and `uv-control/v0.5`).
 
 The part numbers are suggestions; the schematics don't carry them yet. Any
 equivalent passive works (same value and package, same or higher voltage and the
@@ -66,7 +65,7 @@ H1-H4 are M3 mounting holes (no part).
 
 H1-H4 are M3 mounting holes (no part). The LED runs from +12V on J2 pin 4.
 
-## UV-Control v0.4
+## UV-Control v0.5
 
 | Refs | Qty | Part | Manufacturer, MPN | Buy | Notes |
 |---|---|---|---|---|---|

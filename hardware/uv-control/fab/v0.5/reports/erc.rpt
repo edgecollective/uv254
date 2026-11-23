@@ -1,0 +1,22 @@
+ERC report (2026-11-23T15:32:46, Encoding UTF8)
+Report includes: Errors, Warnings, Exclusions
+
+***** Sheet /
+[lib_symbol_mismatch]: Symbol 'st7789' doesn't match copy in library 'uv254'
+    ; warning
+    @(208.28 mm, 106.68 mm): Symbol U5 [st7789]
+[same_local_global_label]: Local and global labels have same name
+    ; warning
+    @(302.26 mm, 167.64 mm): Global Label 'EN'
+    @(285.75 mm, 199.39 mm): Label 'EN'
+[lib_symbol_mismatch]: Symbol 'TPS61041DBV' doesn't match copy in library 'Regulator_Switching'
+    ; warning
+    @(308.61 mm, 199.39 mm): Symbol U6 [TPS61041DBV]
+
+ ** ERC messages: 3  Errors 0  Warnings 3
+
+ ** Ignored checks:
+    - Global label only appears once in the schematic
+    - Four connection points are joined together
+    - SPICE model issue
+    - Assigned footprint doesn't match footprint filters

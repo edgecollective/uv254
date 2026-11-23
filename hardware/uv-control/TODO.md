@@ -27,7 +27,7 @@ same commit that does the work.
   is where it is, are in [`v0.4-design.md`](v0.4-design.md#feather-pins). Keep to
   that map when re-routing: it is what lets the board take an nRF52840, ESP32-S3 or
   M4 Feather.
-- Releases are tagged by the owner (v0.4: `uv-control/v0.4`). Follow CONTRIBUTING.md's release steps.
+- Releases are tagged by the owner (latest: `uv-control/v0.5`). Follow CONTRIBUTING.md's release steps.
 
 ## Layout goals
 
@@ -47,10 +47,11 @@ These are what most items below protect.
 
 ## Status
 
-**v0.4 released 2026-11-23**: tag `uv-control/v0.4`, fab files in
-[`fab/v0.4`](fab/v0.4). The items below are for bring-up and the next revision.
+**v0.5 released 2026-11-23**: tag `uv-control/v0.5`, fab files in
+[`fab/v0.5`](fab/v0.5), with detector and emitter v0.5. (v0.4, tagged the same day, is the
+same design.) The items below are for bring-up and the next revision.
 
-## Bring-up checks on the v0.4 boards
+## Bring-up checks on the v0.5 boards
 
 - [ ] **Boost output margin.**
   - R10/R16 set V_LED to 1.233 × (1 + 1.40M/160k) ≈ 12.0 V.
@@ -64,7 +65,7 @@ These are what most items below protect.
 
 - [ ] **Boost input cap.** C2 (65.5, 19-21) is 8 mm from L1's input (72.9, 22). Move it beside L1 pad 1, with its GND toward U6 pin 2.
 - [ ] **Long runs on the front copper** cut the front ground under the back-side buses (y 33-38): EN at x 70.5 (29 mm), 3V3 at x 61.3 (24 mm) and x 93.7 (16 mm), V_LED at x 69.6 (17 mm). Keep them on the back with short front hops, or move the boost cluster down next to J8.
-- [ ] **J4 (optional OLED header) sits under the display**; their courtyards overlap (DRC error). Don't fit J4 on v0.4; move it out from under U5 or drop it.
+- [ ] **J4 (optional OLED header) sits under the display**; their courtyards overlap (DRC error). Don't fit J4 on v0.5; move it out from under U5 or drop it.
 - [ ] **Display support.** `uv254:st7789_200in_240x320_WithMountingHoles` adds the module's four corner holes (2.7 mm, M2.5, 6 mm copper keep-outs); with U5 at (118, 36) rotated 180 they land at about (118.8, 12.5), (118.8, 41.7), (60.0, 12.5) and (60.0, 41.7). The positions are photo estimates (±0.3 mm): caliper-check a module, update `D2` in `lib/uv254.3dshapes/make_models.py` and the footprints, then switch U5 to the variant.
 - [ ] **One-spoke ground connections** (DRC starved thermals): U5 pin 8 (back island), SW1 pin 1, J9 pin 2. Each also connects through the other layer.
 - [ ] **Ground fill clearance** is 0.5 mm, too much to pass between 0.1 in header pins. 0.25 mm lets thin necks through. Optional.
@@ -81,7 +82,7 @@ These are what most items below protect.
 
 ## Done
 
-2026-11-23, v0.4 release:
+2026-11-23, v0.4 release (renumbered v0.5 the same day, with the detector and emitter v0.5):
 
 - [x] PCB updated to the Feather schematic, placed and routed: DRC 0 unconnected, 0 schematic parity; ERC 0 errors.
 - [x] Review fixes: V_LED reconnected; the microSD shield fill joined to GND; stray SD_CS and 3V3 copper removed; the Feather's GND pin stitched with five vias; R8 moved next to C10, so the long run to the emitter corner carries the low-impedance EMIT_LED_CURRENT along the left edge; the emitter's ground no longer tied to the ADS filter caps; C1 next to D3; FB moved off the switch side; SW 0.3 mm.

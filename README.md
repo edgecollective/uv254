@@ -6,19 +6,24 @@ firmware), as of the [latest commit](https://github.com/edgecollective/uv254/com
 Unzip it and keep the folders together.
 [![Latest commit](https://img.shields.io/github/last-commit/edgecollective/uv254/main)](https://github.com/edgecollective/uv254/commits/main)
 
-**Release: UV-Control v0.4** (2026-11-23):
-**[⬇ download this release (zip)](https://github.com/edgecollective/uv254/archive/refs/tags/uv-control/v0.4.zip)**,
-or the [release page](https://github.com/edgecollective/uv254/releases/tag/uv-control/v0.4) with the fab files.
-Unlike the link above, it stays the same when more commits are pushed.
+**Release v0.5** (2026-11-23), the three boards as one set that work together:
+gerbers for the [detector](https://github.com/edgecollective/uv254/releases/download/uv-detector/v0.5/uv-detector-v0.5-gerbers.zip),
+[emitter](https://github.com/edgecollective/uv254/releases/download/uv-emitter/v0.5/uv-emitter-v0.5-gerbers.zip) and
+[control](https://github.com/edgecollective/uv254/releases/download/uv-control/v0.5/uv-control-v0.5-gerbers.zip) boards
+(release pages: [detector](https://github.com/edgecollective/uv254/releases/tag/uv-detector/v0.5),
+[emitter](https://github.com/edgecollective/uv254/releases/tag/uv-emitter/v0.5),
+[control](https://github.com/edgecollective/uv254/releases/tag/uv-control/v0.5)), or
+**[⬇ the whole design at this release (zip)](https://github.com/edgecollective/uv254/archive/refs/tags/uv-control/v0.5.zip)**.
+Unlike the "latest" link above, these stay the same when more commits are pushed.
 
 Open hardware for the **uv254** UV water-quality sensor. The device is three
 boards, each its own KiCad project:
 
 | Board | Folder | What's on it | Current design |
 |---|---|---|---|
-| **UV-Control** | [`hardware/uv-control`](hardware/uv-control) | Adafruit Feather controller (nRF52840 or ESP32-S3), ADS1115 ADC, color TFT, microSD, buttons, 12 V LED boost | v0.4 (released 2026-11-23) |
-| **UV-Emitter** | [`hardware/uv-emitter`](hardware/uv-emitter) | Inolux IN-C35PPCTGU0 UV-C LED and its driver | v0.5 (in progress: 3.3 V, 12 V LED supply, MMBT3904 driver); v0.4 released 2026-11-08 |
-| **UV-Detector** | [`hardware/uv-detector`](hardware/uv-detector) | SD008-2171-112 photodiode with an op-amp front end | v0.5 (in progress: 3.3 V, 1.8 V reference, 7-pin connector); v0.4 released 2026-11-08 |
+| **UV-Control** | [`hardware/uv-control`](hardware/uv-control) | Adafruit Feather controller (nRF52840 or ESP32-S3), ADS1115 ADC, color TFT, microSD, buttons, 12 V LED boost | v0.5 (released 2026-11-23) |
+| **UV-Emitter** | [`hardware/uv-emitter`](hardware/uv-emitter) | Inolux IN-C35PPCTGU0 UV-C LED and its driver | v0.5 (released 2026-11-23: 3.3 V, 12 V LED supply, MMBT3904 driver) |
+| **UV-Detector** | [`hardware/uv-detector`](hardware/uv-detector) | SD008-2171-112 photodiode with an op-amp front end | v0.5 (released 2026-11-23: 3.3 V, 1.8 V reference, 7-pin connector) |
 
 | [UV-Control](hardware/uv-control) | [UV-Emitter](hardware/uv-emitter) | [UV-Detector](hardware/uv-detector) |
 |:---:|:---:|:---:|

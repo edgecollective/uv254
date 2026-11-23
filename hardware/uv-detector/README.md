@@ -54,8 +54,8 @@ Re-run it after changing the board; see
 | v0.3 | 2024-08-19 | ordered from JLCPCB with emitter v0.3 and control v0.1 | tag `uv-detector/v0.3` | [`fab/v0.3`](fab/v0.3) |
 | v0.2_A | 2026-06-26 | branched from v0.2; sent to Josh | tag `uv-detector/v0.2_A` | — |
 | v0.2_B | 2026-10 | follows v0.2_A | tag `uv-detector/v0.2_B` | — |
-| **v0.4** | 2026-11-08 | **gerbers released**; derived from v0.2_B | tag `uv-detector/v0.4` | [`fab/v0.4`](fab/v0.4) |
-| v0.5 | — | in progress on `main` | `main` | — |
+| v0.4 | 2026-11-08 | gerbers released; derived from v0.2_B (5 V, 6-pin connector) | tag `uv-detector/v0.4` | [`fab/v0.4`](fab/v0.4) |
+| **v0.5** | 2026-11-23 | **gerbers released**: 3.3 V, 1.8 V reference, 7-pin connector; for UV-Control v0.5 | tag `uv-detector/v0.5` | [`fab/v0.5`](fab/v0.5) |
 
 Notes:
 
