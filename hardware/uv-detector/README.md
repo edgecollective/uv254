@@ -55,7 +55,8 @@ Re-run it after changing the board; see
 | v0.2_A | 2026-06-26 | branched from v0.2; sent to Josh | tag `uv-detector/v0.2_A` | — |
 | v0.2_B | 2026-10 | follows v0.2_A | tag `uv-detector/v0.2_B` | — |
 | v0.4 | 2026-11-08 | gerbers released; derived from v0.2_B (5 V, 6-pin connector) | tag `uv-detector/v0.4` | [`fab/v0.4`](fab/v0.4) |
-| **v0.5** | 2026-11-23 | **gerbers released**: 3.3 V, 1.8 V reference, 7-pin connector; for UV-Control v0.5 | tag `uv-detector/v0.5` | [`fab/v0.5`](fab/v0.5) |
+| v0.5 | 2026-11-23 | gerbers released, then renumbered v0.6 with the set before ordering (same design) | tag `uv-detector/v0.5` | [`fab/v0.5`](fab/v0.5) |
+| **v0.6** | 2026-11-23 | **gerbers released**: 3.3 V, 1.8 V reference, 7-pin connector; for UV-Control v0.6 | tag `uv-detector/v0.6` | [`fab/v0.6`](fab/v0.6) |
 
 Notes:
 

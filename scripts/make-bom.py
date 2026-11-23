@@ -277,8 +277,8 @@ def csv_text(order):
 
 INTRO = '''Parts for one set: a detector, an emitter and a control board, plus the two
 cables between them. Taken from the schematics on {date}:
-{versions}, released together on 2026-11-23 (tags `uv-detector/v0.5`,
-`uv-emitter/v0.5` and `uv-control/v0.5`).
+{versions}, released together on 2026-11-23 (tags `uv-detector/v0.6`,
+`uv-emitter/v0.6` and `uv-control/v0.6`).
 
 The part numbers are suggestions; the schematics don't carry them yet. Any
 equivalent passive works (same value and package, same or higher voltage and the
@@ -423,7 +423,7 @@ footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid var(--line);
 <p class="crumb"><a href="../">uv254</a> / bill of materials</p>
 <h1>Bill of materials</h1>
 <p class="lede">Parts for one set of uv254 boards (@@versions@@) and the two cables between them.
-From the KiCad schematics on @@date@@. All three boards are released as v0.5 (2026-11-23).</p>
+From the KiCad schematics on @@date@@. All three boards are released as v0.6 (2026-11-23).</p>
 
 <div class="bar">
   <label for="sets">Sets <input id="sets" type="number" min="1" max="999" value="1" inputmode="numeric"></label>

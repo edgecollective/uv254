@@ -682,7 +682,7 @@
     ]
   ],
   "text_variables": {
-    "VERSION": "v0.5"
+    "VERSION": "v0.6"
   },
   "tuning_profiles": {
     "meta": {

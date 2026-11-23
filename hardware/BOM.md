@@ -3,8 +3,8 @@
 
 Parts for one set: a detector, an emitter and a control board, plus the two
 cables between them. Taken from the schematics on 2026-11-23:
-UV-Detector v0.5, UV-Emitter v0.5, UV-Control v0.5, released together on 2026-11-23 (tags `uv-detector/v0.5`,
-`uv-emitter/v0.5` and `uv-control/v0.5`).
+UV-Detector v0.6, UV-Emitter v0.6, UV-Control v0.6, released together on 2026-11-23 (tags `uv-detector/v0.6`,
+`uv-emitter/v0.6` and `uv-control/v0.6`).
 
 The part numbers are suggestions; the schematics don't carry them yet. Any
 equivalent passive works (same value and package, same or higher voltage and the
@@ -21,7 +21,7 @@ for Digi-Key's or Mouser's BOM upload. The [web page](https://edgecollective.io/
 lists, scales the order to several sets and downloads it as CSV. The Buy links
 search Digi-Key for each part number.
 
-## UV-Detector v0.5
+## UV-Detector v0.6
 
 | Refs | Qty | Part | Manufacturer, MPN | Buy | Notes |
 |---|---|---|---|---|---|
@@ -45,7 +45,7 @@ search Digi-Key for each part number.
 
 H1-H4 are M3 mounting holes (no part).
 
-## UV-Emitter v0.5
+## UV-Emitter v0.6
 
 | Refs | Qty | Part | Manufacturer, MPN | Buy | Notes |
 |---|---|---|---|---|---|
@@ -65,7 +65,7 @@ H1-H4 are M3 mounting holes (no part).
 
 H1-H4 are M3 mounting holes (no part). The LED runs from +12V on J2 pin 4.
 
-## UV-Control v0.5
+## UV-Control v0.6
 
 | Refs | Qty | Part | Manufacturer, MPN | Buy | Notes |
 |---|---|---|---|---|---|

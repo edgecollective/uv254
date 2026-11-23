@@ -1,5 +1,7 @@
 # uv-emitter v0.5 — fabrication files
 
+**Superseded by [v0.6](../v0.6)** before ordering: order from `fab/v0.6`.
+
 Released 2026-11-23, together with the other two boards of the set (detector,
 emitter and control v0.5). Built with `scripts/build-fab.sh` and kicad-cli 10.0.8.
 

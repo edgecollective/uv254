@@ -62,7 +62,8 @@ Re-run it after changing the board; see
 | v0.3 | 2024-08-19 | ordered from JLCPCB with detector v0.3 and control v0.1 | tag `uv-emitter/v0.3` | [`fab/v0.3`](fab/v0.3) |
 | v0.2_A | 2026-06 to 2026-10 | design revision branched from v0.2, not fabricated | tag `uv-emitter/v0.2_A` | — |
 | v0.4 | 2026-11-08 | gerbers released; derived from v0.2_A (5 V, 7 V LED supply, LED_ENABLE) | tag `uv-emitter/v0.4` | [`fab/v0.4`](fab/v0.4) |
-| **v0.5** | 2026-11-23 | **gerbers released**: 3.3 V, 12 V LED supply, MMBT3904 driver, LED_DISABLE; for UV-Control v0.5 | tag `uv-emitter/v0.5` | [`fab/v0.5`](fab/v0.5) |
+| v0.5 | 2026-11-23 | gerbers released, then renumbered v0.6 with the set before ordering (same design) | tag `uv-emitter/v0.5` | [`fab/v0.5`](fab/v0.5) |
+| **v0.6** | 2026-11-23 | **gerbers released**: 3.3 V, 12 V LED supply, MMBT3904 driver, LED_DISABLE; for UV-Control v0.6 | tag `uv-emitter/v0.6` | [`fab/v0.6`](fab/v0.6) |
 
 Notes:
 
