@@ -23,9 +23,10 @@ same commit that does the work.
   kicad-cli sch erc --severity-all -o /tmp/erc.txt hardware/uv-control/uv-control.kicad_sch
   ```
   As of this writing: 0 unconnected items, 0 schematic parity issues.
-- U2's footprint (`uv254:nice_nano_cleanest`, on the back) has no courtyard,
-  so DRC won't notice a part placed under the Pro Micro. Check its silkscreen
-  outline by eye.
+- U2 is an Adafruit Feather (since 2026-11-23). Its pin map, and why each signal
+  is where it is, are in [`v0.4-design.md`](v0.4-design.md#feather-pins). Keep to
+  that map when re-routing: it is what lets the board take an nRF52840, ESP32-S3 or
+  M4 Feather.
 - Don't tag a release. The owner decides when.
 
 ## Layout goals
@@ -46,6 +47,19 @@ These are what most items below protect.
 
 ## Must do before ordering
 
+- [ ] **Bring the PCB up to date with the Feather schematic.** As of 2026-11-23 the schematic has U2 as an Adafruit Feather, the new power switch SW1 and its panel-switch connector J12, and no J9/J11 (battery), but the PCB still has the Pro Micro.
+  - In the PCB editor run *Tools > Update PCB from Schematic*, with "Replace footprints with those specified in the schematic" and "Delete footprints with no symbols" ticked. U2 becomes `uv254:Adafruit_Feather_on_socket` at the Pro Micro's old position, SW1 and J12 are added, and J9/J11 are deleted.
+  - Delete the old tracks to U2's pads and the BAT tracks (back, x 52.4; front, y 8.1 and y 40.4). They keep their old nets and DRC will flag them.
+  - Re-place U2 on the back, on female headers like the Pro Micro.
+    - The Feather is 22.9 x 50.8 mm (the Pro Micro was 18 x 33), longer than the board is tall (45.55 mm).
+    - Its USB connector is at the RST end of the long header (pad 1). Face that end to a board edge so a cable can reach it.
+    - On standard 8.5 mm sockets the Feather's underside is 11.04 mm from the board and its tallest parts about 18 mm. Back-side parts under it must be lower than 11 mm, and the enclosure needs the depth; the 3D view shows it.
+  - Place SW1, the power switch, at a board edge with its actuator over the edge (it's a right-angle slide switch). Its pad 2 is the common (PWR_EN), pad 1 goes to GND (off) and pad 3 is open (on). Check which slider position joins pads 1-2 before marking ON/OFF on the silkscreen.
+  - Place J12 (2-pin JST PH: 1 PWR_EN, 2 GND) where a cable to a panel-mount switch in the enclosure can reach it.
+  - J8 becomes the Adafruit 5644 boost breakout. In the schematic select J8 and use *Change Symbol* with `uv254:adafruit_tps61040_boost`: its pins sit where the 4-pin connector's did, so the wiring is kept. *Update PCB* then gives J8 the footprint `uv254:Adafruit_TPS61040_Boost_5644`, with pads exactly where J8's are now. Leave the breakout's 10.16 x 15.24 mm clear beside them; it lies 2.54 mm above the board on its header.
+  - Re-route. The long header carries A0-A5 and SPI; the short header carries I2C and the display and LED control pins (5-13).
+  - Coordinates in the items below were taken before this change. Re-check any near U2.
+  - Done when `kicad-cli pcb drc --schematic-parity` shows 0 parity issues and 0 unconnected items.
 - [ ] **Boost: move the FB trace off the switching side.**
   - Now: the trace from C3 pad 2 (60.30, 34.05) to U6 pin 3 (58.40, 29.05) runs between D3's pads (SW at 61.85, 31.55; V_LED at 58.55, 31.55) and under U6 pin 2.
   - FB is the converter's most sensitive node (R10 1.40M / R16 160k).
@@ -58,7 +72,10 @@ These are what most items below protect.
   - U6 pin 2 now reaches ground through a trace and vias under the chip (fixed 2026-11-21). Keep it at least that well connected.
 - [ ] **BOM: add the new parts.** `scripts/make-bom.py` stops on parts it doesn't know:
   - boost: U6 TPS61041QDBVRQ1, D3 MBR0530, L1 15 µH 1008, C1 10 µF/25 V, C2 22 µF/10 V, C3 4.7 pF, R10 1.40M, R16 160k
-  - J9 (2-pin JST PH, battery)
+  - SW1, the power switch: C&K OS102011MA1QN1 (footprint `Button_Switch_THT:SW_Slide_SPDT_Angled_CK_OS102011MA1Q`)
+  - J12, 2-pin JST PH header for the panel switch, plus its mating housing and crimps. The panel switch itself (e.g. a rocker) is the owner's choice; prefer gold-plated contacts, since it only carries the EN pull-up's microamps.
+  - J8: the Adafruit 5644 boost breakout (it comes with its header), if it's fitted instead of U6 and its parts. Adafruit's breakout uses a 10 µH 1008 inductor (MPL2520S100MWT) with the 400 mA TPS61040, a useful reference when choosing L1.
+  - U2, now an Adafruit Feather (footprint `uv254:Adafruit_Feather_on_socket`; `part_for()` matched the Pro Micro by its `nice_nano` footprint). Also list the female headers it plugs into (16-pin and 12-pin, 0.1 in).
 
   Add them to `PARTS` and `part_for()`, run `scripts/make-bom.py`, and commit
   `hardware/BOM.md`, `hardware/bom.csv` and `docs/bom/index.html`.
@@ -68,10 +85,6 @@ These are what most items below protect.
 
 ## Should do
 
-- [ ] **BAT cuts the back fill under the display lines.**
-  - BAT runs from J9/J11 (top, about x 38-47) to U2 pins 24/25 (49.44, 40.40 / 42.94).
-  - Its 0.7 mm back trace at x 52.4, y 8-40, splits the back ground under every display and button line.
-  - Fix: if the battery cable can enter at the bottom edge, move J9/J11 next to U2 pins 24/25, so BAT is a few mm long.
 - [ ] **Separate the emitter's ground return from the ADS filter caps.**
   - A 0.7 mm front trace runs from the GND via by J2 pin 6 at (11.70, 22.80) to the ground pads of C9/C10.
   - Delete the segment (11.70, 22.80)-(17.40, 22.80). The via stays in the fill, and C9/C10 stay grounded through their back traces.
@@ -90,22 +103,18 @@ These are what most items below protect.
   - With the TPS61041's 250 mA switch limit, a rough estimate is about 30 mA at 12 V from 3.3 V. The emitter v0.5 LED takes about 24-26 mA while on, so there's little margin.
   - The TPS61040 has the same pinout and a 400 mA limit (about 45 mA). Check TI's output-current curves.
 - [ ] **3V3 load.**
-  - While the LED is on, the boost draws about 120 mA from 3V3, on top of the backlight, microSD and MCU. Check that the Pro Micro's regulator can supply it.
+  - While the LED is on, the boost draws about 120 mA from 3V3, on top of the backlight, microSD and MCU. The Feather's 3.3 V regulator (typically 500-600 mA) supplies all of it; on an ESP32-S3, Wi-Fi transmit peaks share that budget.
   - That load switches at the LED rate on the same 3V3 that feeds the detector (J1 pin 1) and U3. If it shows up in measurements, filter the detector's supply (RC or ferrite plus cap).
 - [ ] **Ground fill clearance** is 0.5 mm, which can't fit between 0.1 in header pins, so U2's columns, J1/J2 and the test headers act as walls in both fills. A clearance of 0.25 mm lets thin necks through. Optional.
 
 ## Other open items
 
-- [ ] **Firmware pin map:** `firmware/uv-control/v0.4/code.py` still uses the first draft's pins. The current map is in `v0.4-design.md` (the Pro Micro pin table and the "Firmware" bullet under "To do in KiCad"). The owner deferred this.
-- [ ] **Design notes:** `v0.4-design.md` predates the boost and the header changes. Update it:
-  - J5 is the emitter test header (CUR, DIS, DRV, V_LED, GND).
-  - J8 is the power test header (GND, V_LED, 3V3, EN).
-  - J7 is a 2-pin GND/3V3 header.
-  - J9/J11 are the battery connectors (BAT to U2 pins 24/25).
-  - The boost (U6 and its parts) makes V_LED = 12 V on the board.
-- [ ] **Schematic:**
-  - ERC has 5 "pin not driven" errors from the Pro Micro symbol typing its GPIOs as inputs (as on Rook) and 2 library-mismatch warnings (*Update Symbols from Library*).
-  - It also warns that `EN` is both a local and a global label.
+- [ ] **Firmware:** write the Arduino firmware for the Feather, using the pin map in [`v0.4-design.md`](v0.4-design.md#feather-pins).
+  - On the ESP32-S3, drive `PIN_I2C_POWER` high in `setup()`.
+  - The CircuitPython `firmware/uv-control/v0.4/code.py` is out of date (first-draft pins, Pro Micro).
+- [ ] **Schematic:** ERC has no errors. Remaining warnings:
+  - library mismatch for U5 (`st7789`) and U6 (`TPS61041DBV`); fix with *Update Symbols from Library*
+  - `EN` is both a local and a global label
 - [ ] **Footprints:** R17, R20, R22 and R24 differ from their `Resistor_SMD` library copies (DRC warnings). Update them from the library unless the difference is deliberate.
 - [ ] **Two starved thermals** (DRC):
   - J7 pad 1's front-fill connection goes to an isolated island. Harmless, since the pad connects through its back trace.
@@ -113,6 +122,14 @@ These are what most items below protect.
 - [ ] **After any board change:** run `scripts/render-images.sh uv-control` (README images) and `scripts/make-bom.py`, and commit their output with the change.
 
 ## Done
+
+2026-11-23:
+
+- [x] Schematic: U2 is an Adafruit Feather (`uv254:feather`, pin map in `v0.4-design.md`). J9/J11 (battery) are removed, since the Feather has its own charger and jack, and so is the PWR_FLAG on 3V3 (the Feather's 3V pin drives it). The BAT cut in the back ground goes with them once the PCB is updated.
+- [x] Symbol, footprint and 3D model for Adafruit's 5644 boost breakout, for J8 (`uv254:adafruit_tps61040_boost`, `uv254:Adafruit_TPS61040_Boost_5644`).
+- [x] U2's footprint is `uv254:Adafruit_Feather_on_socket`, with Adafruit's nRF52840 Feather model (MIT) on 8.5 mm sockets.
+- [x] Power switch SW1 added: it pulls the Feather's EN pin to GND (net `PWR_EN`) to turn the whole board off. J12, in parallel, takes a panel-mount switch (e.g. a rocker).
+- [x] `v0.4-design.md` updated for the boost, the test headers, the Feather and the power switch.
 
 2026-11-21, from the first layout review:
 

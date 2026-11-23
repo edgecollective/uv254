@@ -1,9 +1,12 @@
 # UV-Control
 
 Controller board. **v0.4 is in progress on `main`, restarted from Rook v0.4**
-(Edge Collective's validated Pro Micro nRF52840 board): its Pro Micro, ST7789
-display, buttons and microSD, plus an ADS1115 ADC, JST connectors to the emitter
-and detector, test headers, and a TPS61041 boost that makes the UV LED's 12 V.
+(Edge Collective's validated Pro Micro nRF52840 board): its ST7789 display,
+buttons and microSD, plus an ADS1115 ADC, JST connectors to the emitter and
+detector, test headers, and a TPS61041 boost that makes the UV LED's 12 V. The
+controller is now an **Adafruit Feather** (nRF52840 or ESP32-S3, M4 as fallback)
+with Arduino firmware; the PCB is being updated to match (the last Pro Micro
+version is commit `62d3ce3`).
 See [`v0.4-design.md`](v0.4-design.md) for the pin map. The
 first v0.4 draft is in [`reference/v0.4-draft`](reference/v0.4-draft).
 
